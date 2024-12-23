@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="SS">
+  <XSDCollection href="platform:/resource/SS/Sample.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/SS/Sample.xsd#//price;XSDElementDeclaration" name="price" type="mlib://SS#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/SS/Sample.xsd#//name;XSDElementDeclaration=1" name="name" type="mlib://SS#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/SS/Sample.xsd#//description;XSDElementDeclaration=2" name="description" type="mlib://SS#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/SS/Sample.xsd#//calories;XSDElementDeclaration=3" name="calories" type="mlib://SS#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/SS/Sample.xsd#//food;XSDElementDeclaration=4" name="food"/>
+  </XSDCollection>
+</MessageBroker>

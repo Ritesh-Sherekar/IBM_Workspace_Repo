@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Rest_2",
+    "version": "1.0.0",
+    "description": "Rest_2"
+  },
+  "servers": [
+    {
+      "url": "/rest_2/v1"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "[object Object]": null,
+      "untitled": {
+        "type": "string",
+        "properties": {
+          "ID": {
+            "type": "integer"
+          },
+          "Name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ID",
+          "Name"
+        ]
+      }
+    }
+  },
+  "paths": {
+    "/p20": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {}
+          },
+          "required": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+
+
+Importing file: C:\Workspace\SOAP_New\NewWSDLFileR.wsdl
+
+The WSDL import will proceed with bindings NewWSDLFileRSOAP.
+Creating wsdl schema document for file:///C:/Workspace/SOAP_New/NewWSDLFileR.wsdl.
+Parsing wsdl binding {http://www.example.org/NewWSDLFileR/}NewWSDLFileRSOAP.
+Parsing wsdl binding input NewOperation.
+Parsing wsdl binding output NewOperation.
+Processing doc style for operation NewOperation.
+Populating WSDL schema NewWSDLFileR.xsd.
+Creating file NewWSDLFileR.xsd in the workspace.
+Creating file NewWSDLFileR_InlineSchema1.xsd in the workspace.
+Copying source WSDL NewWSDLFileR.wsdl to NewWSDLFileR.wsdl.
+
+Elapsed time processing this message definition file: 0.203 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

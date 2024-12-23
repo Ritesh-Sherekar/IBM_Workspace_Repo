@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="C:\Workspace\GeneratedBarFiles\DB_LOGproject.generated.bar" deployTimestamp="2024-09-04 21:09:46">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="DB_LOG_Flow" deployBarfile="C:\Workspace\GeneratedBarFiles\DB_LOGproject.generated.bar" deployTimestamp="2024-09-04 21:09:46">
+    <ConfigurableProperty uri="DB_LOG_Flow#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#Compute.dataSource" override="ODBC2">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#Compute1.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#Compute1.dataSource" override="ODBC2">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#Compute1.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Input.URLSpecifier" override="/path1">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.URLSpecifier" override="http://localhost:7800/path2">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.acceptCompressedResponses">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.allowedCiphers">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.enableCRLCheck">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.enableKeepAlive">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.hostnameChecking">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.httpProxyLocation">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.httpVersion" override="1.1">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.keyAlias">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.policyUrl">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.protocol" override="TLS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.requestCompressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.timeoutForServer">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#HTTP Request.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+  <CompiledMessageFlow name="DB_LOG_Flow_2" deployBarfile="C:\Workspace\GeneratedBarFiles\DB_LOGproject.generated.bar" deployTimestamp="2024-09-04 21:09:46">
+    <ConfigurableProperty uri="DB_LOG_Flow_2#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Input.URLSpecifier" override="/path2">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="DB_LOG_Flow_2#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>

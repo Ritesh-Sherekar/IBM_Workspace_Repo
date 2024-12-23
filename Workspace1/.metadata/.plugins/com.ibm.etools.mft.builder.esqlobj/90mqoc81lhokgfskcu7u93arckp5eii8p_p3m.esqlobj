@@ -1,0 +1,19 @@
+CREATE DATABASE MODULE Database_Node_Flow_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		--SET OutputRoot = InputRoot;
+		DECLARE inputJSON REFERENCE TO InputRoot.JSON.Data;
+		-- Extract ID and Name from JSON
+		SET Environment.Variables.ID = inputJSON.ID;
+		SET Environment.Variables.Name = inputJSON.Name;
+		
+		-- Set SQL parameters for Database Node
+SET OutputLocalEnvironment.Destination.SQL.Statement[1] = 'INSERT INTO YourTableName (ID, Name) VALUES (?, ?)';
+SET OutputLocalEnvironment.Destination.SQL.Parameter[1] = Environment.Variables.ID;
+SET OutputLocalEnvironment.Destination.SQL.Parameter[2] = Environment.Variables.Name;
+
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

@@ -1,0 +1,15 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+    BEGIN
+       
+       DECLARE ABC REFERENCE TO InputRoot.XMLNSC;
+
+        DECLARE ref CHARACTER;
+      
+        SET ref = com.RequestType;
+        
+        IF ref = 'Eidiko' THEN
+            RETURN TRUE;
+        ELSE
+            RETURN FALSE;
+        END IF;
+    END;

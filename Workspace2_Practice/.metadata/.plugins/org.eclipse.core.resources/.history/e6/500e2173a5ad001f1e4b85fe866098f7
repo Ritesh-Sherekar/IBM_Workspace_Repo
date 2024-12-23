@@ -1,0 +1,19 @@
+
+
+Importing file: C:\Workspace2_Practice\SOAP_Attachments\SOAP_AttachmentsWSDLFile.wsdl
+
+
+The following is a list of WS-I warning messages found when importing:
+WS-I BP 1.1: (BP2119) The SOAP body must specify the parts attribute with a valid part name because the associated message declares more than one part., Line: 39, Column: 10
+
+
+The WSDL import will proceed with bindings SOAP_AttachmentsWSDLFileSOAP.
+Creating wsdl schema document for file:///C:/Workspace2_Practice/SOAP_Attachments/SOAP_AttachmentsWSDLFile.wsdl.
+Parsing wsdl binding {http://www.example.org/SOAP_AttachmentsWSDLFile/}SOAP_AttachmentsWSDLFileSOAP.
+Parsing wsdl binding input NewOperation.
+Parsing wsdl binding output NewOperation.
+Processing doc style for operation NewOperation.
+Populating WSDL schema SOAP_AttachmentsWSDLFile.xsd.
+Creating file SOAP_AttachmentsWSDLFile.xsd in the workspace.
+Creating file SOAP_AttachmentsWSDLFile_InlineSchema1.xsd in the workspace.
+Copying source WSDL SOAP_AttachmentsWSDLFile.wsdl to SOAP_AttachmentsWSDLFile.wsdl.

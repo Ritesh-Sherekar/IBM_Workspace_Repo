@@ -1,0 +1,54 @@
+2024-11-09 09:22:19.557502Z: [Thread 18404] (Msg 1/1) BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.12.0' (64-bit) 
+2024-11-09 09:22:19.575432Z: [Thread 18404] (Msg 1/1) BIP9905I: Initializing resource managers. 
+2024-11-09 09:22:21.139572Z: [Thread 18404] (Msg 1/1) BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-11-09 09:22:21.361400Z: [Thread 18404] (Msg 1/1) BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-11-09 09:22:23.018108Z: [Thread 18404] (Msg 1/1) BIP9906I: Reading deployed resources. 
+2024-11-09 09:22:23.068664Z: [Thread 18404] (Msg 1/1) BIP9907I: Initializing deployed resources. 
+2024-11-09 09:22:23.070278Z: [Thread 18404] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-11-09 09:22:23.087840Z: [Thread 18404] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'Error_H_Log' of type 'Application'. 
+2024-11-09 09:22:33.000308Z: [Thread 18404] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-11-09 09:22:33.050282Z: [Thread 18404] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7800' for 'http' connections. 
+2024-11-09 09:22:33.050338Z: [Thread 18404] (Msg 1/1) BIP1996I: Listening on HTTP URL '/consoleLog'. 
+2024-11-09 09:22:33.050496Z: [Thread 18404] (Msg 1/1) BIP2269I: Deployed resource 'ConsoleLog_Flow' (uuid='ConsoleLog_Flow',type='MessageFlow') started successfully. 
+2024-11-09 09:22:33.050552Z: [Thread 18404] (Msg 1/1) BIP9332I: Application 'ConsoleLog' has been reloaded successfully. 
+2024-11-09 09:22:33.050610Z: [Thread 18404] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'Error_H_Log' of type 'Application'. 
+2024-11-09 09:22:33.050918Z: [Thread 18404] (Msg 1/1) BIP1996I: Listening on HTTP URL '/log'. 
+2024-11-09 09:22:33.051052Z: [Thread 18404] (Msg 1/1) BIP2269I: Deployed resource 'Error_H_Log_Flow' (uuid='Error_H_Log_Flow',type='MessageFlow') started successfully. 
+2024-11-09 09:22:33.051102Z: [Thread 18404] (Msg 1/1) BIP9332I: Application 'Error_H_Log' has been reloaded successfully. 
+2024-11-09 09:22:33.379562Z: [Thread 5160] (Msg 1/1) BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-11-09 09:22:33.391334Z: [Thread 5160] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
+2024-11-09 09:22:33.392494Z: [Thread 18404] (Msg 1/1) BIP1991I: Integration server has finished initialization. 
+2024-11-09 09:22:50.020124Z: [Thread 12744] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-11-09 09:22:50.020588Z: [Thread 12744] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-11-09 09:22:50.021556Z: [Thread 12744] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-11-09 09:22:53.084012Z: [Thread 12744] (Msg 1/1) BIP2271I: Deployed resource 'ConsoleLog_Flow' (uuid='ConsoleLog_Flow',type='MessageFlow') successfully stopped. 
+2024-11-09 09:22:53.084136Z: [Thread 12744] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-11-09 09:22:53.116640Z: [Thread 12744] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'Error_H_Log' of type 'Application'. 
+2024-11-09 09:22:53.119988Z: [Thread 12744] (Msg 1/1) BIP2271I: Deployed resource 'Error_H_Log_Flow' (uuid='Error_H_Log_Flow',type='MessageFlow') successfully stopped. 
+2024-11-09 09:22:53.120120Z: [Thread 12744] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'Error_H_Log' of type 'Application'. 
+2024-11-09 09:22:53.130204Z: [Thread 12744] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7800' for 'http' connections. 
+2024-11-09 09:22:53.143192Z: [Thread 12744] (Msg 1/1) BIP9521I: Application 'ConsoleLog' has been deleted. 
+2024-11-09 09:22:53.146248Z: [Thread 12744] (Msg 1/1) BIP9521I: Application 'Error_H_Log' has been deleted. 
+2024-11-09 09:22:53.149908Z: [Thread 12744] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-11-09 09:23:07.899376Z: [Thread 16820] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-11-09 09:23:07.999719Z: [Thread 16820] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'BLOB_JSON' of type 'Application'. 
+2024-11-09 09:23:08.078521Z: [Thread 16820] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'BLOB_JSON' of type 'Application'. 
+2024-11-09 09:23:08.132484Z: [Thread 16820] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7800' for 'http' connections. 
+2024-11-09 09:23:08.132569Z: [Thread 16820] (Msg 1/1) BIP1996I: Listening on HTTP URL '/blob'. 
+2024-11-09 09:23:08.132776Z: [Thread 16820] (Msg 1/1) BIP2269I: Deployed resource 'BLOB_JSON_Flow' (uuid='BLOB_JSON_Flow',type='MessageFlow') started successfully. 
+2024-11-09 09:23:08.132828Z: [Thread 16820] (Msg 1/1) BIP9332I: Application 'BLOB_JSON' has been created successfully. 
+2024-11-09 09:23:08.132864Z: [Thread 16820] (Msg 1/1) BIP9326I: The source 'BLOB_JSONproject.generated.bar' has been successfully deployed. 
+2024-11-09 09:23:08.133168Z: [Thread 16820] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-11-09 09:32:30.921664Z: [Thread 10728] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'BLOB_JSON' of type 'Application'. 
+2024-11-09 09:37:50.990724Z: [Thread 10728] (Msg 1/1) BIP2242E: Message flow 'BLOB_JSON_Flow' could not be reconfigured because it remained busy for longer than the timeout period of '300000' 
+2024-11-09 09:37:50.991008Z: [Thread 10728] (Msg 1/1) BIP2242E: Message flow 'BLOB_JSON_Flow' could not be reconfigured because it remained busy for longer than the timeout period of '300000' 
+2024-11-09 09:37:50.991064Z: [Thread 10728] (Msg 1/1) BIP9324W: The request to 'Stop' the deployed resource 'BLOB_JSON' of type 'Application' has failed. 
+2024-11-09 09:42:51.255288Z: [Thread 8776] (Msg 1/1) BIP2242E: Message flow 'BLOB_JSON_Flow' could not be reconfigured because it remained busy for longer than the timeout period of '300000' 
+2024-11-09 09:42:51.255792Z: [Thread 8776] (Msg 1/1) BIP2242E: Message flow 'BLOB_JSON_Flow' could not be reconfigured because it remained busy for longer than the timeout period of '300000' 
+2024-11-09 09:42:51.255888Z: [Thread 8776] (Msg 1/1) BIP9324W: The request to 'Stop' the deployed resource 'BLOB_JSON' of type 'Application' has failed. 
+2024-11-09 09:42:51.296556Z: [Thread 18404] (Msg 1/1) BIP1989I: Integration server is terminating due to a shutdown event. 
+2024-11-09 09:47:52.107388Z: [Thread 18404] (Msg 1/1) BIP2242E: Message flow 'BLOB_JSON_Flow' could not be reconfigured because it remained busy for longer than the timeout period of '300000' 
+2024-11-09 09:47:52.107696Z: [Thread 18404] (Msg 1/1) BIP2242E: Message flow 'BLOB_JSON_Flow' could not be reconfigured because it remained busy for longer than the timeout period of '300000' 
+2024-11-09 09:47:52.107784Z: [Thread 18404] (Msg 1/1) BIP9324W: The request to 'Stop' the deployed resource 'BLOB_JSON' of type 'Application' has failed. 
+2024-11-09 09:47:52.107816Z: [Thread 18404] (Msg 1/2) BIP9318E: Request to 'Stop' resource 'BLOB_JSON', 'BLOB_JSON' of type 'Application' failed. 
+2024-11-09 09:47:52.107832Z: [Thread 18404] (Msg 2/2) BIP2242E: Message flow 'BLOB_JSON_Flow' could not be reconfigured because it remained busy for longer than the timeout period of '300000' 

@@ -1,0 +1,87 @@
+import com.ibm.broker.javacompute.MbJavaComputeNode;
+import com.ibm.broker.plugin.MbException;
+import com.ibm.broker.plugin.MbMessage;
+import com.ibm.broker.plugin.MbMessageAssembly;
+import com.ibm.broker.plugin.MbOutputTerminal;
+import com.ibm.broker.plugin.MbUserException;
+
+public class Java_Compute_Node_Flow_JavaCompute extends MbJavaComputeNode {
+
+    public void evaluate(MbMessageAssembly inAssembly) throws MbException {
+        MbOutputTerminal out = getOutputTerminal("out");
+
+        // Retrieve the input message
+        MbMessage inMessage = inAssembly.getMessage();
+        MbMessageAssembly outAssembly = null;
+
+        try {
+            // Create new message as a copy of the input
+            MbMessage outMessage = new MbMessage();
+            outAssembly = new MbMessageAssembly(inAssembly, outMessage);
+
+            // Get the root element of the input XML message
+            MbElement inputRoot = inMessage.getRootElement();
+            
+            // Create an empty JSON message in the output message
+            MbElement outputRoot = outMessage.getRootElement().createElementAsLastChild("JSON");
+
+            // Copy XMLNSC input message to JSON output message
+            MbElement xmlnscElement = inputRoot.getLastChild();
+            MbElement jsonElement = outputRoot.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "Data", null);
+            
+            // Recursively convert XML to JSON
+            transformXMLToJSON(xmlnscElement, jsonElement);
+            
+        } catch (MbException e) {
+            throw e;
+        } catch (RuntimeException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new MbUserException(this, "evaluate()", "", "", e.toString(), null);
+        }
+
+        // Propagate the JSON output message
+        out.propagate(outAssembly);
+    }
+
+    private void transformXMLToJSON(MbElement xmlElement, MbElement jsonElement) throws MbException {
+        // Iterate over all children of the XML element
+        MbElement child = xmlElement.getFirstChild();
+        while (child != null) {
+            // Get the name and value of the XML element
+            String name = child.getName();
+            String value = (child.getValue() != null) ? child.getValue().toString() : null;
+
+            // Create a corresponding JSON element in the output
+            MbElement jsonChild = jsonElement.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, name, value);
+
+            // If the XML element has children, recursively transform them
+            if (child.getFirstChild() != null) {
+                transformXMLToJSON(child, jsonChild);
+            }
+
+            // Move to the next sibling
+            child = child.getNextSibling();
+        }
+    }
+
+    @Override
+    public void onPreSetupValidation() throws MbException {
+    }
+
+    @Override
+    public void onSetup() throws MbException {
+    }
+
+    @Override
+    public void onStart() throws MbException {
+    }
+
+    @Override
+    public void onStop(boolean wait) throws MbException {
+    }
+
+    @Override
+    public void onTearDown() throws MbException {
+    }
+}

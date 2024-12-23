@@ -1,0 +1,16 @@
+BIP1049E: The BAR file does not exist. 
+
+The bar file 'C:\Workspace\ER.bar' could not be found on the file system. 
+
+Reissue the command specifying the location of a valid bar file.
+
+BIP1048I: This command displays information about a BAR file. 
+
+Syntax:  
+ mqsireadbar -b barFileName [-r] [-v traceFileName]  
+  
+ Command options:  
+ '-b barFileName' The name of the BAR file to display.  
+ '-r' Recursively display the contents of applications and libraries.  
+ '-v traceFileName' Verbose internal trace is sent to the specified file.  
+

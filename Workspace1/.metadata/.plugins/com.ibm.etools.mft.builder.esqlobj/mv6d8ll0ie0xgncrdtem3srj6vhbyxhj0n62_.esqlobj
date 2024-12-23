@@ -1,0 +1,35 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+    BEGIN
+        -- Call the procedures
+        CALL CopyMessageHeaders();
+        CALL CopyEntireMessage();
+        RETURN TRUE;
+    END;
+
+    CREATE PROCEDURE CopyMessageHeaders() BEGIN
+        -- Declare local variables
+        DECLARE I INTEGER 1;
+        DECLARE J INTEGER;
+        
+        -- Determine the number of children in InputRoot
+        SET J = CARDINALITY(InputRoot.*[]);
+        
+        -- Copy message headers
+        WHILE I < J DO
+            SET OutputRoot.*[I] = InputRoot.*[I];
+            SET I = I + 1;
+        END WHILE;
+    END;
+
+    CREATE PROCEDURE CopyEntireMessage() BEGIN
+        -- Set OutputRoot to be the same as InputRoot
+        SET OutputRoot = InputRoot;
+
+        -- Define constants
+        CONSTANT CHARACTER MY_CONSTANT_STRING = 'Eidiko';
+        CONSTANT INTEGER MY_CONSTANT_INTEGER = 42;
+
+        -- Use constants
+        SET OutputRoot.XML.ConstantValue = MY_CONSTANT_STRING;
+        SET OutputRoot.XML.ConstantNumber = MY_CONSTANT_INTEGER;
+    END;

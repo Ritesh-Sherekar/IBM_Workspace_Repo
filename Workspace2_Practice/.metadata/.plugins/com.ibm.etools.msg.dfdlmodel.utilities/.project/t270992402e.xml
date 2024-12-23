@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="File_Fix_To_XML">
+  <XSDCollection href="platform:/resource/File_Fix_To_XML/FixToXML.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/File_Fix_To_XML/FixToXML.xsd#//FixToXML;XSDElementDeclaration" name="FixToXML"/>
+  </XSDCollection>
+  <XSDCollection href="platform:/resource/File_Fix_To_XML/IBMdefined/RecordFixLengthFieldFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/RecordFixLengthFieldFormat"/>
+</MessageBroker>

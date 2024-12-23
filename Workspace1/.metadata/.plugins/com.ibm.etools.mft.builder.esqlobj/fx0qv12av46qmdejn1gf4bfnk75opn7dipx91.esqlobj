@@ -1,0 +1,15 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- Extract student information from the LoopBack node response
+   DECLARE studentName CHARACTER;
+   DECLARE studentAge INTEGER;
+
+   SET studentName = InputRoot.JSON.Data.Student.Name;
+   SET studentAge = InputRoot.JSON.Data.Student.Age;
+
+   -- Build the output message
+   SET OutputRoot.JSON.Data.Response.ID = InputRoot.JSON.Data.Student.ID;
+   SET OutputRoot.JSON.Data.Response.Name = studentName;
+   SET OutputRoot.JSON.Data.Response.Age = studentAge;
+
+	END;

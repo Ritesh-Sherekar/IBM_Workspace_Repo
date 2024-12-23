@@ -1,0 +1,41 @@
+package kaymant;
+
+	import com.ibm.broker.javacompute.MbJavaComputeNode;
+	import com.ibm.broker.plugin.MbException;
+	import com.ibm.broker.plugin.MbMessage;
+	import com.ibm.broker.plugin.MbMessageAssembly;
+	import com.ibm.broker.plugin.MbOutputTerminal;
+	import org.json.JSONObject;
+	import org.json.XML;
+
+	public class Java_Node_Flow_JavaCompute extends MbJavaComputeNode {
+	    
+	    public void evaluate(MbMessageAssembly inAssembly) throws MbException {
+	        MbOutputTerminal out = getOutputTerminal("out");
+	        
+	        MbMessage inMessage = inAssembly.getMessage();
+	        MbMessage outMessage = new MbMessage();
+	        MbMessageAssembly outAssembly = new MbMessageAssembly(inAssembly, outMessage);
+
+	        try {
+	            // Copy message headers
+	            outMessage = inMessage.copyMessageHeaders();
+
+	            // Get XML content from InputRoot.XMLNSC
+	            String xmlContent = inMessage.getRootElement().getLastChild().getDOMNode().toString();
+
+	            // Convert XML to JSON using org.json library
+	            JSONObject jsonObject = XML.toJSONObject(xmlContent);
+	            String jsonOutput = jsonObject.toString();
+
+	            // Set JSON output to OutputRoot.JSON.Data
+	            outMessage.getRootElement().createElementAsLastChild("JSON").createElementAsLastChild("Data").setValue(jsonOutput);
+	            
+	        } catch (Exception e) {
+	            throw new MbException("Error in JCN: " + e.getMessage());
+	        }
+
+	        // Propagate the message
+	        out.propagate(outAssembly);
+	    }
+	}

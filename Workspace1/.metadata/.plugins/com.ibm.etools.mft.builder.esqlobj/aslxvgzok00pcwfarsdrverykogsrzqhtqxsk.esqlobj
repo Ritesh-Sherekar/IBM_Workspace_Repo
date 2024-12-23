@@ -1,0 +1,17 @@
+CREATE FILTER MODULE Filter_Flow_Filter
+    CREATE FUNCTION Main() RETURNS BOOLEAN
+    BEGIN
+       
+      DECLARE com REFERENCE TO InputRoot.XMLNSC.root;
+
+        DECLARE ref CHARACTER;
+      
+        SET ref = com.RequestType;
+        
+        IF ref = 'Eidiko' THEN
+            RETURN TRUE;
+        ELSE
+            RETURN FALSE;
+        END IF;
+    END;
+END MODULE;

@@ -1,0 +1,79 @@
+2024-12-07 01:08:27.187128: BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.12.0' (64-bit) 
+2024-12-07 01:08:27.207860: BIP9905I: Initializing resource managers. 
+Listening for transport dt_socket at address: 9997
+2024-12-07 01:08:29.683586: BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-12-07 01:08:30.048302: BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-12-07 01:08:32.220428: BIP9906I: Reading deployed resources. 
+2024-12-07 01:08:32.233810: BIP9907I: Initializing deployed resources. 
+2024-12-07 01:08:32.235774: BIP2155I: About to 'Initialize' the deployed resource 'Demo' of type 'Application'. 
+2024-12-07 01:08:32.248906: BIP2155I: About to 'Initialize' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 01:08:32.259548: BIP2155I: About to 'Initialize' the deployed resource 'Rest_1' of type 'RestAPI'. 
+2024-12-07 01:08:32.738274: BIP2155I: About to 'Start' the deployed resource 'Demo' of type 'Application'. 
+2024-12-07 01:08:32.793160: BIP3132I: The HTTP Listener has started listening on port '7800' for 'http' connections. 
+2024-12-07 01:08:32.793220: BIP1996I: Listening on HTTP URL '/t'. 
+Started native listener for HTTP input node on port 7800 for URL /t
+2024-12-07 01:08:32.793388: BIP2269I: Deployed resource 'Demo_flow' (uuid='Demo_flow',type='MessageFlow') started successfully. 
+2024-12-07 01:08:32.793450: BIP9332I: Application 'Demo' has been reloaded successfully. 
+2024-12-07 01:08:32.793510: BIP2155I: About to 'Start' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 01:08:32.793896: BIP1996I: Listening on HTTP URL '/d'. 
+Started native listener for HTTP input node on port 7800 for URL /d
+2024-12-07 01:08:32.794044: BIP2269I: Deployed resource 'Demo2' (uuid='Demo2',type='MessageFlow') started successfully. 
+2024-12-07 01:08:32.794106: BIP9332I: Application 'Demo2' has been reloaded successfully. 
+2024-12-07 01:08:32.794266: BIP2155I: About to 'Start' the deployed resource 'Rest_1' of type 'RestAPI'. 
+2024-12-07 01:08:32.794552: BIP1996I: Listening on HTTP URL '/rest_1/v1*'. 
+Started native listener for HTTP input node on port 7800 for URL /rest_1/v1*
+2024-12-07 01:08:32.805058: BIP2269I: Deployed resource 'gen.Rest_1' (uuid='gen.Rest_1',type='MessageFlow') started successfully. 
+2024-12-07 01:08:32.805130: BIP9332I: RestAPI 'Rest_1' has been reloaded successfully. 
+2024-12-07 01:08:33.332790: BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-12-07 01:08:33.346832: BIP3132I: The HTTP Listener has started listening on port '7601' for 'RestAdmin http' connections. 
+2024-12-07 01:08:33.347984: BIP1991I: Integration server has finished initialization. 
+2024-12-07 01:42:48.983620: BIP2152I: Configuration message received. 
+2024-12-07 01:42:48.993260: BIP2155I: About to 'Stop' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 01:42:50.983000: BIP2271I: Deployed resource 'Demo2' (uuid='Demo2',type='MessageFlow') successfully stopped. 
+2024-12-07 01:42:50.983124: BIP2155I: About to 'TearDown' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 01:42:51.036308: BIP2155I: About to 'Initialize' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 01:42:51.069200: BIP2155I: About to 'Start' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 01:42:51.069576: BIP1996I: Listening on HTTP URL '/d'. 
+Started native listener for HTTP input node on port 7800 for URL /d
+2024-12-07 01:42:51.069768: BIP2269I: Deployed resource 'Demo2' (uuid='Demo2',type='MessageFlow') started successfully. 
+2024-12-07 01:42:51.069828: BIP9332I: Application 'Demo2' has been changed successfully. 
+2024-12-07 01:42:51.069920: BIP9326I: The source 'Demo2project.generated.bar' has been successfully deployed. 
+2024-12-07 01:42:51.070252: BIP2154I: Integration server finished with Configuration message. 
+2024-12-07 03:46:34.699036: BIP2152I: Configuration message received. 
+2024-12-07 03:46:34.718952: BIP2155I: About to 'Stop' the deployed resource 'Rest_1' of type 'RestAPI'. 
+2024-12-07 03:46:35.262212: BIP2271I: Deployed resource 'gen.Rest_1' (uuid='gen.Rest_1',type='MessageFlow') successfully stopped. 
+2024-12-07 03:46:35.262332: BIP2155I: About to 'TearDown' the deployed resource 'Rest_1' of type 'RestAPI'. 
+2024-12-07 03:46:35.335640: BIP2155I: About to 'Initialize' the deployed resource 'Rest_1' of type 'RestAPI'. 
+2024-12-07 03:46:35.390684: BIP2155I: About to 'Start' the deployed resource 'Rest_1' of type 'RestAPI'. 
+2024-12-07 03:46:35.391288: BIP1996I: Listening on HTTP URL '/rest_1/v1*'. 
+Started native listener for HTTP input node on port 7800 for URL /rest_1/v1*
+2024-12-07 03:46:35.392352: BIP2269I: Deployed resource 'gen.Rest_1' (uuid='gen.Rest_1',type='MessageFlow') started successfully. 
+2024-12-07 03:46:35.392444: BIP9332I: RestAPI 'Rest_1' has been changed successfully. 
+2024-12-07 03:46:35.392508: BIP9326I: The source 'Rest_1project.generated.bar' has been successfully deployed. 
+2024-12-07 03:46:35.392840: BIP2154I: Integration server finished with Configuration message. 
+2024-12-07 05:27:08.367813: BIP2152I: Configuration message received. 
+2024-12-07 05:27:08.368045: BIP2153I: About to 'deleteAll' an integration server. 
+2024-12-07 05:27:08.369192: BIP2155I: About to 'Stop' the deployed resource 'Demo' of type 'Application'. 
+2024-12-07 05:27:11.673054: BIP2271I: Deployed resource 'Demo_flow' (uuid='Demo_flow',type='MessageFlow') successfully stopped. 
+2024-12-07 05:27:11.673197: BIP2155I: About to 'TearDown' the deployed resource 'Demo' of type 'Application'. 
+2024-12-07 05:27:11.713070: BIP2155I: About to 'Stop' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 05:27:12.451382: BIP2271I: Deployed resource 'Demo2' (uuid='Demo2',type='MessageFlow') successfully stopped. 
+2024-12-07 05:27:12.451516: BIP2155I: About to 'TearDown' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 05:27:12.492611: BIP9521I: Application 'Demo' has been deleted. 
+2024-12-07 05:27:12.497025: BIP9521I: Application 'Demo2' has been deleted. 
+2024-12-07 05:27:12.497158: BIP2155I: About to 'Stop' the deployed resource 'Rest_1' of type 'RestAPI'. 
+2024-12-07 05:27:12.821102: BIP2271I: Deployed resource 'gen.Rest_1' (uuid='gen.Rest_1',type='MessageFlow') successfully stopped. 
+2024-12-07 05:27:12.821257: BIP2155I: About to 'TearDown' the deployed resource 'Rest_1' of type 'RestAPI'. 
+2024-12-07 05:27:12.851097: BIP3133I: The HTTP Listener has stopped listening on port '7800' for 'http' connections. 
+2024-12-07 05:27:12.871276: BIP9521I: RestAPI 'Rest_1' has been deleted. 
+2024-12-07 05:27:12.876394: BIP2154I: Integration server finished with Configuration message. 
+2024-12-07 05:28:58.351268: BIP2152I: Configuration message received. 
+2024-12-07 05:28:58.379912: BIP2155I: About to 'Initialize' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 05:28:58.417540: BIP2155I: About to 'Start' the deployed resource 'Demo2' of type 'Application'. 
+2024-12-07 05:28:58.461096: BIP3132I: The HTTP Listener has started listening on port '7800' for 'http' connections. 
+2024-12-07 05:28:58.461204: BIP1996I: Listening on HTTP URL '/d'. 
+Started native listener for HTTP input node on port 7800 for URL /d
+2024-12-07 05:28:58.461448: BIP2269I: Deployed resource 'Demo2' (uuid='Demo2',type='MessageFlow') started successfully. 
+2024-12-07 05:28:58.461524: BIP9332I: Application 'Demo2' has been created successfully. 
+2024-12-07 05:28:58.461588: BIP9326I: The source 'Demo2project.generated.bar' has been successfully deployed. 
+2024-12-07 05:28:58.461972: BIP2154I: Integration server finished with Configuration message. 

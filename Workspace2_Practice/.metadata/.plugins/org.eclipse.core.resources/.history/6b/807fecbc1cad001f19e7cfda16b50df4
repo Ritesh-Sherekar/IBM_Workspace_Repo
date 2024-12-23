@@ -1,0 +1,14 @@
+
+
+Importing file: C:\Workspace2_Practice\WS_Uname\wsunameWSDLFile.wsdl
+
+The WSDL import will proceed with bindings wsunameWSDLFileSOAP.
+Creating wsdl schema document for file:///C:/Workspace2_Practice/WS_Uname/wsunameWSDLFile.wsdl.
+Parsing wsdl binding {http://www.example.org/wsunameWSDLFile/}wsunameWSDLFileSOAP.
+Parsing wsdl binding input NewOperation.
+Parsing wsdl binding output NewOperation.
+Processing doc style for operation NewOperation.
+Populating WSDL schema wsunameWSDLFile.xsd.
+Creating file wsunameWSDLFile.xsd in the workspace.
+Creating file wsunameWSDLFile_InlineSchema1.xsd in the workspace.
+Copying source WSDL wsunameWSDLFile.wsdl to wsunameWSDLFile.wsdl.

@@ -1,0 +1,11 @@
+CREATE DATABASE MODULE Database_Node_Flow_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE var CHARACTER 'INSERT INTO EMP(ID ,NAME ,SALARY ,AGE) VALUES (?,?,?,?)';
+		SET Environment.data[] = PASSTHRU(var, 4, 'Eidiko' ,19020 ,24);
+		SET OutputRoot.XMLNSC.Result = 'Record Inserted Successfully';
+		RETURN TRUE;
+		RETURN TRUE;
+	END;
+
+END MODULE;

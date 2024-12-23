@@ -1,0 +1,10 @@
+CREATE COMPUTE MODULE LoobBack_MangoDB_Update_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- Retrive Data From Database
+		DECLARE studentID CHARACTER;
+		SET OutputLocalEnvironment.Destination.Loopback.Request.Id = InputRoot.JSON.Data.id; 
+		SET OutputRoot = InputRoot ;
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

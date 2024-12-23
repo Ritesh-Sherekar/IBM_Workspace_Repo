@@ -1,0 +1,57 @@
+
+==============================================
+
+!Wed Sep 04 14:06:04 PDT 2024
+
+Processing file DB_LOG\DB_LOG_Flow_2.msgflow.
+Successfully added file DB_LOG\DB_LOG_Flow_2.msgflow to BAR file.
+
+==============================================
+
+!Wed Sep 04 14:06:04 PDT 2024
+
+Processing file DB_LOG\DB_LOG_Flow.msgflow.
+Successfully added file DB_LOG\DB_LOG_Flow.msgflow to BAR file.
+
+==============================================
+
+!Wed Sep 04 14:06:04 PDT 2024
+
+Processing file DB_LOG\DB_LOG_Flow_2_Compute.esql.
+Dependent ESQL file DB_LOG_Flow_Compute.esql is added to the BAR file.
+
+Successfully added file DB_LOG\DB_LOG_Flow_2_Compute.esql to BAR file.
+
+==============================================
+
+!Wed Sep 04 14:06:04 PDT 2024
+
+Processing file DB_LOG\DB_LOG_Flow_Compute.esql.
+Successfully added file DB_LOG\DB_LOG_Flow_Compute.esql to BAR file.
+
+==============================================
+
+!Wed Sep 04 14:06:04 PDT 2024
+
+Processing file DB_LOG\DB_LOG_Flow_Compute1.esql.
+Successfully added file DB_LOG\DB_LOG_Flow_Compute1.esql to BAR file.
+
+==============================================
+
+!Wed Sep 04 14:06:04 PDT 2024
+
+Processing file DB_LOG\application.descriptor.
+Successfully added file DB_LOG\application.descriptor to BAR file.
+Elapsed time: 0 second(s).
+
+Successfully added file DB_LOG\application.descriptor to BAR file.
+
+==============================================
+
+!Wed Sep 04 14:06:04 PDT 2024
+
+Processing file DB_LOG\application.descriptor.
+Successfully added file DB_LOG\application.descriptor to BAR file.
+Elapsed time: 0 second(s).
+
+Successfully added file DB_LOG\application.descriptor to BAR file.

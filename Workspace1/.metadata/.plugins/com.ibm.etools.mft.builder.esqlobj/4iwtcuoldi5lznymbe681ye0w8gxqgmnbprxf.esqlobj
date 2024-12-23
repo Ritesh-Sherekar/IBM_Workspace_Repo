@@ -1,0 +1,14 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+    BEGIN
+        -- Use a statement to handle SQL execution
+        DECLARE sqlStatement CHARACTER;
+        
+        -- Define the SQL statement with placeholders
+        SET sqlStatement = 'INSERT INTO TABLE1 (ID, Name) VALUES (?, ?)';
+        
+        -- Execute the SQL statement with parameters
+        INSERT INTO Database.TABLE1 (ID, Name)
+        VALUES (OutputLocalEnvironment.Destination.SQL.Parameter[1], OutputLocalEnvironment.Destination.SQL.Parameter[2]);
+        
+        RETURN TRUE;
+    END;

@@ -1,0 +1,73 @@
+package kaymant;
+
+import com.ibm.broker.javacompute.MbJavaComputeNode;
+import com.ibm.broker.plugin.MbElement;
+import com.ibm.broker.plugin.MbException;
+import com.ibm.broker.plugin.MbMessage;
+import com.ibm.broker.plugin.MbMessageAssembly;
+import com.ibm.broker.plugin.MbOutputTerminal;
+import com.ibm.broker.plugin.MbUserException;
+
+public class Java_Node_Flow_JavaComput extends MbJavaComputeNode {
+
+    public void evaluate(MbMessageAssembly inAssembly) throws MbException {
+        MbOutputTerminal out = getOutputTerminal("out");
+        MbOutputTerminal alt = getOutputTerminal("alternate");
+
+        MbMessage inMessage = inAssembly.getMessage();
+        MbMessageAssembly outAssembly = null;
+        try {
+            // Create a new message as a copy of the input
+            MbMessage outMessage = new MbMessage(inMessage);
+            outAssembly = new MbMessageAssembly(inAssembly, outMessage);
+
+            // First, Get the values from Input Tree (XML)
+            MbElement oGetRootMessage = inAssembly.getMessage().getRootElement();
+
+            MbElement Name = oGetRootMessage.getFirstElementByPath("XMLNSC/Employee/Name");
+            MbElement Lname = oGetRootMessage.getFirstElementByPath("XMLNSC/Employee/LName");
+            MbElement Company = oGetRootMessage.getFirstElementByPath("XMLNSC/Employee/Company");
+            MbElement Designation = oGetRootMessage.getFirstElementByPath("XMLNSC/Employee/Designation");
+
+            // Create Output Root for the output message in JSON format
+            MbElement outJsonRoot = outAssembly.getMessage().getRootElement().createElementAsLastChild(MbElement.TYPE_NAME, "JSON", null);
+            MbElement jsonData = outJsonRoot.createElementAsLastChild(MbElement.TYPE_NAME, "Data", null);
+            MbElement jsonResponse = jsonData.createElementAsLastChild(MbElement.TYPE_NAME, "Response", null);
+            MbElement jsonEmployeeDetails = jsonResponse.createElementAsLastChild(MbElement.TYPE_NAME, "EmployeeDetails", null);
+
+            // Map the values to the output JSON structure
+            jsonEmployeeDetails.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "EmployeeName", Name.getValue());
+            jsonEmployeeDetails.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "EmployeeLastName", Lname.getValue());
+            jsonEmployeeDetails.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "EmployeeCompany", Company.getValue());
+            jsonEmployeeDetails.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "EmployeeDesignation", Designation.getValue());
+
+            // End of logic
+
+        } catch (MbException e) {
+            throw e;
+        } catch (RuntimeException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new MbUserException(this, "evaluate()", "", "", e.toString(), null);
+        }
+
+        // Propagate the message to the 'out' terminal
+        out.propagate(outAssembly);
+    }
+
+    @Override
+    public void onPreSetupValidation() throws MbException {}
+
+    @Override
+    public void onSetup() throws MbException {}
+
+    @Override
+    public void onStart() throws MbException {}
+
+    @Override
+    public void onStop(boolean wait) throws MbException {}
+
+    @Override
+    public void onTearDown() throws MbException {}
+
+}

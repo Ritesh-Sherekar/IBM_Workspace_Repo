@@ -1,0 +1,13 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+    BEGIN
+       DECLARE var REFERENCE TO Root.JSON.Data.Name;
+        IF var = 'Eidiko' THEN
+            RETURN TRUE;
+        ELSEIF var = 'System' THEN
+        	RETURN FALSE;
+        ELSE
+        	RETURN UNKNOWN;
+        END IF; 	
+        RETURN TRUE;
+    END;
+    

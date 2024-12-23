@@ -1,0 +1,169 @@
+2024-09-03 16:57:21.724084: BIP1990I: Integration server 'TEST_SERVER12' starting initialization; version '12.0.12.0' (64-bit) 
+2024-09-03 16:57:21.741542: BIP9905I: Initializing resource managers. 
+Listening for transport dt_socket at address: 9998
+2024-09-03 16:57:23.426048: BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-09-03 16:57:23.658698: BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-09-03 16:57:25.335304: BIP9906I: Reading deployed resources. 
+2024-09-03 16:57:25.338506: BIP9907I: Initializing deployed resources. 
+2024-09-03 16:57:25.351910: BIP2155I: About to 'Initialize' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 16:57:25.511284: BIP2155I: About to 'Start' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 16:57:25.527744: BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-03 16:57:25.527802: BIP1996I: Listening on HTTP URL '/consoleLog'. 
+Started native listener for HTTP input node on port 7801 for URL /consoleLog
+2024-09-03 16:57:25.527950: BIP2269I: Deployed resource 'ConsoleLog_Flow' (uuid='ConsoleLog_Flow',type='MessageFlow') started successfully. 
+2024-09-03 16:57:25.528002: BIP9332I: Application 'ConsoleLog' has been reloaded successfully. 
+2024-09-03 16:57:25.843794: BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-09-03 16:57:25.854960: BIP3144S: An error has occurred during HTTP listener startup: the specified TCPIP port (7601) is already in use. 
+2024-09-03 16:57:26.332780: BIP1991I: Integration server has finished initialization. 
+2024-09-03 16:57:40.711624: BIP2155I: About to 'Stop' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 16:57:41.517992: BIP2271I: Deployed resource 'ConsoleLog_Flow' (uuid='ConsoleLog_Flow',type='MessageFlow') successfully stopped. 
+2024-09-03 16:57:41.518436: BIP2155I: About to 'TearDown' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 16:57:41.548120: BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-03 16:57:41.587148: BIP9521I: Application 'ConsoleLog' has been deleted. 
+2024-09-03 16:57:46.476440: BIP2152I: Configuration message received. 
+2024-09-03 16:57:46.551460: BIP2155I: About to 'Initialize' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 16:57:46.583824: BIP2155I: About to 'Start' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 16:57:46.592808: BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-03 16:57:46.592868: BIP1996I: Listening on HTTP URL '/consoleLog'. 
+Started native listener for HTTP input node on port 7801 for URL /consoleLog
+2024-09-03 16:57:46.593048: BIP2269I: Deployed resource 'ConsoleLog_Flow' (uuid='ConsoleLog_Flow',type='MessageFlow') started successfully. 
+2024-09-03 16:57:46.593108: BIP9332I: Application 'ConsoleLog' has been created successfully. 
+2024-09-03 16:57:46.593144: BIP9326I: The source 'ConsoleLogproject.generated.bar' has been successfully deployed. 
+2024-09-03 16:57:46.593420: BIP2154I: Integration server finished with Configuration message. 
+2024-09-03 16:58:40.722236: BIP2176S: Could not find message '2951' in catalog 'BIPMSG', inserts are 'ddsds' 'ConsoleLog_Flow.Compute' '{2}' '{3}' '{4}' '{5}' '{6}'
+2024-09-03 17:00:06.490399: BIP2155I: About to 'Stop' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 17:00:10.162877: BIP2271I: Deployed resource 'ConsoleLog_Flow' (uuid='ConsoleLog_Flow',type='MessageFlow') successfully stopped. 
+2024-09-03 17:00:10.163985: BIP2155I: About to 'TearDown' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 17:00:10.174909: BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-03 17:00:10.190563: BIP9521I: Application 'ConsoleLog' has been deleted. 
+2024-09-03 17:10:14.904153: BIP2152I: Configuration message received. 
+2024-09-03 17:10:14.927923: BIP2155I: About to 'Initialize' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 17:10:14.960216: BIP2155I: About to 'Start' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-03 17:10:14.974800: BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-03 17:10:14.974901: BIP1996I: Listening on HTTP URL '/consoleLog'. 
+Started native listener for HTTP input node on port 7801 for URL /consoleLog
+2024-09-03 17:10:14.975183: BIP2269I: Deployed resource 'ConsoleLog_Flow' (uuid='ConsoleLog_Flow',type='MessageFlow') started successfully. 
+2024-09-03 17:10:14.975266: BIP9332I: Application 'ConsoleLog' has been created successfully. 
+2024-09-03 17:10:14.975307: BIP9326I: The source 'ConsoleLogproject.generated.bar' has been successfully deployed. 
+2024-09-03 17:10:14.975553: BIP2154I: Integration server finished with Configuration message. 
+2024-09-03 17:11:02.542325: BIP2176S: Could not find message '2951' in catalog 'BIPMSG', inserts are 'ddsds' 'ConsoleLog_Flow.Compute' '{2}' '{3}' '{4}' '{5}' '{6}'
+2024-09-04 08:54:56.075132: BIP2152I: Configuration message received. 
+2024-09-04 08:54:56.075256: BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-04 08:54:56.075848: BIP2155I: About to 'Stop' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-04 08:54:58.834120: BIP2271I: Deployed resource 'ConsoleLog_Flow' (uuid='ConsoleLog_Flow',type='MessageFlow') successfully stopped. 
+2024-09-04 08:54:58.835160: BIP2155I: About to 'TearDown' the deployed resource 'ConsoleLog' of type 'Application'. 
+2024-09-04 08:54:58.842788: BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-04 08:54:58.867936: BIP9521I: Application 'ConsoleLog' has been deleted. 
+2024-09-04 08:54:58.886100: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 08:57:40.767708: BIP2152I: Configuration message received. 
+2024-09-04 08:57:40.792724: BIP2155I: About to 'Initialize' the deployed resource 'Console_Log' of type 'Application'. 
+2024-09-04 08:57:40.850868: BIP2155I: About to 'Start' the deployed resource 'Console_Log' of type 'Application'. 
+2024-09-04 08:57:40.861308: BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-04 08:57:40.861440: BIP1996I: Listening on HTTP URL '/consollog'. 
+Started native listener for HTTP input node on port 7801 for URL /consollog
+2024-09-04 08:57:40.861620: BIP2269I: Deployed resource 'Consol_Log_Flow' (uuid='Consol_Log_Flow',type='MessageFlow') started successfully. 
+2024-09-04 08:57:40.861780: BIP9332I: Application 'Console_Log' has been created successfully. 
+2024-09-04 08:57:40.862828: BIP9326I: The source 'Console_Logproject.generated.bar' has been successfully deployed. 
+2024-09-04 08:57:40.863160: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 10:22:31.456116: BIP2152I: Configuration message received. 
+2024-09-04 10:22:31.546470: BIP2155I: About to 'Initialize' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 10:22:31.617898: BIP2155I: About to 'Start' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 10:22:31.618624: BIP1996I: Listening on HTTP URL '/path1'. 
+Started native listener for HTTP input node on port 7801 for URL /path1
+2024-09-04 10:22:31.618858: BIP2269I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') started successfully. 
+2024-09-04 10:22:31.619188: BIP1996I: Listening on HTTP URL '/path2'. 
+Started native listener for HTTP input node on port 7801 for URL /path2
+2024-09-04 10:22:31.619342: BIP2269I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') started successfully. 
+2024-09-04 10:22:31.619418: BIP9332I: Application 'DB_LOG' has been created successfully. 
+2024-09-04 10:22:31.619478: BIP9326I: The source 'DB_LOGproject.generated.bar' has been successfully deployed. 
+2024-09-04 10:22:31.619946: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 10:22:45.695024: BIP2155I: About to 'Stop' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 10:22:47.647808: BIP2271I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') successfully stopped. 
+2024-09-04 10:22:47.648524: BIP2271I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') successfully stopped. 
+2024-09-04 10:22:47.648968: BIP2155I: About to 'TearDown' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 10:22:47.694756: BIP9521I: Application 'DB_LOG' has been deleted. 
+2024-09-04 11:14:02.799609: BIP2152I: Configuration message received. 
+2024-09-04 11:14:02.838082: BIP2155I: About to 'Initialize' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 11:14:02.917100: BIP2155I: About to 'Start' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 11:14:02.917894: BIP1996I: Listening on HTTP URL '/path1'. 
+Started native listener for HTTP input node on port 7801 for URL /path1
+2024-09-04 11:14:02.918119: BIP2269I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') started successfully. 
+2024-09-04 11:14:02.918447: BIP1996I: Listening on HTTP URL '/path2'. 
+Started native listener for HTTP input node on port 7801 for URL /path2
+2024-09-04 11:14:02.918551: BIP2269I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') started successfully. 
+2024-09-04 11:14:02.918609: BIP9332I: Application 'DB_LOG' has been created successfully. 
+2024-09-04 11:14:02.918666: BIP9326I: The source 'DB_LOGproject.generated.bar' has been successfully deployed. 
+2024-09-04 11:14:02.919170: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 13:58:08.415811: BIP2152I: Configuration message received. 
+2024-09-04 13:58:08.437699: BIP2155I: About to 'Stop' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 13:58:10.854389: BIP2271I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') successfully stopped. 
+2024-09-04 13:58:10.871607: BIP2271I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') successfully stopped. 
+2024-09-04 13:58:10.871891: BIP2155I: About to 'TearDown' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 13:58:10.977433: BIP2155I: About to 'Initialize' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 13:58:11.023053: BIP2155I: About to 'Start' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 13:58:11.023529: BIP1996I: Listening on HTTP URL '/path1'. 
+Started native listener for HTTP input node on port 7801 for URL /path1
+2024-09-04 13:58:11.023703: BIP2269I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') started successfully. 
+2024-09-04 13:58:11.023902: BIP1996I: Listening on HTTP URL '/path2'. 
+Started native listener for HTTP input node on port 7801 for URL /path2
+2024-09-04 13:58:11.024000: BIP2269I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') started successfully. 
+2024-09-04 13:58:11.024238: BIP9332I: Application 'DB_LOG' has been changed successfully. 
+2024-09-04 13:58:11.024336: BIP9326I: The source 'DB_LOGproject.generated.bar' has been successfully deployed. 
+2024-09-04 13:58:11.024610: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 14:02:41.969244: BIP2152I: Configuration message received. 
+2024-09-04 14:02:41.969340: BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-04 14:02:41.970192: BIP2155I: About to 'Stop' the deployed resource 'Console_Log' of type 'Application'. 
+2024-09-04 14:02:46.138136: BIP2271I: Deployed resource 'Consol_Log_Flow' (uuid='Consol_Log_Flow',type='MessageFlow') successfully stopped. 
+2024-09-04 14:02:46.139700: BIP2155I: About to 'TearDown' the deployed resource 'Console_Log' of type 'Application'. 
+2024-09-04 14:02:46.175864: BIP2155I: About to 'Stop' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:02:46.179360: BIP2271I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') successfully stopped. 
+2024-09-04 14:02:46.179480: BIP2271I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') successfully stopped. 
+2024-09-04 14:02:46.179532: BIP2155I: About to 'TearDown' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:02:46.219212: BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-04 14:02:46.238724: BIP9521I: Application 'Console_Log' has been deleted. 
+2024-09-04 14:02:46.248676: BIP9521I: Application 'DB_LOG' has been deleted. 
+2024-09-04 14:02:46.252108: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 14:03:39.269548: BIP2152I: Configuration message received. 
+2024-09-04 14:03:39.291372: BIP2155I: About to 'Initialize' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:03:39.338832: BIP2155I: About to 'Start' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:03:39.359820: BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-04 14:03:39.359904: BIP1996I: Listening on HTTP URL '/path1'. 
+Started native listener for HTTP input node on port 7801 for URL /path1
+2024-09-04 14:03:39.360100: BIP2269I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') started successfully. 
+2024-09-04 14:03:39.360384: BIP1996I: Listening on HTTP URL '/path2'. 
+Started native listener for HTTP input node on port 7801 for URL /path2
+2024-09-04 14:03:39.360504: BIP2269I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') started successfully. 
+2024-09-04 14:03:39.360604: BIP9332I: Application 'DB_LOG' has been created successfully. 
+2024-09-04 14:03:39.360676: BIP9326I: The source 'DB_LOGproject.generated.bar' has been successfully deployed. 
+2024-09-04 14:03:39.360952: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 14:06:25.428142: BIP2152I: Configuration message received. 
+2024-09-04 14:06:25.428204: BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-04 14:06:25.428948: BIP2155I: About to 'Stop' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:06:25.568896: BIP2271I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') successfully stopped. 
+2024-09-04 14:06:25.569534: BIP2271I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') successfully stopped. 
+2024-09-04 14:06:25.569682: BIP2155I: About to 'TearDown' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:06:25.614206: BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-04 14:06:25.632696: BIP9521I: Application 'DB_LOG' has been deleted. 
+2024-09-04 14:06:25.633522: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 14:09:46.869956: BIP2152I: Configuration message received. 
+2024-09-04 14:09:46.904912: BIP2155I: About to 'Initialize' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:09:46.950344: BIP2155I: About to 'Start' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:09:46.961504: BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-04 14:09:46.961580: BIP1996I: Listening on HTTP URL '/path1'. 
+Started native listener for HTTP input node on port 7801 for URL /path1
+2024-09-04 14:09:46.961756: BIP2269I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') started successfully. 
+2024-09-04 14:09:46.962012: BIP1996I: Listening on HTTP URL '/path2'. 
+Started native listener for HTTP input node on port 7801 for URL /path2
+2024-09-04 14:09:46.962216: BIP2269I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') started successfully. 
+2024-09-04 14:09:46.962296: BIP9332I: Application 'DB_LOG' has been created successfully. 
+2024-09-04 14:09:46.962332: BIP9326I: The source 'DB_LOGproject.generated.bar' has been successfully deployed. 
+2024-09-04 14:09:46.962740: BIP2154I: Integration server finished with Configuration message. 
+2024-09-04 14:18:54.995132: BIP1989I: Integration server is terminating due to a shutdown event. 
+2024-09-04 14:18:55.009724: BIP2155I: About to 'Stop' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:18:58.818348: BIP2271I: Deployed resource 'DB_LOG_Flow' (uuid='DB_LOG_Flow',type='MessageFlow') successfully stopped. 
+2024-09-04 14:18:58.819008: BIP2271I: Deployed resource 'DB_LOG_Flow_2' (uuid='DB_LOG_Flow_2',type='MessageFlow') successfully stopped. 
+2024-09-04 14:19:00.008688: BIP2155I: About to 'TearDown' the deployed resource 'DB_LOG' of type 'Application'. 
+2024-09-04 14:19:00.068399: BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+node.js process.on('exit') event emitted with exitCode of 0
+node.js process.on('exit') event emitted with exitCode of 0
+2024-09-04 14:19:06.008819: BIP1992I: Integration server 'TEST_SERVER12' stopped. 

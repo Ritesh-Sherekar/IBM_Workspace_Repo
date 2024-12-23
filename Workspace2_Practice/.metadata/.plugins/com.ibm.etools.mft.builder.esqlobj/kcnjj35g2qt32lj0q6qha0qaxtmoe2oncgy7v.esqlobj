@@ -1,0 +1,4 @@
+CREATE PROCEDURE Sum (IN a INTEGER, IN b INTEGER)
+RETURNS INTEGER
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker1.myPackage.myClass.myMethod";

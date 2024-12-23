@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.ibm.dfdl.launching.testParse">
+		<item key="ParserInputsFromFile" value="true"/>
+		<item key="SerializerInputsFromFile" value="true"/>
+		<item key="Encoding" value="UTF-8"/>
+		<item key="BinaryFloarRep" value="ieee"/>
+		<item key="ByteOrder" value="bigEndian"/>
+		<item key="RuntimeValidation" value="false"/>
+		<list key="ParserInputs">
+			<item value="C:\Users\Sreenivas Bandaru\Documents\Xmldata.xml.txt"/>
+			<item value="C:\Users\Sreenivas Bandaru\Desktop\Delimeated.txt"/>
+			<item value="C:\Users\Sreenivas Bandaru\Downloads\fixed.txt"/>
+			<item value="C:\Users\Sreenivas Bandaru\Downloads\fixed2.txt"/>
+		</list>
+		<list key="SerializerInputs">
+		</list>
+	</section>
+</section>

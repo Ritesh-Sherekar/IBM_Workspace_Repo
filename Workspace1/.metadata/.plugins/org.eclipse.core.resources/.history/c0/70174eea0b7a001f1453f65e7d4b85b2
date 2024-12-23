@@ -1,0 +1,79 @@
+package kaymant;
+
+
+		import com.ibm.broker.javacompute.MbJavaComputeNode;
+		import com.ibm.broker.plugin.MbException;
+		import com.ibm.broker.plugin.MbMessage;
+		import com.ibm.broker.plugin.MbMessageAssembly;
+		import com.ibm.broker.plugin.MbOutputTerminal;
+		import org.w3c.dom.Document;
+		import org.w3c.dom.Element;
+		import org.w3c.dom.NodeList;
+
+		import javax.xml.parsers.DocumentBuilder;
+		import javax.xml.parsers.DocumentBuilderFactory;
+		import java.io.StringWriter;
+
+		public class Java_Node_Flow_JavaCompute extends MbJavaComputeNode {
+
+		    public void evaluate(MbMessageAssembly inAssembly) throws MbException {
+		        MbOutputTerminal out = getOutputTerminal("out");
+		        
+		        MbMessage inMessage = inAssembly.getMessage();
+		        MbMessage outMessage = new MbMessage();
+		        MbMessageAssembly outAssembly = new MbMessageAssembly(inAssembly, outMessage);
+
+		        try {
+		            // Copy message headers
+		            outMessage = inMessage.copyMessageHeaders();
+
+		            // Get XML content from InputRoot.XMLNSC
+		            String xmlContent = inMessage.getRootElement().getLastChild().getDOMNode().toString();
+
+		            // Parse XML content to a Document
+		            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		            DocumentBuilder builder = factory.newDocumentBuilder();
+		            Document document = builder.parse(new java.io.ByteArrayInputStream(xmlContent.getBytes("UTF-8")));
+		            
+		            // Convert Document to JSON String
+		            String jsonOutput = convertToJSON(document.getDocumentElement());
+
+		            // Set JSON output to OutputRoot.JSON.Data
+		            outMessage.getRootElement().createElementAsLastChild("JSON").createElementAsLastChild("Data").setValue(jsonOutput);
+		            
+		        } catch (Exception e) {
+		            throw new MbException("Error in JCN: " + e.getMessage());
+		        }
+
+		        // Propagate the message
+		        out.propagate(outAssembly);
+		    }
+
+		    private String convertToJSON(Element element) {
+		        StringBuilder jsonBuilder = new StringBuilder();
+		        jsonBuilder.append("{");
+
+		        NodeList children = element.getChildNodes();
+		        for (int i = 0; i < children.getLength(); i++) {
+		            if (children.item(i) instanceof Element) {
+		                Element child = (Element) children.item(i);
+		                String childName = child.getTagName();
+		                String childValue = child.getTextContent().trim();
+		                
+		                // Handle multiple elements with the same name
+		                if (jsonBuilder.length() > 1) {
+		                    jsonBuilder.append(",");
+		                }
+
+		                if (child.hasChildNodes() && child.getChildNodes().getLength() > 1) {
+		                    jsonBuilder.append("\"").append(childName).append("\":").append(convertToJSON(child));
+		                } else {
+		                    jsonBuilder.append("\"").append(childName).append("\":\"").append(childValue).append("\"");
+		                }
+		            }
+		        }
+
+		        jsonBuilder.append("}");
+		        return jsonBuilder.toString();
+		    }
+		}

@@ -1,0 +1,53 @@
+CREATE COMPUTE MODULE Task_DBLogging_MQ_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		   CALL CopyEntireMessage();
+		  
+		  
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data.OUTER;
+		DECLARE id INTEGER  inref.REQUEST_ID;
+	
+--	    DECLARE inref2 BLOB;
+--	    SET inref2 = ASBITSTREAM(inref.PAYLOAD);
+	    
+--	    DECLARE REQUEST_ID CHARACTER id;
+--	    
+--	    DECLARE PAYLOAD BLOB;
+--	    SET PAYLOAD = ASBITSTREAM(InputRoot.JSON.Data.OUTER.PAYLOAD);
+--	    
+--	    DECLARE CREATED_ON TIMESTAMP CURRENT_TIMESTAMP;
+--	    
+--	    DECLARE PAYLOAD_TYPE CHARACTER 'REQUEST';
+--	    
+--	    DECLARE PAYLOAD_ID CHARACTER 'ABC1';
+	    
+--	    DECLARE REQUEST_ID CHARACTER 'Insert into DBMQ Valuses(id)';
+--	    
+--		SET OutputRoot = InputRoot;
+--		
+--		CALL myPROCEDURE(REQUEST_ID,PAYLOAD,CREATED_ON,PAYLOAD_TYPE,PAYLOAD_ID);
+
+        DECLARE sqlst CHARACTER 'insert into DBMQ valuses(id)';
+        PASSTHRU(sqlst);
+
+	END;
+	CREATE PROCEDURE generalProcedure (IN REQUEST_ID , IN PAYLOAD , IN PAYLOAD_TYPE)
+	BEGIN
+		
+	END;
+END MODULE;

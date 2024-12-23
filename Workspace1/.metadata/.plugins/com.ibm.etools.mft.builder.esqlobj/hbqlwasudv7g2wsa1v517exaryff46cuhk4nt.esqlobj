@@ -1,0 +1,29 @@
+CREATE COMPUTE MODULE Aggregation_Node_Flow_Compute2
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot.Properties = InputRoot.ComIbmAggregateReplyBody.out1.Properties;
+		
+		 SET OutputRoot.XMLNSC.Reply1Data = InputRoot.ComIbmAggregateReplyBody.out1.XMLNSC;
+		 
+		 SET OutputRoot.XMLNSC.Reply2Data = InputRoot.ComIbmAggregateReplyBody.out2.XMLNSC;
+		 
+	
+		
+	END;
+END MODULE;

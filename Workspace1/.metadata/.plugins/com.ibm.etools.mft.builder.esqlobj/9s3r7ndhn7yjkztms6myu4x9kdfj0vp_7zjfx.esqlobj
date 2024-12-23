@@ -1,0 +1,12 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		SET OutputRoot = InputRoot;
+DECLARE inputJSON REFERENCE TO InputRoot.JSON.Data;
+
+-- Extract ID and Name from JSON
+SET Environment.Variables.ID = inputJSON.ID;
+SET Environment.Variables.Name = inputJSON.Name;
+		
+		RETURN TRUE;
+	END;
+

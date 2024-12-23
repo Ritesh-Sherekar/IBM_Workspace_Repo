@@ -1,0 +1,8 @@
+CREATE PROCEDURE MyAdd (IN X CHARACTER)
+BEGIN
+	DECLARE Simple CHARACTER;
+	SET Simple = X;
+	SET OutputRoot.XMLNSC.String = SUBSTRING()
+END;
+
+CREATE COMPUTE MODULE For_Broker_Schema_Subflow_Compute

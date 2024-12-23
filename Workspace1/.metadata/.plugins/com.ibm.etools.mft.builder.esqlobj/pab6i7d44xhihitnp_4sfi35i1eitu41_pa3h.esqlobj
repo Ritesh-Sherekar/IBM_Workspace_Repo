@@ -1,0 +1,28 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		 CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data.project;
+		CREATE FIELD OutputRoot.JSON.Data.project;
+		DECLARE OutRef REFERENCE TO OutputRoot.XMLNSC.project;
+		
+		DECLARE i INTEGER 1;
+		WHILE LASTMOVE(inref) DO
+			CREATE LASTCHILD OF OutRef.teamMembers.Item[i] NAME 'memberId' VALUE 'inref.memberId';
+		END WHILE;
+		SET OutputRoot = InputRoot;
+	END;

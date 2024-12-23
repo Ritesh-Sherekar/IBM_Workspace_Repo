@@ -1,0 +1,9 @@
+package myPackage;
+
+public class myClass {
+    public static int myMethod(int var1, int var2) {
+        int ans = var1 + var2; 
+        System.out.println("Sum is: " + ans);
+        return ans;
+    }
+}

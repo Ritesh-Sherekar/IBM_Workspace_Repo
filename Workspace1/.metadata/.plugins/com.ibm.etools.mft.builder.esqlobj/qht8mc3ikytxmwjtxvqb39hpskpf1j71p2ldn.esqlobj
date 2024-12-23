@@ -1,0 +1,12 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- Extract the ID from the incoming message
+   DECLARE studentID CHARACTER;
+   SET studentID = InputRoot.JSON.Data.Student.ID;
+
+   -- Set the LoopBack query to fetch the document by ID
+  -- SET OutputLocalEnvironment.Destination.Loopback.Request.DatabaseOperation = 'Retrive';
+  -- SET OutputLocalEnvironment.Destination.Loopback.Request.Model = 'StudentINFO';  -- The model name (MongoDB collection)
+   SET OutputLocalEnvironment.Destination.Loopback.Request.Id = InputRoot.JSON.Data.id;     -- Pass the ID to the LoopBack node
+
+	END;

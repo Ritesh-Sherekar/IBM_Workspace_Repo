@@ -1,0 +1,15 @@
+CREATE FILTER MODULE Filter_Flow_Filter
+    CREATE FUNCTION Main() RETURNS BOOLEAN
+    BEGIN
+       DECLARE var REFERENCE TO Root.JSON.Data.Name;
+        IF var = 'Eidiko' THEN
+            RETURN TRUE;
+        ELSEIF var = 'System' THEN
+        	RETURN FALSE;
+        ELSE
+        	RETURN UNKNOWN;
+        END IF; 	
+        RETURN TRUE;
+    END;
+    
+END MODULE;

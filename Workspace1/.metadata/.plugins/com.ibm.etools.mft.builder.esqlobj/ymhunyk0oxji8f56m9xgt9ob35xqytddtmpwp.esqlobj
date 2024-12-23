@@ -1,0 +1,12 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+	 -- Extract the ID from the incoming message
+   DECLARE studentID CHARACTER;
+   SET studentID = InputRoot.JSON.Data.ID;
+
+   -- Prepare the query for the LoopBack node to fetch data based on the ID
+   SET OutputLocalEnvironment.Destination.Loopback.Request.DatabaseOperation = 'findById';
+   SET OutputLocalEnvironment.Destination.Loopback.Request.Model = 'StudentINFO';  -- Model name in LoopBack
+   SET OutputLocalEnvironment.Destination.Loopback.Request.Filter.ID = studentID;
+
+	END;

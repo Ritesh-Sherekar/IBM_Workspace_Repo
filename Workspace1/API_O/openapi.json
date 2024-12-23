@@ -1,0 +1,42 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API_O",
+    "version": "1.0.0",
+    "description": "API_O"
+  },
+  "servers": [
+    {
+      "url": "/api_o/v1"
+    }
+  ],
+  "components": {
+    "schemas": {}
+  },
+  "paths": {
+    "/sample": {
+      "parameters": [],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      },
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      }
+    }
+  }
+}

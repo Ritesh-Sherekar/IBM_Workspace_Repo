@@ -1,0 +1,25 @@
+CREATE COMPUTE MODULE Database_Insert_T_Flow_2_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+			SET OutputRoot.JSON.Data.Result.EMPID = InputRoot.DataObject.ns:EMP1.EMP_ID;
+			SET OutputRoot.JSON.Data.Result.Addr = InputRoot.DataObject.ns:EMP1.ADDRESS;
+			SET OutputRoot.JSON.Data.Result.DESIGNATION = InputRoot.DataObject.ns:EMP1.DESIGNATION;
+			SET OutputRoot.JSON.Data.Result.EMP_Name = InputRoot.DataObject.ns:EMP1.EMP_NAME;
+		END;
+END MODULE;

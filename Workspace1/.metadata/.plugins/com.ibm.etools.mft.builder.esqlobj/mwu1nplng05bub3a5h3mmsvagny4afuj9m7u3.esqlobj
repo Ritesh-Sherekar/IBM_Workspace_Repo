@@ -1,0 +1,29 @@
+CREATE COMPUTE MODULE Route_To_Label_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		 CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE ref REFERENCE TO InputRoot.XMLNSC;
+		SET OutputRoot = InputRoot;
+		
+		If ref.root = InputRoot THEN
+			SET OutputLocalEnvironment.destination.RouterList.DestinationData[1] = 'lab1';
+			SET OutputLocalEnvironment.destination.RouterList.DestinationData[2] = 'lab2';
+			SET OutputLocalEnvironment.destination.RouterList.DestinationData[1] = 'lab3';
+			
+	END;
+END MODULE;

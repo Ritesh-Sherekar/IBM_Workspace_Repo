@@ -1,0 +1,14 @@
+Generating .xsdzip file for message set "MySet" 
+
+Generating schema for no XML Wire format
+Generating schema using the lax option
+
+
+Processing File : "/MySet/MySet/MyDefination.mxsd"
+
+Saving File : "/MySet/.GeneratedSchemas/MyDefination.xsd" 
+
+Saving file "/MySet/.KeywordsFile/meta-inf/keywords.txt" 
+
+Saving file "/MySet/MySet/messageSet.mset" 
+

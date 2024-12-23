@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <input path="/XML_Schema.xsd" var="var2"/>
+    <output path="/XML_Schema.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="Mapping_Msg_Map">
+        <input path="$var2/mb:msg(CustomerDetails,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_CustomerDetails"/>
+        <output path="mb:msg(CustomerDetails,assembly,XMLNSC,Properties)" var="MessageAssembly1"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_CustomerDetails/CustomerDetails/Customer"/>
+            <output path="$MessageAssembly1/CustomerDetails/Customer"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

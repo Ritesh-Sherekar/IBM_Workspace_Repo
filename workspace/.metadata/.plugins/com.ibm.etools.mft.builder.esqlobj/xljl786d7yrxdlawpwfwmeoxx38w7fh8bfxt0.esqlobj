@@ -1,0 +1,34 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+    BEGIN
+        -- Call procedures to copy headers and process message
+        CALL CopyMessageHeaders();
+        CALL ProcessMessage();
+        
+        RETURN TRUE;
+    END;
+
+    CREATE PROCEDURE CopyMessageHeaders() BEGIN
+        -- Copy headers from input to output
+        DECLARE I INTEGER 1;
+        DECLARE J INTEGER;
+        SET J = CARDINALITY(InputRoot.*[]);
+        WHILE I < J DO
+            SET OutputRoot.*[I] = InputRoot.*[I];
+            SET I = I + 1;
+        END WHILE;
+    END;
+
+    CREATE PROCEDURE ProcessMessage() BEGIN
+        -- Set OutputRoot for the database node
+        SET OutputRoot = InputRoot;
+
+        -- Specify the SQL statement for the Database node
+        SET OutputRoot.Database.DBInput.SQLStatement = 
+            'INSERT INTO Student (ID, Name, Department, Age) VALUES (?, ?, ?, ?)';
+
+        -- Map XMLNSC elements to SQL parameters
+        SET OutputRoot.Database.DBInput.Parameters[1] = InputRoot.XMLNSC.Employee.ID;
+        SET OutputRoot.Database.DBInput.Parameters[2] = InputRoot.XMLNSC.Employee.Name;
+        SET OutputRoot.Database.DBInput.Parameters[3] = InputRoot.XMLNSC.Employee.Department;
+        SET OutputRoot.Database.DBInput.Parameters[4] = InputRoot.XMLNSC.Employee.Age;
+    END;

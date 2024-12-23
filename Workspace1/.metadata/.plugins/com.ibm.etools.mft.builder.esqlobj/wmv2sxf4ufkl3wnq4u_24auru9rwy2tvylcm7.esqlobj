@@ -1,0 +1,23 @@
+CREATE DATABASE MODULE Database_Node_Flow_Database
+    CREATE FUNCTION Main() RETURNS BOOLEAN
+    BEGIN
+        -- Declare local variables to hold SQL statement and parameters
+        DECLARE sqlStatement CHARACTER;
+        DECLARE id CHARACTER;
+        DECLARE name CHARACTER;
+
+        -- Get parameters from the local environment or input message
+        -- You would typically get these from the Compute node or directly from the message
+        SET id = InputRoot.JSON.Data.ID;
+        SET name = InputRoot.JSON.Data.Name;
+
+        -- Construct the SQL statement
+        SET sqlStatement = 'INSERT INTO YourTableName (ID, Name) VALUES (?, ?)';
+
+        -- Execute the SQL statement using the parameters
+        CALL SQLExecute(sqlStatement, ID, name);
+
+        RETURN TRUE;
+    END;
+
+END MODULE;

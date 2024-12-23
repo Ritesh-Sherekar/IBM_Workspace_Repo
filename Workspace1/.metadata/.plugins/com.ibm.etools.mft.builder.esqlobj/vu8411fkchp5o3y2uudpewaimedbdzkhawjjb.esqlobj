@@ -1,0 +1,8 @@
+CREATE COMPUTE MODULE LoopBack_MangoDB_Delete_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- Delete Data From Database
+		
+		SET OutputLocalEnvironment.Destination.Loopback.Request.id = InputRoot.JSON.Data.id; 
+	END;
+END MODULE;

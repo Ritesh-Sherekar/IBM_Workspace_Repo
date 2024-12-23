@@ -1,0 +1,41 @@
+CREATE COMPUTE MODULE LOGGING_REQ_ID_EXCEPTION_TASK_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 CALL CopyEntireMessage();
+		RETURN FALSE;
+	END;
+
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		
+		DECLARE Envar REFERENCE TO Environment.Variable;
+		SET Envar.Req_ID=InputRoot.XMLNSC.Info.REQUEST_ID;
+		
+		CALL Payload_Log('REQUEST',ASBITSTREAM(InputRoot.XMLNSC));
+		
+		set OutputRoot.XMLNSC.Root.OutputData=InputRoot.XMLNSC.Info;
+		set Envar.out= OutputRoot;
+		
+		call Payload_Log('RESPONSE',ASBITSTREAM(OutputRoot));
+		SET OutputRoot.XMLNSC= Envar.out;
+		propagate to TERMINAL 'out1';
+		--CALL Payload_Log('RESPONSE',ASBITSTREAM(o));
+			
+	END;
+	
+	CREATE PROCEDURE Payload_Log (IN PAYLOAD_TYPE CHARACTER, IN PAYLOAD BLOB)
+	BEGIN
+		SET OutputRoot = NULL;
+		DECLARE Env REFERENCE TO Environment.Variables;
+		SET OutputRoot.MQMD.Format = MQFMT_RF_HEADER_2;
+		SET OutputRoot.MQRFH2.usr.requestid = Env.Req_ID;
+		SET OutputRoot.MQRFH2.usr.Payload_Type = PAYLOAD_TYPE;
+		set OutputRoot.XMLNSC.Root.payload= PAYLOAD;
+		--SET OutputRoot.XMLNSC.Info=InputRoot.XMLNSC.Info;
+		propagate to TERMINAL 'out';
+		SET OutputRoot = NULL;
+	END;
+END MODULE;
+
+
+

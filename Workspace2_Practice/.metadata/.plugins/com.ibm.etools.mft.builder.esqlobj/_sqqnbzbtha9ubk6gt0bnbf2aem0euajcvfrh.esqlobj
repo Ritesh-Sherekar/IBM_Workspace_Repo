@@ -1,0 +1,50 @@
+CREATE COMPUTE MODULE File_Fix_To_XML_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		/*
+		Root>
+		<body>
+		<name>Sridhar</name>
+		<id>999</id>
+		<company>eidiko</company>
+		</body>
+		<body>
+		<name>vishnu</name>
+		<id>6352</id>
+		<company>eidiko1</company>
+		</body>
+		</Root>
+		*/
+
+		SET OutputRoot.XMLNSC.Root.body = InputRoot.DFDL.FixToXML.header.Name;
+		SET OutputRoot.XMLNSC.Root.body = InputRoot.DFDL.FixToXML.header.ID;
+		SET OutputRoot.XMLNSC.Root.body = InputRoot.DFDL.FixToXML.header.Company;          
+
+		DECLARE ref REFERENCE TO InputRoot.DFDL.FixToXML.body[1];
+		DECLARE i INTEGER 1;
+		WHILE LASTMOVE(ref) DO
+			SET OutputRoot.XMLNSC.FixToXML.header[i].Name = InputRoot.DFDL.FixToXML.body[i].body_elem1;
+			SET OutputRoot.XMLNSC.FixToXML.header[i].ID = InputRoot.DFDL.FixToXML.body[i].body_elem2;
+			SET OutputRoot.XMLNSC.FixToXML.header[i].Company = InputRoot.DFDL.FixToXML.body[i].body_elem3;
+			SET i = i +1 ;
+			MOVE ref NEXTSIBLING;
+		END WHILE;
+
+	END;
+END MODULE;

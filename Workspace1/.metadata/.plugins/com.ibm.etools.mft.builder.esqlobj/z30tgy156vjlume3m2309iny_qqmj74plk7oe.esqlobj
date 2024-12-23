@@ -1,0 +1,33 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+    BEGIN
+        CALL CopyEntireMessage();
+        RETURN TRUE;
+    END;
+
+    CREATE PROCEDURE CopyMessageHeaders() BEGIN
+        DECLARE I INTEGER 1;
+        DECLARE J INTEGER CARDINALITY(InputRoot.*[]);
+        WHILE I <= J DO
+            SET OutputRoot.*[I] = InputRoot.*[I];
+            SET I = I + 1;
+        END WHILE;
+    END;
+
+    CREATE PROCEDURE CopyEntireMessage() BEGIN
+        DECLARE Count INTEGER CARDINALITY(InputRoot.XMLNSC.employees.emp[]);
+        DECLARE i INTEGER 1;
+        
+        -- Loop through each <emp> element
+        WHILE i <= Count DO
+            -- Modify the output file name based on the employee index
+            SET OutputLocalEnvironment.Destination.File.Name = 'emp_' || CAST(i AS CHAR);
+
+            -- Copy the entire input message to the output message
+            SET OutputRoot.XMLNSC = InputRoot.XMLNSC;
+
+            -- Optionally, you can manipulate OutputRoot for each employee if needed
+
+            -- Increment the loop counter
+            SET i = i + 1;
+        END WHILE;
+    END;

@@ -1,0 +1,17 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		DECLARE RID REFERENCE TO Root.MQRFH2.usr.Request_id;
+		DECLARE PLOAD REFERENCE TO Root.MQRFH2.usr.PAYLOAD1;
+		DECLARE P_Type REFERENCE TO Root.MQRFH2.usr.payLoad;
+		
+		DECLARE sq CHARACTER 'select SEQ1.nextval from dual';
+		SET Environment.Variable.Record[] = PASSTHRU(sq);
+		DECLARE seq INTEGER Environment.Variable.Record.NEXTVAL;
+		
+		DECLARE sqlst CHARACTER;
+		SET sqlst = 'insert into DBMQ('RID' , 'PLOAD' , 'CURRENT_TIME' , 'P_Type' , ) valuses(?,?,?,?,seq) ';
+		
+		RETURN TRUE;
+	END;
+

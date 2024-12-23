@@ -1,0 +1,8 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		DECLARE RID REFERENCE TO Root.MQRFH2.usr.Request_id;
+		
+		RETURN TRUE;
+	END;
+

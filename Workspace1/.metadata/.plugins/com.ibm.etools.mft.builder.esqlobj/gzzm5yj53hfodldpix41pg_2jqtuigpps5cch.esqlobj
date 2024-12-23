@@ -1,0 +1,50 @@
+CREATE COMPUTE MODULE NameSpace_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		-- Creating the element
+		-- DECLARE space1 NAMESPACE 'namespace1';
+		-- SET OutputRoot.XMLNSC.space1:root.(XMLNSC.NamespaceDecl)xmlns:ns1 = space1;
+		-- SET OutputRoot.XMLNSC.space1:root.space1:example = 'ABCD';
+		
+		-- Taking input and add namespaces
+--		DECLARE space1 NAMESPACE 'namespace1';
+--		SET OutputRoot.XMLNSC.space1:root.(XMLNSC.NamespaceDecl)xmlns:ns1 = space1;
+--		SET OutputRoot.XMLNSC.space1:root.space1:example = InputRoot.XMLNSC.Person;
+		
+		-- without prefix
+		-- DECLARE space2 NAMESPACE 'Hello';
+		-- SET OutputRoot.XMLNSC.space2:root.(XMLNSC.NamespaceDecl)xmlns = space2;
+		-- SET OutputRoot.XMLNSC.space2:root.space2:child = InputRoot.XMLNSC.Person.Name;
+		-- SET OutputRoot.XMLNSC.space2:root.space2:child = 'ABCD';		
+		
+
+
+		DECLARE sp1 NAMESPACE 'http://www.ibm.com/space1';
+		DECLARE sp2 NAMESPACE 'http://www.ibm.com/space2';
+		DECLARE sp3 NAMESPACE 'http://www.ibm.com/space3';
+		-- Namespace declaration for prefix 'space1'
+		SET OutputRoot.XMLNS.message.(XML.NamespaceDecl)xmlns:space1 = 'http://www.ibm.com/space1';
+		SET OutputRoot.XMLNS.message.sp1:data1 = 'Hello!';
+		-- Default namespace declaration ( empty prefix )
+		SET OutputRoot.XMLNS.message.sp2:data2.(XML.NamespaceDecl)xmlns = 'http://www.ibm.com/space2';
+		SET OutputRoot.XMLNS.message.sp2:data2.sp2:subData1 = 'Hola!';
+		SET OutputRoot.XMLNS.message.sp2:data2.sp2:subData2 = 'Guten Tag!';
+		SET OutputRoot.XMLNS.message.sp3:data3 = 'Bonjour!';
+	END;
+END MODULE;

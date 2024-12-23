@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <input path="/XML_Schema.xsd"/>
+    <output path="/XML_Schema.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="Mapping_Msg_Map">
+        <input path="mb:msg(CustomerDetails,assembly,DataObject,Properties)" var="ComIbmMessageAssembly_CustomerDetails"/>
+        <output path="mb:msg(CustomerDetails,assembly,DataObject,Properties)" var="ComIbmMessageAssembly_CustomerDetails1"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_CustomerDetails/Properties"/>
+            <output path="$ComIbmMessageAssembly_CustomerDetails1/Properties"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_CustomerDetails/CustomerDetails/Customer[1]/ID"/>
+            <output path="$ComIbmMessageAssembly_CustomerDetails1/CustomerDetails/Customer/ID"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_CustomerDetails/CustomerDetails/Customer[1]/Name"/>
+            <output path="$ComIbmMessageAssembly_CustomerDetails1/CustomerDetails/Customer/Name"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_CustomerDetails/CustomerDetails/Customer[1]/Email"/>
+            <output path="$ComIbmMessageAssembly_CustomerDetails1/CustomerDetails/Customer/Email"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_CustomerDetails/CustomerDetails/Customer[1]/Phone"/>
+            <output path="$ComIbmMessageAssembly_CustomerDetails1/CustomerDetails/Customer/Phone"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

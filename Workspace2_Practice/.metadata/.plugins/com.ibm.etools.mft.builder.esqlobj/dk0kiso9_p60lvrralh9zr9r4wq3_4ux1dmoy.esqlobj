@@ -1,0 +1,46 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+
+		DECLARE chaID CHARACTER InputRoot.XMLNSC.Root.Header.channelId;
+		DECLARE outt CHARACTER;
+
+		IF chaID = 'TPH' THEN
+			SET outt = 'out';
+
+		ELSE
+			IF chaID = 'FCS' THEN
+				SET outt = 'out1';
+			END IF;
+		END IF;
+
+		DECLARE inref3 REFERENCE TO InputRoot.XMLNSC.Root.Body.Data.catalog.book[1];
+		DECLARE cat CHARACTER InputRoot.XMLNSC.Root.Body.Data.
+		DECLARE j INTEGER 1 ;
+		DECLARE fild CHARACTER FIELDNAME( OutputRoot.XMLNSC.Root.Body.Data.*[<]);
+		WHILE LASTMOVE(inref3) DO
+			DECLARE authorNN CHARACTER inref3.author;
+			IF authorNN = 'Corets, Eva' AND chaID = 'TPH' THEN
+				SET OutputRoot.XMLNSC.Root.Body.Data.catalog.book[j] = inref3;
+				SET j = j + 1;
+			END IF;	
+			MOVE inref3 NEXTSIBLING;
+		END WHILE;
+
+		PROPAGATE TO TERMINAL outt;
+	END;

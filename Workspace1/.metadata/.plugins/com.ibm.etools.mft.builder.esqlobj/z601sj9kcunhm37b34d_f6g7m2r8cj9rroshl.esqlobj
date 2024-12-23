@@ -1,0 +1,4 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+    BEGIN
+    	INSERT INTO YourTableName (ID, Name) VALUES (?, ?);
+    END;

@@ -1,0 +1,8 @@
+package myPackage;
+
+public class myClass {
+    public static int myMethod(Integer var1 , Integer var2) {
+    	int ans = var1 + var2; 
+    	return ans;
+    }
+}

@@ -1,0 +1,6 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		SET var = var + 1;
+		RETURN TRUE;
+	END;
+

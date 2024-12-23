@@ -1,0 +1,19 @@
+CREATE COMPUTE MODULE RouteByName_Compute
+CREATE FUNCTION Main() RETURNS BOOLEAN
+BEGIN
+    -- Declare variables
+    DECLARE nameValue CHARACTER;
+    DECLARE fileName CHARACTER;
+
+    -- Access the value of the <Name> element
+    SET nameValue = InputRoot.XMLNSC.Name;
+
+    -- Determine the file name based on the <Name> value
+    SET fileName = nameValue || '.xml';
+
+    -- Set the file name in OutputLocalEnvironment
+    SET OutputLocalEnvironment.Destination.File.Name = fileName;
+
+    RETURN TRUE;
+END;
+END MODULE;

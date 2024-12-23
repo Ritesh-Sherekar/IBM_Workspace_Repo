@@ -1,0 +1,31 @@
+CREATE DATABASE MODULE Database_Node_Flow_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- For Insert the data into database
+		
+		--DECLARE var CHARACTER 'INSERT INTO EMP(ID ,NAME ,SALARY ,AGE) VALUES (?,?,?,?)';
+		--SET LocalEnvironment.data[] = PASSTHRU(var, 50, 'Eidiko50' ,15050 ,25);
+		
+		--SET OutputRoot.XMLNSC.Result = 'Record Inserted Successfully';
+		
+		-- For Update Data In Database
+		
+		--DECLARE var CHARACTER 'UPDATE EMP SET ID = 10  WHERE NAME = ? ';
+		--SET LocalEnvironment.data[] = PASSTHRU(var, 'Eidiko');
+		
+		 -- Declare local variables for data
+        DECLARE id INT;
+        DECLARE name CHARACTER;
+        DECLARE salary DECIMAL;
+        DECLARE age INT;
+        
+          -- Extract data from XML
+        SET id = InputRoot.XMLNSC.Employee.ID;
+        SET name = InputRoot.XMLNSC.Employee.Name;
+        SET salary = CAST(InputRoot.XMLNSC.Employee.Salary AS DECIMAL);
+        SET age = CAST(InputRoot.XMLNSC.Employee.Age AS INT);
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

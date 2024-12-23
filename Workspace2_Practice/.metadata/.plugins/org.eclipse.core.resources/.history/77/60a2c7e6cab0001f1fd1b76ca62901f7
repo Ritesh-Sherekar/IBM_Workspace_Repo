@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <input path="/xe/system/xe.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="Database_Mapping_Flow_Mapping">
+        <input namespace="http://xe/system" path="mb:msg(EMP,assembly,XMLNSC,Properties)"/>
+    </mappingDeclaration>
+</mappingRoot>

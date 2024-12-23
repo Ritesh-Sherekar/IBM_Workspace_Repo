@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy:Deploy xmlns:deploy="http://www.ibm.com/xmlns/prod/wmb/deploy/6.0.0" overrideConfigurableProperties="false" includeESQL="false">
+  <deployables>
+    <deployable deployed="true" barResourceTimeStamp="1725473636304" workspaceResource="/DB_LOG/DB_LOG_Flow.msgflow">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file DB_LOG\DB_LOG_Flow.msgflow.&#xA;Successfully added file DB_LOG\DB_LOG_Flow.msgflow to BAR file.&#xA;" severity="0"/>
+      <barEntry name="DB_LOG_Flow.msgflow"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1725465927596" workspaceResource="/DB_LOG/DB_LOG_Flow_2.msgflow">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file DB_LOG\DB_LOG_Flow_2.msgflow.&#xA;Successfully added file DB_LOG\DB_LOG_Flow_2.msgflow to BAR file.&#xA;" severity="0"/>
+      <barEntry name="DB_LOG_Flow_2.msgflow"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1725473888856" workspaceResource="/DB_LOG/DB_LOG_Flow_2_Compute.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file DB_LOG\DB_LOG_Flow_2_Compute.esql.&#xA;Dependent ESQL file DB_LOG_Flow_Compute.esql is added to the BAR file.&#xA;&#xA;Successfully added file DB_LOG\DB_LOG_Flow_2_Compute.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="DB_LOG_Flow_2_Compute.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1725483957560" workspaceResource="/DB_LOG/DB_LOG_Flow_Compute.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file DB_LOG\DB_LOG_Flow_Compute.esql.&#xA;Successfully added file DB_LOG\DB_LOG_Flow_Compute.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="DB_LOG_Flow_Compute.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1725470161004" workspaceResource="/DB_LOG/DB_LOG_Flow_Compute1.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file DB_LOG\DB_LOG_Flow_Compute1.esql.&#xA;Successfully added file DB_LOG\DB_LOG_Flow_Compute1.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="DB_LOG_Flow_Compute1.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1725465559131" workspaceResource="/DB_LOG/application.descriptor">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file DB_LOG\application.descriptor.&#xA;Successfully added file DB_LOG\application.descriptor to BAR file.&#xA;Elapsed time: 0 second(s).&#xA;&#xA;Successfully added file DB_LOG\application.descriptor to BAR file.&#xA;" severity="0"/>
+      <barEntry name="application.descriptor"/>
+    </deployable>
+  </deployables>
+</deploy:Deploy>

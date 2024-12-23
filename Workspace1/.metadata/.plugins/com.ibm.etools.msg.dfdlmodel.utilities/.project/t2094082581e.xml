@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="EX_MAPPING">
+  <XSDCollection href="platform:/resource/EX_MAPPING/Sample.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/EX_MAPPING/Sample.xsd#//price;XSDElementDeclaration" name="price" type="mlib://EX_MAPPING#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/EX_MAPPING/Sample.xsd#//name;XSDElementDeclaration=1" name="name" type="mlib://EX_MAPPING#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/EX_MAPPING/Sample.xsd#//description;XSDElementDeclaration=2" name="description" type="mlib://EX_MAPPING#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/EX_MAPPING/Sample.xsd#//calories;XSDElementDeclaration=3" name="calories" type="mlib://EX_MAPPING#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/EX_MAPPING/Sample.xsd#//food;XSDElementDeclaration=4" name="food"/>
+  </XSDCollection>
+</MessageBroker>

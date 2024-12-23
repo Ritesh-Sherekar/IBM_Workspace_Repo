@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="Database_Node">
+  <XSDCollection href="platform:/resource/Database_Node/IBMdefined/RecordFixLengthFieldFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/RecordFixLengthFieldFormat"/>
+  <XSDCollection href="platform:/resource/Database_Node/hello.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/Database_Node/hello.xsd#//hello;XSDElementDeclaration" name="hello"/>
+  </XSDCollection>
+</MessageBroker>

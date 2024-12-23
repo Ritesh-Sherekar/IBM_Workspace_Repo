@@ -1,0 +1,7 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE var CHARACTER 'INSERT INTO EMP(ID ,NAME ,SALARY ,AGE) VALUES (?,?,?,?)';
+		SET Environment.data[] = PASSTHRU(var, 4, 'Eidiko' ,19020 ,24);
+		SET OutputRoot.XMLNSC.Result = 'Record Inserted Successfully';
+		RETURN TRUE;
+	END;

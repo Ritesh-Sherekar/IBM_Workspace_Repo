@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "CustomerDetails": {
+      "type": "object",
+      "properties": {
+        "Customer": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Email": {
+                  "type": "string"
+                },
+                "Phone": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ID",
+                "Name",
+                "Email",
+                "Phone"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "string"
+                },
+                "Name": {
+                  "type": "string"
+                },
+                "Email": {
+                  "type": "string"
+                },
+                "Phone": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ID",
+                "Name",
+                "Email",
+                "Phone"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "Customer"
+      ]
+    }
+  },
+  "required": [
+    "CustomerDetails"
+  ]
+}

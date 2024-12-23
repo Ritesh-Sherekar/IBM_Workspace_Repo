@@ -1,0 +1,113 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE refXML REFERENCE TO InputRoot.XMLNSC;
+		
+		-- Converting XML format to Blob format
+		DECLARE blobData BLOB;
+--		SET blobData = ASBITSTREAM(refXML
+--		                           ENCODING InputRoot.Properties.Encoding
+--		                           CCSID InputRoot.Properties.CodedCharSetId
+--		                           SET InputRoot.Properties.MessageSet
+--		                           TYPE InputRoot.Properties.MessageType
+--		                           FORMAT InputRoot.Properties.MessageFormat
+--		                           OPTIONS RootBitStream);
+       SET blobData = ASBITSTREAM(refXML);
+		                           
+		-- Converting Blob format to Char
+		DECLARE charData CHARACTER;
+		SET charData = CAST(blobData AS CHAR CCSID InputRoot.Properties.CodedCharSetId
+		ENCODING InputRoot.Properties.Encoding);
+		
+		-- Extract Application name
+		DECLARE APPLICATION_NAME CHARACTER;
+		--SET APPLICATION_NAME = Environment.Variables.ApplicationName;
+		SET APPLICATION_NAME = 'DB_LOG';
+
+        -- Extract Message Flow Name
+		DECLARE MSG_FLOW_NAME CHAR;
+		SET MSG_FLOW_NAME = 'DB_LOG_Flow';
+		
+		-- Set Current Time
+		DECLARE LOG_TIME TIMESTAMP CURRENT_TIMESTAMP;
+		
+		-- Set Lock_Type 
+		DECLARE LOCK_TYPE CHARACTER;
+		SET LOCK_TYPE = 'Channel_Request';
+		
+		-- Message
+--		DECLARE MESSAGE CHARACTER;
+--		SET MESSAGE = InputRoot.XMLNSC;
+		
+		-- Stored Message
+		CALL myProcedure(APPLICATION_NAME ,MSG_FLOW_NAME ,LOG_TIME ,LOCK_TYPE ,charData);
+		
+		-- Convert to JSON
+		SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
+		
+		
+		
+		-- Stored JSON Data In Database
+		
+		
+		DECLARE ref REFERENCE TO OutputRoot.JSON.Data;
+		--SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
+		-- Converting JSON format to Blob format
+		DECLARE bData BLOB;
+--		SET blobData = ASBITSTREAM(refXML
+--		                           ENCODING InputRoot.Properties.Encoding
+--		                           CCSID InputRoot.Properties.CodedCharSetId
+--		                           SET InputRoot.Properties.MessageSet
+--		                           TYPE InputRoot.Properties.MessageType
+--		                           FORMAT InputRoot.Properties.MessageFormat
+--		                           OPTIONS RootBitStream);
+       SET bData = ASBITSTREAM(refXML);
+		                           
+		-- Converting Blob format to Char
+		DECLARE Cdata CHARACTER;
+		SET Cdata = CAST(bData AS CHAR CCSID InputRoot.Properties.CodedCharSetId
+		                     ENCODING InputRoot.Properties.Encoding);
+		
+		-- Extract Application name
+		DECLARE APPLICATION_NAME1 CHARACTER;
+		--SET APPLICATION_NAME = Environment.Variables.ApplicationName;
+		SET APPLICATION_NAME1 = 'DB_LOG';
+
+        -- Extract Message Flow Name
+		DECLARE MSG_FLOW_NAME1 CHAR;
+		SET MSG_FLOW_NAME1 = 'DB_LOG_Flow';
+		
+		-- Set Current Time
+		DECLARE LOG_TIME1 TIMESTAMP CURRENT_TIMESTAMP;
+		
+		-- Set Lock_Type 
+		DECLARE LOCK_TYPE1 CHARACTER;
+		SET LOCK_TYPE1 = 'HOST_Request';
+		
+		-- Message
+--		DECLARE MESSAGE CHARACTER;
+--		SET MESSAGE = InputRoot.XMLNSC;
+		
+		-- Stored Message
+		CALL myProcedure_Two(APPLICATION_NAME1 ,MSG_FLOW_NAME1 ,LOG_TIME1 ,LOCK_TYPE1 ,Cdata);
+		
+		SET OutputRoot.JSON.Data = InputRoot.JSON.Data;
+		
+		
+	END;

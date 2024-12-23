@@ -1,0 +1,41 @@
+
+
+CREATE COMPUTE MODULE File_Fix_Length_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		   CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
+		
+		DECLARE folder1 CHARACTER;
+		DECLARE folder2 CHARACTER;
+		DECLARE folder3 CHARACTER;
+		
+		IF InputRoot.XMLNSC.Name = 'Eidiko' THEN
+        SET folder1 =  OutputRoot.JSON.Data ;
+    ELSEIF InputRoot.XMLNSC.Name2 = 'System' THEN
+        SET folder2 = OutputRoot.JSON.Data;
+	ELSEIF InputRoot.XMLNSC.Name3 = 'integrators' THEN
+        SET folder3 = OutputRoot.JSON.Data ;
+    END IF;
+
+    -- Set the destination folder dynamically
+    SET OutputLocalEnvironment.Destination.File.Directory = folderName;
+		
+		
+	END;
+END MODULE;

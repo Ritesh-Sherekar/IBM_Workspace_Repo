@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+<preferenceForDFDLFile dfdlFileLocation="/File_Delimated/New.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\new 4.txt" messageRootUsedForLastParse="New"/>
+<preferenceForDFDLFile dfdlFileLocation="/Database_Node/hello.xsd" didLastParseUseOutputFromUnparser="false" messageRootUsedForLastParse="hello"/>
+<preferenceForDFDLFile dfdlFileLocation="/Task_DFDL/MyDFDL.xsd" didLastParseUseOutputFromUnparser="false" didLastUnparseUseLogicalInstance="true" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\DFDL1.txt" messageRootUsedForLastParse="MyDFDL" messageRootUsedForLastUnparse="MyDFDL"/>
+</preferences>

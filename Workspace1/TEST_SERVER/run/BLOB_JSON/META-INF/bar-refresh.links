@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy:Deploy xmlns:deploy="http://www.ibm.com/xmlns/prod/wmb/deploy/6.0.0" overrideConfigurableProperties="false" includeESQL="false">
+  <deployables>
+    <deployable deployed="true" barResourceTimeStamp="1731136927529" workspaceResource="/BLOB_JSON/BLOB_JSON_Flow.msgflow">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file BLOB_JSON\BLOB_JSON_Flow.msgflow.&#xA;Successfully added file BLOB_JSON\BLOB_JSON_Flow.msgflow to BAR file.&#xA;" severity="0"/>
+      <barEntry name="BLOB_JSON_Flow.msgflow"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1731143705006" workspaceResource="/BLOB_JSON/BLOB_JSON_Flow_Compute.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file BLOB_JSON\BLOB_JSON_Flow_Compute.esql.&#xA;Successfully added file BLOB_JSON\BLOB_JSON_Flow_Compute.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="BLOB_JSON_Flow_Compute.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1731142196705" workspaceResource="/BLOB_JSON/BLOB_JSON_Flow_Compute1.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file BLOB_JSON\BLOB_JSON_Flow_Compute1.esql.&#xA;Successfully added file BLOB_JSON\BLOB_JSON_Flow_Compute1.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="BLOB_JSON_Flow_Compute1.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1730985117658" workspaceResource="/BLOB_JSON/application.descriptor">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file BLOB_JSON\application.descriptor.&#xA;Successfully added file BLOB_JSON\application.descriptor to BAR file.&#xA;Elapsed time: 0 second(s).&#xA;&#xA;Successfully added file BLOB_JSON\application.descriptor to BAR file.&#xA;" severity="0"/>
+      <barEntry name="application.descriptor"/>
+    </deployable>
+  </deployables>
+</deploy:Deploy>

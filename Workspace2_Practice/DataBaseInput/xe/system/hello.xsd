@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:xesystem="http://xe/system" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xe/system">
+  <!-- Message definition generated from C:\Workspace2_Practice\MyProject\xe.dbm -->
+  
+  <!-- Complex type for xe.SYSTEM.CUS -->
+      
+  <xsd:complexType name="CUSType">
+    <xsd:sequence>
+      <xsd:element name="EMP_ID">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="EMP_NAME" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="DESIGNATION" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ADDRESS" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <!-- Global element for xe.SYSTEM.CUS -->
+      
+  <xsd:element ibmSchExtn:docRoot="true" name="CUS" type="xesystem:CUSType"/>
+  
+  <!-- Complex type for xe.SYSTEM.CUS_EVENT -->
+      
+  <xsd:complexType name="CUS_EVENTType">
+    <xsd:sequence>
+      <xsd:element name="EVENTID">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="EMP_ID">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="EVENT_DESC" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="100"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <!-- Global element for xe.SYSTEM.CUS_EVENT -->
+      
+  <xsd:element ibmSchExtn:docRoot="true" name="CUS_EVENT" type="xesystem:CUS_EVENTType"/>
+  
+</xsd:schema>

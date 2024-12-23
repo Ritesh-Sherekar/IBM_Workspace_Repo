@@ -1,0 +1,9 @@
+CREATE DATABASE MODULE Database_Node_Flow_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		INSERT INTO YourTableName (ID, Name) VALUES (?, ?);
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

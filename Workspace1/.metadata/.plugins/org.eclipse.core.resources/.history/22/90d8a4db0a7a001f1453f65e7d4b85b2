@@ -1,0 +1,70 @@
+CREATE COMPUTE MODULE XMLNSC_To_JSON_Transformation
+    CREATE FUNCTION Main() RETURNS BOOLEAN
+    BEGIN
+        -- Initialize the JSON domain in OutputRoot
+        CREATE LASTCHILD OF OutputRoot DOMAIN('JSON') NAME 'Data';
+        
+        -- Step 1: Retrieve data from the XMLNSC input message tree
+        DECLARE VesselDetailsRef REFERENCE TO InputRoot.XMLNSC.VesselSchedule.VesselDetails.PortDetails.Item[1];
+        DECLARE i INTEGER 1;
+        
+        -- Loop through the XML data and populate the JSON tree
+        WHILE LASTMOVE(VesselDetailsRef) DO
+            SET OutputRoot.JSON.Data.VesselDetails.PortDetails[i].EventDate = VesselDetailsRef.EventDetails.EventDate;
+            SET OutputRoot.JSON.Data.VesselDetails.PortDetails[i].PortFunctionCode = VesselDetailsRef.PortFunctionCode;
+            -- Additional fields from XML can be mapped to JSON here as needed
+            SET OutputRoot.JSON.Data.VesselDetails.PortDetails[i].PortName = VesselDetailsRef.PortName;
+            
+            -- Move to the next sibling element
+            MOVE VesselDetailsRef NEXTSIBLING;
+            SET i = i + 1;
+        END WHILE;
+        
+        -- Step 2: Sort the dates in ascending order
+        DECLARE rEnv REFERENCE TO OutputRoot.JSON.Data.VesselDetails.PortDetails;
+        DECLARE rNextDate REFERENCE TO OutputRoot.JSON.Data.VesselDetails.PortDetails[1];
+        SET rEnv.LastProvEffDate = rEnv[1].EventDate;
+
+        -- Sorting JSON dates using a temporary field for swapping
+        DECLARE k INTEGER 1;
+        FOR rList AS rEnv[] DO
+            IF rEnv.LastProvEffDate > rList.EventDate THEN
+                SET rEnv.TempProvider = rEnv[k-1];
+                SET rEnv[k-1] = rList;
+                SET rEnv[k] = rEnv.TempProvider;
+            END IF;
+            SET rEnv.LastProvEffDate = rList.EventDate;
+            SET k = k + 1;
+        END FOR;
+        DELETE FIELD rEnv.TempProvider;  -- Clean up temporary field after sorting
+
+        -- Step 3: Search for the next date where "Unloading" is happening
+        DECLARE rNextDateFinder REFERENCE TO OutputRoot.JSON.Data.VesselDetails.PortDetails[1];
+        WHILE LASTMOVE(rNextDateFinder) DO
+            DECLARE PortFunctionCode CHARACTER rNextDateFinder.PortFunctionCode;
+
+            -- Check if the current PortCode is 'L' for Loading
+            IF (PortFunctionCode = 'L') THEN
+                DECLARE LoadDate DATE CAST(rNextDateFinder.EventDate AS DATE);
+                
+                -- Loop to find the next date for unloading
+                DECLARE rUnloadingFinder REFERENCE TO OutputRoot.JSON.Data.VesselDetails.PortDetails[1];
+                WHILE LASTMOVE(rUnloadingFinder) DO
+                    DECLARE NextDate DATE CAST(rUnloadingFinder.EventDate AS DATE);
+                    DECLARE UnloadingFlag CHARACTER rUnloadingFinder.PortFunctionCode;
+                    
+                    IF (LoadDate < NextDate) AND ((UnloadingFlag = 'I') OR (UnloadingFlag = 'D')) THEN
+                        -- If a matching unloading event is found, call the backend or perform any action
+                        -- Backend call or other processing logic can be placed here
+                        DECLARE BackendCallStatus CHARACTER 'Unloading found, Backend Call initiated';
+                        -- Example: SET OutputRoot.JSON.Data.VesselDetails.BackendStatus = BackendCallStatus;
+                    END IF;
+                    MOVE rUnloadingFinder NEXTSIBLING;
+                END WHILE;
+            END IF;
+            MOVE rNextDateFinder NEXTSIBLING;
+        END WHILE;
+
+        RETURN TRUE;
+    END;
+END MODULE;

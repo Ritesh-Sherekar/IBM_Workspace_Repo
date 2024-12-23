@@ -1,0 +1,75 @@
+package kaymant;
+
+import com.ibm.broker.javacompute.MbJavaComputeNode;
+import com.ibm.broker.plugin.MbElement;
+import com.ibm.broker.plugin.MbException;
+import com.ibm.broker.plugin.MbMessage;
+import com.ibm.broker.plugin.MbMessageAssembly;
+import com.ibm.broker.plugin.MbOutputTerminal;
+import com.ibm.broker.plugin.MbUserException;
+
+public class Java_Node_Flow_JavaCompute extends MbJavaComputeNode {
+
+    public void evaluate(MbMessageAssembly inAssembly) throws MbException {
+        MbOutputTerminal out = getOutputTerminal("out");
+        MbOutputTerminal alt = getOutputTerminal("alternate");
+
+        MbMessage inMessage = inAssembly.getMessage();
+        MbMessageAssembly outAssembly = null;
+        try {
+            // Create a new message as a copy of the input
+            MbMessage outMessage = new MbMessage(inMessage);
+            outAssembly = new MbMessageAssembly(inAssembly, outMessage);
+
+            // Get the root message element
+            MbElement oGetRootMessage = inAssembly.getMessage().getRootElement();
+            
+            // Retrieve input fields from XML
+            MbElement Name = oGetRootMessage.getFirstElementByPath("XMLNSC/Employee/Name");
+            MbElement Lname = oGetRootMessage.getFirstElementByPath("XMLNSC/Employee/LName");
+            MbElement Company = oGetRootMessage.getFirstElementByPath("XMLNSC/Employee/Company");
+            MbElement Designation = oGetRootMessage.getFirstElementByPath("XMLNSC/Employee/Designation");
+
+            // Create output structure
+            MbElement oResponseRoot = outAssembly.getMessage().getRootElement().getLastChild();
+            MbElement oResponse = oResponseRoot.createElementAsLastChild(MbElement.TYPE_NAME, "Response", null);
+            MbElement oResponseDetails = oResponse.createElementAsLastChild(MbElement.TYPE_NAME, "EmployeeDetails", null);
+
+            // Populate output fields
+            oResponseDetails.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "EmployeeName", Name.getValue());
+            oResponseDetails.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "EmployeeLastName", Lname.getValue());
+            oResponseDetails.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "EmployeeCompany", Company.getValue());
+            oResponseDetails.createElementAsLastChild(MbElement.TYPE_NAME_VALUE, "EmployeeDesignation", Designation.getValue());
+
+        } catch (MbException e) {
+            throw e;
+        } catch (RuntimeException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new MbUserException(this, "evaluate()", "", "", e.toString(), null);
+        }
+
+        // Propagate the message to the 'out' terminal
+        out.propagate(outAssembly);
+    }
+
+    @Override
+    public void onPreSetupValidation() throws MbException {
+    }
+
+    @Override
+    public void onSetup() throws MbException {
+    }
+
+    @Override
+    public void onStart() throws MbException {
+    }
+
+    @Override
+    public void onStop(boolean wait) throws MbException {
+    }
+
+    @Override
+    public void onTearDown() throws MbException {
+    }
+}

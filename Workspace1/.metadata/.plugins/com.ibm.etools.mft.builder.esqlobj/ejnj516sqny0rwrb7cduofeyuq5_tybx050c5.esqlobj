@@ -1,0 +1,6 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		--Create A Field Or insert the data
+		DECLARE studentID CHARACTER;
+		SET OutputLocalEnvironment.Destination.Loopback.Request.Id = InputRoot.JSON.Data.id; 
+	END;

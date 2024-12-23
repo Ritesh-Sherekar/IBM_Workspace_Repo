@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><MyDFDL xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><name xsi:type="xs:string">John Doe</name><age xsi:type="xs:string">30</age><place xsi:type="xs:string">New York</place></MyDFDL>

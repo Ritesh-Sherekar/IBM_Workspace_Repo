@@ -1,0 +1,30 @@
+CREATE COMPUTE MODULE Log4J_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		   CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		
+		declare input_request,output_response CHARACTER;
+set OutputRoot.JSON.Data.Root=InputRoot.XMLNSC.Root;
+set input_request=cast(ASBITSTREAM(InputRoot.XMLNSC CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+set output_response= cast(ASBITSTREAM(OutputRoot.JSON CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+call logwrite(MessageFlowLabel,'RakeshLogger1', 'INFO', 'Application_data: ' || input_request) into var;
+call logwrite(MessageFlowLabel,'RakeshLogger1', 'INFO', 'Application_data: ' || output_response) into var;
+		
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

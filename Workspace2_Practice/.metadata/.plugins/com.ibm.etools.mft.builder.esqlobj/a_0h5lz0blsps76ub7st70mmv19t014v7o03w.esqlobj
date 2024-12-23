@@ -1,0 +1,30 @@
+CREATE COMPUTE MODULE Business_Flow_3_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		   CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.XMLNSC.Data.Customer;
+	    DECLARE id CHARACTER inref.CUS_ID;
+	    DECLARE name CHARACTER inref.CUS_NAME;
+	    DECLARE address CHARACTER inref.CUS_ADDRESS;
+	    DECLARE city CHARACTER inref.CUS_CITY;
+	    DECLARE mobile INTEGER inref.CUS_MOBILE_NO;
+		
+		CALL CREATE_ACCOUNT(id , name , address , city , mobile);
+		SET OutputRoot.XMLNSC.Data.Response = 'Account has successfully Created !';
+	END;
+END MODULE;

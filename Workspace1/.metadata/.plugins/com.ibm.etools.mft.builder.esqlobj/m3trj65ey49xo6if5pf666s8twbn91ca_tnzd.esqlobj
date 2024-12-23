@@ -1,0 +1,11 @@
+CREATE FILTER MODULE Filter_Flow_Filter
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE com REFERENCE TO InputRoot.XMLNSC.root;
+		DECLARE ref CHARACTER;
+		SET ref = com.RequestType;
+		IF com
+		RETURN TRUE;
+	END;
+
+END MODULE;

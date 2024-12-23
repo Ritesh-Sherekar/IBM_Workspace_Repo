@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="Mapping_Node">
+  <XSDCollection href="platform:/resource/Mapping_Node/XML_Schema.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/Mapping_Node/XML_Schema.xsd#//CustomerDetails;XSDElementDeclaration" name="CustomerDetails"/>
+  </XSDCollection>
+</MessageBroker>

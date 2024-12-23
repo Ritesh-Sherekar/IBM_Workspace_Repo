@@ -1,0 +1,8 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- Retrive Data From Database
+		DECLARE studentID CHARACTER;
+		SET OutputLocalEnvironment.Destination.Loopback.Request.Id = InputRoot.JSON.Data.id; 
+		SET OutputRoot = InputRoot ;
+		SET OutputRoot = InputRoot;
+	END;

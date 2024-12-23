@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?><FixXML xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><body><body_elem1 xsi:type="xs:string">Name     I</body_elem1><body_elem2 xsi:type="xs:string">d  Company</body_elem2><body_elem3 xsi:type="xs:string"> &#13;
+Sridhar</body_elem3></body></FixXML>

@@ -1,0 +1,13 @@
+CREATE DATABASE MODULE Database_Node_Flow_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		--SET OutputRoot = InputRoot;
+		DECLARE inputJSON REFERENCE TO InputRoot.JSON.Data;
+		-- Extract ID and Name from JSON
+		SET Environment.Variables.ID = inputJSON.ID;
+		SET Environment.Variables.Name = inputJSON.Name;
+
+		RETURN TRUE;
+	END;
+
+END MODULE;

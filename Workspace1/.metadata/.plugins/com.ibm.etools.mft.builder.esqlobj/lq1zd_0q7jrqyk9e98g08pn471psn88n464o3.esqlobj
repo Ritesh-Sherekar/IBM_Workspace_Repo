@@ -1,0 +1,25 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- For Insert the data into database
+		
+		--DECLARE var CHARACTER 'INSERT INTO EMP(ID ,NAME ,SALARY ,AGE) VALUES (?,?,?,?)';
+		--SET LocalEnvironment.data[] = PASSTHRU(var, 50, 'Eidiko50' ,15050 ,25);
+		
+		--SET OutputRoot.XMLNSC.Result = 'Record Inserted Successfully';
+		
+		-- For Update Data In Database
+		
+		--DECLARE var CHARACTER 'UPDATE EMP SET ID = 10  WHERE NAME = ? ';
+		--SET LocalEnvironment.data[] = PASSTHRU(var, 'Eidiko');
+		
+		--DECLARE var REFERENCE TO InputRoot.XMLNSC;
+		--DECLARE var CHARACTER 'INSERT INTO EMP(ID ,NAME ,SALARY ,AGE) VALUES (var.ID , var.NAME , var.SALARY , var.AGE)';
+		
+		DECLARE id INT;
+        DECLARE name CHARACTER;
+        DECLARE salary DECIMAL;
+        DECLARE age INT
+		
+		
+	END;
+

@@ -1,0 +1,35 @@
+
+
+
+
+
+
+CREATE COMPUTE MODULE BLOB_JSON_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE myBlob BLOB; -- Declare a BLOB variable
+		DECLARE myJson REFERENCE TO OutputRoot.JSON; -- Declare a JSON reference for output
+		-- Assume the BLOB data is in InputRoot.BLOBDATA
+		SET myBlob = InputRoot.BLOBDATA; -- Assign BLOB data from the input message
+		-- Parse the BLOB data (which should be Base64-encoded or in a raw binary JSON format) to JSON
+		SET myJson = PARSE(myBlob AS JSON); -- Parse the BLOB as JSON
+		-- Now you can manipulate the 'myJson' variable as a JSON structure
+
+	END;
+END MODULE;

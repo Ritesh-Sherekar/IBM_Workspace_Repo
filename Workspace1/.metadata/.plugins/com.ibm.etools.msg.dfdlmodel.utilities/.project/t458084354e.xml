@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="File_Fix_Length">
+  <XSDCollection href="platform:/resource/File_Fix_Length/IBMdefined/CommaSeparatedFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+  <XSDCollection href="platform:/resource/File_Fix_Length/New.xsd" prefix="" targetNamespace="">
+    <import name="IBMdefined/CommaSeparatedFormat.xsd" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+    <element href="platform:/resource/File_Fix_Length/New.xsd#//New;XSDElementDeclaration" name="New"/>
+  </XSDCollection>
+</MessageBroker>

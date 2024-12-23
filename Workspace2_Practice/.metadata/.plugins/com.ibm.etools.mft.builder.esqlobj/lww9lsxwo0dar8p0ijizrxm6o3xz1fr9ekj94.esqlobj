@@ -1,0 +1,31 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		 CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		-- Accessing the customer ID from the Header 
+		DECLARE inref CHARACTER InputRoot.HTTPInputHeader.Cus_id ;
+		
+		-- Fetching customer details base on Customer ID
+		DECLARE fetch_data CHARACTER;
+		SET fetch_data = 'Select * from API_1_DETAIL_BY_ID where CUS_ID = ?';
+		
+		-- Stored the fetched data to the Environment 
+		SET Environment.Data[] = PASSTHRU(fetch_data ,inref);
+		SET OutputRoot.XMLNSC.Data.Accout_Datails[] = Environment.Data[];
+         
+      
+	END;

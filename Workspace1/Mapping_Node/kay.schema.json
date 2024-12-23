@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/Welcome7",
+    "definitions": {
+        "Welcome7": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Employee": {
+                    "$ref": "#/definitions/Employee"
+                }
+            },
+            "required": [
+                "Employee"
+            ],
+            "title": "Welcome7"
+        },
+        "Employee": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ID": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Age": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "Age",
+                "ID",
+                "Name"
+            ],
+            "title": "Employee"
+        }
+    }
+}

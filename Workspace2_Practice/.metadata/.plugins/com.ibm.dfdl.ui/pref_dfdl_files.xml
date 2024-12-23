@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+<preferenceForDFDLFile dfdlFileLocation="/Task_Fix_&amp;_Delimeated/fix.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Downloads\fixed2.txt" messageRootUsedForLastParse="fix"/>
+<preferenceForDFDLFile dfdlFileLocation="/File_Delimated/Delimeated.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\Delimeated.txt" messageRootUsedForLastParse="Parent"/>
+<preferenceForDFDLFile dfdlFileLocation="/File_FixedLength/Fix.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Documents\Xmldata.xml.txt" messageRootUsedForLastParse="Fix"/>
+<preferenceForDFDLFile dfdlFileLocation="/File_Fix_To_XML/FixXML.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Downloads\fixed.txt" messageRootUsedForLastParse="FixXML"/>
+<preferenceForDFDLFile dfdlFileLocation="/Task_Fix_&amp;_Delimeated/Fix.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Downloads\fixed.txt" messageRootUsedForLastParse="Fix"/>
+</preferences>

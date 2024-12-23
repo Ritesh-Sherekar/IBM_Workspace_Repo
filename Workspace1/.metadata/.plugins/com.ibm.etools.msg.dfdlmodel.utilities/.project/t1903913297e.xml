@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="Mapping_Node">
+  <XSDCollection href="platform:/resource/Mapping_Node/hello.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/Mapping_Node/hello.xsd#//Employee;XSDElementDeclaration" name="Employee"/>
+    <element href="platform:/resource/Mapping_Node/hello.xsd#//ID;XSDElementDeclaration=1" name="ID" type="mlib://Mapping_Node#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/Mapping_Node/hello.xsd#//Age;XSDElementDeclaration=2" name="Age" type="mlib://Mapping_Node#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/Mapping_Node/hello.xsd#//Name;XSDElementDeclaration=3" name="Name" type="mlib://Mapping_Node#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+  </XSDCollection>
+</MessageBroker>

@@ -1,0 +1,7 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inref CHARACTER;
+		SET inref = InputRoot.XMLNSC.ID;
+		RETURN TRUE;
+	END;
+

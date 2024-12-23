@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="C:\Workspace2_Practice\GeneratedBarFiles\Demo2project.generated.bar" deployTimestamp="2024-12-06 23:58:58">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="Demo2" deployBarfile="C:\Workspace2_Practice\GeneratedBarFiles\Demo2project.generated.bar" deployTimestamp="2024-12-06 23:58:58">
+    <ConfigurableProperty uri="Demo2#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Input.URLSpecifier" override="/d">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Input.decompressInputMessage" override="yes">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="Demo2#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>

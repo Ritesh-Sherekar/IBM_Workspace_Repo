@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="selectConnectionProfileWizard">
+		<item key="selectConnectionProfileWizardSortColumn" value="0"/>
+		<item key="selectConnectionProfileWizardSortOrder" value="-1"/>
+	</section>
+</section>

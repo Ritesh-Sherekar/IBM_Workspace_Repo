@@ -1,0 +1,14 @@
+CREATE COMPUTE MODULE LoopBack_MangoDB_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- Extract the ID from the incoming message
+   DECLARE studentID CHARACTER;
+   SET studentID = InputRoot.JSON.Data.Student.ID;
+   
+   -- Construct the HTTP request URL dynamically using the ID
+   SET OutputLocalEnvironment.Destination.HTTP.RequestURL = 'http://localhost:3000/api/Students/' || studentID;
+
+   -- Set HTTP Method to GET
+   SET OutputLocalEnvironment.Destination.HTTP.Method = 'GET';
+	END;
+END MODULE;

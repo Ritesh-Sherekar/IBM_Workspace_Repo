@@ -1,0 +1,14 @@
+CREATE COMPUTE MODULE LoopBack_MangoDB_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- Extract the ID from the incoming message
+   DECLARE studentID CHARACTER;
+   SET studentID = InputRoot.JSON.Data.Student.ID;
+
+   -- Set the LoopBack query to fetch the document by ID
+   SET OutputLocalEnvironment.Destination.Loopback.Request.DatabaseOperation = 'Retrive';
+   SET OutputLocalEnvironment.Destination.Loopback.Request.Model = 'StudentINFO';  -- The model name (MongoDB collection)
+   SET OutputLocalEnvironment.Destination.Loopback.Request.ID = studentID;     -- Pass the ID to the LoopBack node
+
+	END;
+END MODULE;

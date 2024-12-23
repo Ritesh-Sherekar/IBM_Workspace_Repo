@@ -1,0 +1,29 @@
+CREATE DATABASE MODULE Database_Node_flow_Database
+    CREATE FUNCTION Main() RETURNS BOOLEAN
+    BEGIN
+        -- Declare variables to hold input values
+        DECLARE ID INTEGER;
+        DECLARE NAME CHARACTER;
+        DECLARE SALARY INTEGER;
+        DECLARE AGE INTEGER;
+
+        -- Declare a reference to Environment (not InputRoot in Database Node)
+        DECLARE inref REFERENCE TO Environment.XMLNSC.EMPL;
+
+        -- Extract the values from the Environment tree (without using COALESCE)
+        SET ID = Environment.XMLNSC.EMPL.ID;
+        SET NAME = Environment.XMLNSC.EMPL.NAME;
+        SET SALARY = Environment.XMLNSC.EMPL.SALARY;
+        SET AGE = Environment.XMLNSC.EMPL.AGE;
+
+        -- Correct the SQL statement
+        DECLARE sqlStatement CHARACTER;
+        SET sqlStatement = 'INSERT INTO EMP(ID, NAME, SALARY, AGE) VALUES (?, ?, ?, ?)';
+
+        -- Use PASSTHRU to execute the SQL statement with the parameters
+        PASSTHRU(sqlStatement, ID, NAME, SALARY, AGE);
+
+        -- Return TRUE to indicate successful execution
+        RETURN TRUE;
+    END;
+END MODULE;

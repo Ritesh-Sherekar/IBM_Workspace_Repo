@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="C:\Workspace\GeneratedBarFiles\BLOB_JSONproject.generated.bar" deployTimestamp="2024-11-09 09:23:07">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="BLOB_JSON_Flow" deployBarfile="C:\Workspace\GeneratedBarFiles\BLOB_JSONproject.generated.bar" deployTimestamp="2024-11-09 09:23:07">
+    <ConfigurableProperty uri="BLOB_JSON_Flow#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#Compute1.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#Compute1.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#Compute1.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Input.URLSpecifier" override="/blob">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Reply1.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#HTTP Reply1.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="BLOB_JSON_Flow#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>
