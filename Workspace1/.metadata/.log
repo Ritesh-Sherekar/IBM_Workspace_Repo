@@ -9259,3 +9259,1161 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY com.ibm.etools.mft.pattern.community 4 0 2024-12-23 22:42:38.462
 !MESSAGE Connection error occurred : ot4i.github.io
+!SESSION 2025-01-03 18:56:24.308 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220421-1001
+java.fullversion=11.0.22+7
+JRE 11 Windows 10 amd64-64-Bit Compressed References 20240201_758 (JIT enabled, AOT enabled)
+OpenJ9   - 2c3d78b48
+OMR      - ea8124dbc
+JCL      - ad0357f272 based on jdk-11.0.22+7
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -showlocation -product com.ibm.etools.msgbroker.tooling.ide -data C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace1 -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 18:56:24.914
+!MESSAGE Both 'com.ibm.etools.mft.fcb' and 'com.ibm.etools.mft.gef.emf' register a package for 'http://www.ibm.com/wbi/2005/eflow_utility'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 18:56:24.914
+!MESSAGE Both 'com.ibm.etools.mft.gef.emf' and 'com.ibm.etools.mft.gef.emf' register a package for 'http://www.ibm.com/wbi/2005/eflow_utility'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 18:56:24.915
+!MESSAGE Both 'com.ibm.etools.mft.fcb' and 'com.ibm.etools.mft.pattern.capture.annotation' register a package for 'http://www.ibm.com/patternAnnotation/2010'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 18:56:24.916
+!MESSAGE Both 'com.ibm.etools.mft.gef.emf' and 'org.eclipse.emf.ecore' register a package for 'http://www.eclipse.org/emf/2002/Ecore'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 18:56:24.923
+!MESSAGE Both 'com.ibm.etools.javaee.core' and 'com.ibm.etools.mft.service.model' register an extension parser for 'application'
+
+!ENTRY org.eclipse.core.resources 4 567 2025-01-03 18:56:25.280
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2025-01-03 18:56:25.280
+!MESSAGE Could not read metadata for '.org.eclipse.egit.core.cmp'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/.org.eclipse.egit.core.cmp)[567]: java.lang.Exception: The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:868)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:724)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1555)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2482)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2233)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:813)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:746)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:805)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:762)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:1075)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2025-01-03 18:56:25.280
+!MESSAGE The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!STACK 0
+java.lang.Exception: The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:888)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:868)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:724)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1555)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2482)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2233)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:813)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:746)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:805)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:762)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:1075)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.jface 2 0 2025-01-03 18:56:26.925
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-01-03 18:56:26.925
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@60a04d1a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4a43f7b3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-01-03 18:56:26.925
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7fd0432d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63367fa2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2025-01-03 18:56:27.294
+!MESSAGE Invalid preference category path: com.ibm.importer.preferences (bundle: com.ibm.adapter.c, page: com.ibm.adapter.c.ui.preferencepage.CPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2025-01-03 18:56:27.294
+!MESSAGE Invalid preference category path: com.ibm.importer.preferences (bundle: com.ibm.etools.cobol.preference.ui, page: com.ibm.etools.cobol.preference.ui.preferencepage.CobolPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2025-01-03 18:56:27.295
+!MESSAGE Invalid preference category path: com.ibm.debug.breakpoints.common.pref.tracepoint (bundle: com.ibm.debug.wsa, page: com.ibm.debug.wsa.WSATracepointPreferencePage)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-01-03 18:56:28.347
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sreenivas Bandaru'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2025-01-03 18:56:28.435
+!MESSAGE Duplicate template id: 'com.ibm.datatools.sqlxeditor.templates.xmlnamespaces2'
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 18:56:33.816
+!MESSAGE 
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 18:56:33.817
+!MESSAGE C:\Program Files\IBM\ACE\12.0.12.0\tools>mqsifindmqpath
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 18:56:34.111
+!MESSAGE BIP8071I: Successful command completion. C:\Program Files\IBM\MQ
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 18:56:34.111
+!MESSAGE MQ Install location found:C:/Program Files/IBM/MQ
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 18:56:34.112
+!MESSAGE 
+
+!ENTRY com.ibm.etools.mft.uri 0 0 2025-01-03 18:57:07.735
+!MESSAGE 
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:57:34.495
+!MESSAGE Project 'Java_CN_2Java' is not open.
+!STACK 0
+java.lang.Exception: Project 'Java_CN_2Java' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:2897)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:801)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2789)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:57:34.501
+!MESSAGE Project 'Java_CN_2Java' is not open.
+!STACK 0
+java.lang.Exception: Project 'Java_CN_2Java' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.optionallyPruneChildren(AbstractTreeViewer.java:2848)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2647)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:57:55.529
+!MESSAGE Project 'TaskGeneralJava' is not open.
+!STACK 0
+java.lang.Exception: Project 'TaskGeneralJava' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:2897)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:801)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2789)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:57:55.543
+!MESSAGE Project 'TaskGeneralJava' is not open.
+!STACK 0
+java.lang.Exception: Project 'TaskGeneralJava' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.optionallyPruneChildren(AbstractTreeViewer.java:2848)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2647)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:58:02.035
+!MESSAGE Project 'Global_CacheJava' is not open.
+!STACK 0
+java.lang.Exception: Project 'Global_CacheJava' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:2897)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:801)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2789)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:58:02.054
+!MESSAGE Project 'Global_CacheJava' is not open.
+!STACK 0
+java.lang.Exception: Project 'Global_CacheJava' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.optionallyPruneChildren(AbstractTreeViewer.java:2848)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2647)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:58:09.645
+!MESSAGE Project 'WS_Policy_Project' is not open.
+!STACK 0
+java.lang.Exception: Project 'WS_Policy_Project' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:2897)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:801)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2789)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.msgFilterProc(Display.java:3369)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:58:09.659
+!MESSAGE Project 'WS_Policy_Project' is not open.
+!STACK 0
+java.lang.Exception: Project 'WS_Policy_Project' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.optionallyPruneChildren(AbstractTreeViewer.java:2848)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2647)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.msgFilterProc(Display.java:3369)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:58:31.398
+!MESSAGE Project 'Java_Compute_NodeJava' is not open.
+!STACK 0
+java.lang.Exception: Project 'Java_Compute_NodeJava' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:2897)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:801)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2789)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 372 2025-01-03 18:58:31.420
+!MESSAGE Project 'Java_Compute_NodeJava' is not open.
+!STACK 0
+java.lang.Exception: Project 'Java_Compute_NodeJava' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:148)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:459)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.optionallyPruneChildren(AbstractTreeViewer.java:2848)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2647)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.handleResourceAdded(AbstractDeltaVisitor.java:170)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:98)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 4 2025-01-03 18:58:32.457
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable@3a940023, thread Worker-18: Refreshing workspace will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2025-01-03 18:58:32.457
+!MESSAGE Worker-18: Refreshing workspace thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-18: Refreshing workspace
+	at java.management/com.ibm.java.lang.management.internal.ThreadMXBeanImpl.getMultiThreadInfoImpl(Native Method)
+	at java.management/com.ibm.java.lang.management.internal.ThreadMXBeanImpl.getThreadInfoCommon(ThreadMXBeanImpl.java:352)
+	at java.management/com.ibm.java.lang.management.internal.ThreadMXBeanImpl.getThreadInfo(ThreadMXBeanImpl.java:312)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4779)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener.resourceChanged(ResourceTreeContentProvider.java:167)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:381)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1505)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2025-01-03 18:58:32.457
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at java.base/java.lang.Object.waitImpl(Native Method)
+	at java.base/java.lang.Object.wait(Object.java:251)
+	at java.base/java.lang.Object.wait(Object.java:219)
+	at org.eclipse.core.internal.jobs.Semaphore.acquire(Semaphore.java:45)
+	at org.eclipse.core.internal.jobs.OrderedLock.doAcquire(OrderedLock.java:173)
+	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:109)
+	at org.eclipse.core.internal.jobs.OrderedLock.acquire(OrderedLock.java:85)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:125)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2265)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2310)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2340)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:811)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.initKnownContainers(JavaModelManager.java:3082)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3052)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2340)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3091)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2088)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3783)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3240)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3404)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2489)
+	at org.eclipse.jdt.internal.core.DynamicProjectReferences.getDependentProjects(DynamicProjectReferences.java:37)
+	at org.eclipse.core.internal.resources.ProjectDescription.computeDynamicReferencesForProject(ProjectDescription.java:951)
+	at org.eclipse.core.internal.resources.ProjectDescription.getAllBuildConfigReferences(ProjectDescription.java:266)
+	at org.eclipse.core.internal.resources.ProjectDescription.getAllReferences(ProjectDescription.java:223)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:464)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:697)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:714)
+	at com.ibm.etools.mft.applib.utils.ApplicationLibraryHelper.getReferencedProjectButDontRecurseIntoLibraries(ApplicationLibraryHelper.java:685)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getObjectsInContainer(VirtualFolderUtils.java:2644)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getAllObjectsInApplication(VirtualFolderUtils.java:2481)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForApplicationOrLibraryProj(VirtualFolderUtils.java:801)
+	at com.ibm.etools.mft.navigator.utils.VirtualFolderUtils.getProjectChildrenForLibraryProj(VirtualFolderUtils.java:778)
+	at com.ibm.etools.mft.navigator.resource.factory.ResourceLibraryFactory.getProjectChildren(ResourceLibraryFactory.java:78)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getProjectChildren(ResourceTreeContentProvider.java:648)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.getChildren(ResourceTreeContentProvider.java:321)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider.hasChildren(ResourceTreeContentProvider.java:655)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2184)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2214)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:2897)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:801)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1937)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1890)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1459)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeViewer.refresh(ResourceTreeViewer.java:2583)
+	at com.ibm.etools.mft.navigator.resource.viewer.WorkspaceRootDeltaVisitor.handleResourceModified(WorkspaceRootDeltaVisitor.java:72)
+	at com.ibm.etools.mft.navigator.AbstractDeltaVisitor.visit(AbstractDeltaVisitor.java:110)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.ibm.etools.mft.navigator.resource.viewer.ResourceTreeContentProvider$ResourceChangeListener$DeltaVisitorRunnable.run(ResourceTreeContentProvider.java:141)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2025-01-03 19:04:30.748 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220421-1001
+java.fullversion=11.0.22+7
+JRE 11 Windows 10 amd64-64-Bit Compressed References 20240201_758 (JIT enabled, AOT enabled)
+OpenJ9   - 2c3d78b48
+OMR      - ea8124dbc
+JCL      - ad0357f272 based on jdk-11.0.22+7
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide -data C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace1 -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 19:04:31.366
+!MESSAGE Both 'com.ibm.etools.mft.fcb' and 'com.ibm.etools.mft.gef.emf' register a package for 'http://www.ibm.com/wbi/2005/eflow_utility'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 19:04:31.367
+!MESSAGE Both 'com.ibm.etools.mft.gef.emf' and 'com.ibm.etools.mft.gef.emf' register a package for 'http://www.ibm.com/wbi/2005/eflow_utility'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 19:04:31.367
+!MESSAGE Both 'com.ibm.etools.mft.fcb' and 'com.ibm.etools.mft.pattern.capture.annotation' register a package for 'http://www.ibm.com/patternAnnotation/2010'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 19:04:31.369
+!MESSAGE Both 'com.ibm.etools.mft.gef.emf' and 'org.eclipse.emf.ecore' register a package for 'http://www.eclipse.org/emf/2002/Ecore'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-01-03 19:04:31.374
+!MESSAGE Both 'com.ibm.etools.javaee.core' and 'com.ibm.etools.mft.service.model' register an extension parser for 'application'
+
+!ENTRY org.eclipse.jface 2 0 2025-01-03 19:04:33.014
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-01-03 19:04:33.014
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@db290add,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4423a2bc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-01-03 19:04:33.014
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29876b66,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@586898c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2025-01-03 19:04:33.378
+!MESSAGE Invalid preference category path: com.ibm.importer.preferences (bundle: com.ibm.adapter.c, page: com.ibm.adapter.c.ui.preferencepage.CPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2025-01-03 19:04:33.379
+!MESSAGE Invalid preference category path: com.ibm.importer.preferences (bundle: com.ibm.etools.cobol.preference.ui, page: com.ibm.etools.cobol.preference.ui.preferencepage.CobolPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2025-01-03 19:04:33.379
+!MESSAGE Invalid preference category path: com.ibm.debug.breakpoints.common.pref.tracepoint (bundle: com.ibm.debug.wsa, page: com.ibm.debug.wsa.WSATracepointPreferencePage)
+
+!ENTRY com.ibm.etools.mft.uri 0 0 2025-01-03 19:04:33.911
+!MESSAGE 
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-01-03 19:04:36.448
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sreenivas Bandaru'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2025-01-03 19:04:36.522
+!MESSAGE Duplicate template id: 'com.ibm.datatools.sqlxeditor.templates.xmlnamespaces2'
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 19:04:42.080
+!MESSAGE 
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 19:04:42.081
+!MESSAGE C:\Program Files\IBM\ACE\12.0.12.0\tools>mqsifindmqpath
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 19:04:42.352
+!MESSAGE BIP8071I: Successful command completion. C:\Program Files\IBM\MQ
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 19:04:42.353
+!MESSAGE MQ Install location found:C:/Program Files/IBM/MQ
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-01-03 19:04:42.353
+!MESSAGE 
