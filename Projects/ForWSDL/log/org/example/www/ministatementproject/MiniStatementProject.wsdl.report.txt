@@ -1,0 +1,22 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\IBM\ACET12\Projects\ForWSDL\MiniStatementProject.wsdl
+
+The WSDL import will proceed with bindings MiniStatementProjectSOAP.
+Creating wsdl schema document for file:///C:/Users/Sreenivas Bandaru/IBM/ACET12/Projects/ForWSDL/MiniStatementProject.wsdl.
+Parsing wsdl binding {http://www.example.org/MiniStatementProject/}MiniStatementProjectSOAP.
+Parsing wsdl binding input NewOperation.
+Parsing wsdl binding output NewOperation.
+Processing doc style for operation NewOperation.
+Populating WSDL schema MiniStatementProject.xsd.
+Creating file MiniStatementProject.xsd in the workspace.
+Creating file MiniStatementProject_InlineSchema1.xsd in the workspace.
+Copying source WSDL MiniStatementProject.wsdl to MiniStatementProject.wsdl.
+
+Elapsed time processing this message definition file: 0.133 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
