@@ -6,13 +6,13 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MiniStatement_Backend/icons/full/obj16/MiniStatement_Backend_Flow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MiniStatement_Backend/icons/full/obj30/MiniStatement_Backend_Flow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmSOAPInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="148,142" wsdlFileName="MiniStatementProject.wsdl" selectedPortType="MiniStatementProject" selectedBinding="MiniStatementProjectSOAP" selectedPort="MiniStatementProjectSOAP" targetNamespace="http://www.example.org/MiniStatementProject/" useHTTPTransport="true" urlSelector="/path" messageSetProperty="{ForWSDL}">
+      <nodes xmi:type="ComIbmSOAPInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="165,105" wsdlFileName="services_1.wsdl" selectedPortType="T24WebServicesImpl" selectedBinding="T24WebServicesImplPortBinding" selectedPort="T24WebServicesImplPort" targetNamespace="http://temenos.com/MMT" useHTTPTransport="true" urlSelector="/TWSMMT/services" messageSetProperty="{T24WSDL}" parserXmlnscBuildTreeUsingXMLSchema="false">
         <translation xmi:type="utility:ConstantString" string="SOAP Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="600,141">
+      <nodes xmi:type="ComIbmSOAPReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="617,104">
         <translation xmi:type="utility:ConstantString" string="SOAP Reply"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="387,62" computeExpression="esql://routine/#MiniStatement_Backend_Flow_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="404,25" computeExpression="esql://routine/#MiniStatement_Backend_Flow_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

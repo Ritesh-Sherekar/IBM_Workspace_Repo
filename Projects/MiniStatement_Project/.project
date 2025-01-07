@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>ForWSDL</project>
+		<project>T24WSDL</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

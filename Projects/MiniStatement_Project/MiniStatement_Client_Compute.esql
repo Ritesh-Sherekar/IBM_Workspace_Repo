@@ -20,7 +20,6 @@ CREATE COMPUTE MODULE MiniStatement_Client_Compute
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot.MQMD.MsgId = InputLocalEnvironment.Destination.HTTP.RequestIdentifier;
-		SET OutputRoot.MQRFH2.Result= InputRoot.JSON.Data.MiniStatementRequest;
-		SET OutputRoot = InputRoot;
+		SET OutputRoot.JSON = InputRoot.JSON;
 	END;
 END MODULE;

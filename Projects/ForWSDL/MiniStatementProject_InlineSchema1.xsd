@@ -6,13 +6,12 @@
     <xsd:complexType>
                 
       <xsd:sequence>
-                  	
-        <xsd:element name="a" type="xsd:int"/>
-                  	
-        <xsd:element name="b" type="xsd:int"/>
-                  
+
+
+
+      	<xsd:element name="in" type="xsd:string"></xsd:element>
       </xsd:sequence>
-              
+
     </xsd:complexType>
           
   </xsd:element>
@@ -22,11 +21,11 @@
     <xsd:complexType>
                 
       <xsd:sequence>
-                    
-        <xsd:element name="sum" type="xsd:int"/>
-                  
+
+
+      	<xsd:element name="out" type="xsd:string"></xsd:element>
       </xsd:sequence>
-              
+
     </xsd:complexType>
           
   </xsd:element>
