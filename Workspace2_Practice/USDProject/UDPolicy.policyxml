@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policies>
+  <policy policyType="UserDefined" policyName="UDPolicy" policyTemplate="UserDefined">
+    <dsn>Hello</dsn>
+    <Dsn2>kay re</Dsn2>
+    <Dsn3>jevli kay</Dsn3>
+  </policy>
+</policies>

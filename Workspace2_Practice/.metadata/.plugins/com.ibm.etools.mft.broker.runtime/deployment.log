@@ -520,3 +520,93 @@ BIP9326I<<The source 'jdbcproject.generated.bar' has been successfully deployed.
 Fetch_data_By_Java_CN>>broker1>>server1>>SUCCESS>>1734650554428
 BIP9332I<<Application 'Fetch_data_By_Java_CN' has been created successfully. <<1734650554428
 BIP9326I<<The source 'Fetch_data_By_Java_CNproject.generated.bar' has been successfully deployed. <<1734650554428
+User_Define_Policy>>p>>s1>>SUCCESS>>1736314251582
+BIP9332I<<Application 'User_Define_Policy' has been created successfully. <<1736314251582
+BIP9326I<<The source 'User_Define_Policyproject.generated.bar' has been successfully deployed. <<1736314251582
+User_Define_Policy>>p>>s1>>SUCCESS>>1736314449598
+BIP9332I<<Application 'User_Define_Policy' has been changed successfully. <<1736314449598
+BIP9326I<<The source 'User_Define_Policyproject.generated.bar' has been successfully deployed. <<1736314449598
+User_Define_Policy>>p>>s1>>SUCCESS>>1736314524735
+BIP9332I<<Application 'User_Define_Policy' has been changed successfully. <<1736314524735
+BIP9326I<<The source 'User_Define_Policyproject.generated.bar' has been successfully deployed. <<1736314524735
+User_Define_Policy>>p>>s1>>WARNING>>1736321361587
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_Define_Policy', 'User_Define_Policy' of type 'Application' failed. <<1736321361587
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'MyPolicyAccessClass.getPolicyProperty' which is referred to by the routine 'getPolicyProperty'. <<1736321361587
+BIP2943E<<The Java Method 'MyPolicyAccessClass.getPolicyProperty' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736321361587
+BIP9333W<<Application 'User_Define_Policy' has been changed but contains errors which has prevented some resources from starting. <<1736321361587
+BIP1096E<<The source 'User_Define_Policyproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736321361587
+USDProject>>p>>s1>>SUCCESS>>1736321410705
+BIP9332I<<PolicyProject 'USDProject' has been created successfully. <<1736321410705
+BIP9326I<<The source 'USDProjectproject.generated.bar' has been successfully deployed. <<1736321410705
+User_Define_Policy>>p>>s1>>WARNING>>1736321416952
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_Define_Policy', 'User_Define_Policy' of type 'Application' failed. <<1736321416952
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'MyPolicyAccessClass.getPolicyProperty' which is referred to by the routine 'getPolicyProperty'. <<1736321416952
+BIP2943E<<The Java Method 'MyPolicyAccessClass.getPolicyProperty' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736321416952
+BIP9333W<<Application 'User_Define_Policy' has been created but contains errors which has prevented some resources from starting. <<1736321416952
+BIP1096E<<The source 'User_Define_Policyproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736321416952
+User_Define_Policy>>p>>s1>>WARNING>>1736321470148
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_Define_Policy', 'User_Define_Policy' of type 'Application' failed. <<1736321470148
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'MyPolicyAccessClass.mypolicyaccessclass' which is referred to by the routine 'getPolicyProperty'. <<1736321470148
+BIP2943E<<The Java Method 'MyPolicyAccessClass.mypolicyaccessclass' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736321470148
+BIP9333W<<Application 'User_Define_Policy' has been changed but contains errors which has prevented some resources from starting. <<1736321470148
+BIP1096E<<The source 'User_Define_Policyproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736321470148
+User_Define_Policy>>p>>s1>>WARNING>>1736326572889
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_Define_Policy', 'User_Define_Policy' of type 'Application' failed. <<1736326572889
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'MyPolicyAccessClass.mypolicyaccessclass' which is referred to by the routine 'getPolicyProperty'. <<1736326572889
+BIP2943E<<The Java Method 'MyPolicyAccessClass.mypolicyaccessclass' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736326572889
+BIP9333W<<Application 'User_Define_Policy' has been created but contains errors which has prevented some resources from starting. <<1736326572889
+BIP1096E<<The source 'User_Define_Policyproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736326572889
+USDProject>>p>>s1>>SUCCESS>>1736326836314
+BIP9332I<<PolicyProject 'USDProject' has been created successfully. <<1736326836314
+BIP9326I<<The source 'USDProjectproject.generated.bar' has been successfully deployed. <<1736326836314
+User_Define_Policy>>p>>s1>>WARNING>>1736326842951
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_Define_Policy', 'User_Define_Policy' of type 'Application' failed. <<1736326842951
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'MyPolicyAccessClass.getPolicyProperty' which is referred to by the routine 'getPolicyProperty'. <<1736326842951
+BIP2943E<<The Java Method 'MyPolicyAccessClass.getPolicyProperty' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736326842951
+BIP9333W<<Application 'User_Define_Policy' has been created but contains errors which has prevented some resources from starting. <<1736326842951
+BIP1096E<<The source 'User_Define_Policyproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736326842951
+User_Define_Policy>>p>>s1>>WARNING>>1736327197954
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_Define_Policy', 'User_Define_Policy' of type 'Application' failed. <<1736327197954
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'MyPolicyAccessClass.getPolicyProperty' which is referred to by the routine 'getPolicyProperty'. <<1736327197954
+BIP2943E<<The Java Method 'MyPolicyAccessClass.getPolicyProperty' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736327197954
+BIP9333W<<Application 'User_Define_Policy' has been changed but contains errors which has prevented some resources from starting. <<1736327197954
+BIP1096E<<The source 'User_Define_Policyproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736327197954
+User_Define_Policy>>p>>s1>>WARNING>>1736327604865
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_Define_Policy', 'User_Define_Policy' of type 'Application' failed. <<1736327604865
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'MyPolicyAccessClass.getPolicyProperty' which is referred to by the routine 'getPolicyProperty'. <<1736327604865
+BIP2943E<<The Java Method 'MyPolicyAccessClass.getPolicyProperty' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736327604865
+BIP9333W<<Application 'User_Define_Policy' has been created but contains errors which has prevented some resources from starting. <<1736327604865
+BIP1096E<<The source 'User_Define_Policyproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736327604865
+User_DP>>test>>testserver>>WARNING>>1736329215124
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_DP', 'User_DP' of type 'Application' failed. <<1736329215124
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'Java_Class.getPolicyProperty' which is referred to by the routine 'getPolicyProperty'. <<1736329215124
+BIP2943E<<The Java Method 'Java_Class.getPolicyProperty' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736329215124
+BIP9333W<<Application 'User_DP' has been created but contains errors which has prevented some resources from starting. <<1736329215124
+BIP1096E<<The source 'User_DPproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736329215124
+User_DP>>test>>testserver>>WARNING>>1736329642776
+BIP9318E<<Request to 'PreSetupValidate' resource 'User_DP', 'User_DP' of type 'Application' failed. <<1736329642776
+BIP3202E<<(.getPolicyProperty, 1.1) : An error occurred when trying to resolve the Java class or method 'Java_Class.getPolicyProperty' which is referred to by the routine 'getPolicyProperty'. <<1736329642776
+BIP2943E<<The Java Method 'Java_Class.getPolicyProperty' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. <<1736329642776
+BIP9333W<<Application 'User_DP' has been changed but contains errors which has prevented some resources from starting. <<1736329642776
+BIP1096E<<The source 'User_DPproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1736329642776
+User_DP>>test>>testserver>>SUCCESS>>1736329727255
+BIP9332I<<Application 'User_DP' has been changed successfully. <<1736329727255
+BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deployed. <<1736329727255
+User_DP>>test>>testserver>>SUCCESS>>1736332534405
+BIP9332I<<Application 'User_DP' has been created successfully. <<1736332534405
+BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deployed. <<1736332534405
+User_DP>>p>>s1>>SUCCESS>>1736332769663
+BIP9332I<<Application 'User_DP' has been created successfully. <<1736332769663
+BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deployed. <<1736332769663
+User_DP>>p>>s1>>SUCCESS>>1736332818010
+BIP9332I<<Application 'User_DP' has been changed successfully. <<1736332818010
+BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deployed. <<1736332818010
+User_DP>>p>>s1>>SUCCESS>>1736334151858
+BIP9332I<<Application 'User_DP' has been created successfully. <<1736334151858
+BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deployed. <<1736334151858
+User_DP>>p>>s1>>SUCCESS>>1736334248000
+BIP9332I<<Application 'User_DP' has been changed successfully. <<1736334248000
+BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deployed. <<1736334248000
+User_DP>>p>>s1>>SUCCESS>>1736338992518
+BIP9332I<<Application 'User_DP' has been created successfully. <<1736338992518
+BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deployed. <<1736338992518

@@ -16,7 +16,7 @@
       <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="660,69" computeExpression="esql://routine/#MiniStatement_Project_Flow_Compute1.Main">
         <translation xmi:type="utility:ConstantString" string="soapTOjson"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="344,42" wsdlFileName="services_1.wsdl" selectedPortType="T24WebServicesImpl" selectedBinding="T24WebServicesImplPortBinding" selectedOperation="MMTSTMT" selectedPort="T24WebServicesImplPort" targetNamespace="http://temenos.com/MMT" useHTTPTransport="true" webServiceURL="http://10.1.245.189:9080/TWSMMT/services" sslProtocol="TLS" messageSetProperty="{T24WSDL}" parserXmlnscBuildTreeUsingXMLSchema="false"
+      <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="344,42" wsdlFileName="services_1.wsdl" selectedPortType="T24WebServicesImpl" selectedBinding="T24WebServicesImplPortBinding" selectedOperation="MMTSTMT" selectedPort="T24WebServicesImplPort" targetNamespace="http://temenos.com/MMT" useHTTPTransport="true" webServiceURL="http://localhost:7800/TWSMMT/services" sslProtocol="TLS" messageSetProperty="{T24WSDL}" parserXmlnscBuildTreeUsingXMLSchema="false"
           validateMaster="none">
         <translation xmi:type="utility:ConstantString" string="CallBackend"/>
       </nodes>
