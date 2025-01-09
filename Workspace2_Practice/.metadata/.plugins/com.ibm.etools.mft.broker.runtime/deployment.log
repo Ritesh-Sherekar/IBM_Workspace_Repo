@@ -610,3 +610,6 @@ BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deploy
 User_DP>>p>>s1>>SUCCESS>>1736338992518
 BIP9332I<<Application 'User_DP' has been created successfully. <<1736338992518
 BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deployed. <<1736338992518
+1gbFile>>b1>>s1>>SUCCESS>>1736414907407
+BIP9332I<<Application '1gbFile' has been created successfully. <<1736414907407
+BIP9326I<<The source '1gbFileproject.generated.bar' has been successfully deployed. <<1736414907407
