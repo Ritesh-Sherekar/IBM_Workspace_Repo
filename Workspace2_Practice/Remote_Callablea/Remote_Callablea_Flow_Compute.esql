@@ -19,6 +19,6 @@ CREATE COMPUTE MODULE Remote_Callablea_Flow_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot.XMLNSC.Result = InputRoot.JSON.Data;
+		SET OutputRoot.XMLNSC.Message = 'Kay Re gotya';
 	END;
 END MODULE;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.ibm.etools.mft.debug.internal.mbLaunchConfigurationDelegate">
-    <stringAttribute key="BRName" value="wsuname"/>
+    <stringAttribute key="BRName" value="rakesh"/>
     <stringAttribute key="ConnectionInfo" value=""/>
-    <stringAttribute key="EGName" value="sar2"/>
+    <stringAttribute key="EGName" value="RakeshVdhya"/>
     <stringAttribute key="com.ibm.etools.mft.debug.attr_hostname" value="localhost"/>
     <stringAttribute key="com.ibm.etools.mft.debug.attr_javaportname" value="23"/>
 </launchConfiguration>

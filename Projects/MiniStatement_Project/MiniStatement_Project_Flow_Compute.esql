@@ -1,4 +1,5 @@
-
+DECLARE mmt NAMESPACE 'http://temenos.com/MMT';
+DECLARE ns2 NAMESPACE 'http://temenos.com/EMMTMINISTMT';
 
 CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
