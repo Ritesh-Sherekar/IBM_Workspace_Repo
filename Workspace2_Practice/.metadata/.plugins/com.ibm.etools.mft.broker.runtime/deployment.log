@@ -613,3 +613,9 @@ BIP9326I<<The source 'User_DPproject.generated.bar' has been successfully deploy
 1gbFile>>b1>>s1>>SUCCESS>>1736414907407
 BIP9332I<<Application '1gbFile' has been created successfully. <<1736414907407
 BIP9326I<<The source '1gbFileproject.generated.bar' has been successfully deployed. <<1736414907407
+Remote_Callablea>>remote>>rs1>>SUCCESS>>1736487299276
+BIP9332I<<Application 'Remote_Callablea' has been created successfully. <<1736487299276
+BIP9326I<<The source 'Remote_Callableaproject.generated.bar' has been successfully deployed. <<1736487299276
+Remote_Callablea>>remote>>rs1>>SUCCESS>>1736488549928
+BIP9332I<<Application 'Remote_Callablea' has been created successfully. <<1736488549928
+BIP9326I<<The source 'Remote_Callableaproject.generated.bar' has been successfully deployed. <<1736488549928
