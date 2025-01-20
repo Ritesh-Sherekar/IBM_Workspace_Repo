@@ -126,6 +126,9 @@
 <workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1736486040993_41" label="[Remote_Callablea]" name="[Remote_Callablea]">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Remote_Callablea" type="4"/>
 </workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1737362979498_42" label="[XMLNSC_Parser_Option]" name="[XMLNSC_Parser_Option]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XMLNSC_Parser_Option" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1732828250113_13" label="Window Working Set" name="Aggregate for window 1732828250113"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1733421561316_25" label="Window Working Set" name="Aggregate for window 1733421561316"/>
 </workingSetManager>

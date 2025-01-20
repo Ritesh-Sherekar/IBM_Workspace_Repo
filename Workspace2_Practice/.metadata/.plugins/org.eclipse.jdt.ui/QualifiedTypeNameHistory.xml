@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.ibm.broker.plugin.MbSQLStatement"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.sql.JDBCType"/>
-    <fullyQualifiedTypeName name="com.ibm.broker.plugin.MbNode.JDBC_TransactionType"/>
-    <fullyQualifiedTypeName name="java.beans.Statement"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>

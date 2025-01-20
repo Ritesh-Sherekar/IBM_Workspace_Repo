@@ -3,7 +3,7 @@
 CREATE COMPUTE MODULE Business_Flow_1_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		-- CALL CopyMessageHeaders();
+		 CALL CopyMessageHeaders();
 		 CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
@@ -29,7 +29,11 @@ CREATE COMPUTE MODULE Business_Flow_1_Compute
 		-- Stored the fetched data to the Environment 
 		SET Environment.Data[] = PASSTHRU(fetch_data ,inref);
 		SET OutputRoot.XMLNSC.Data.Accout_Datails[] = Environment.Data[];
+		
+		-- Seting service ID for response
+		SET OutputRoot.HTTPResponseHeader."SER_ID" = InputRoot.HTTPInputHeader.Ser_id ;
          
-      
+    
+         
 	END;
 END MODULE;
