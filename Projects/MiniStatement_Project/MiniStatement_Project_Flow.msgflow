@@ -14,10 +14,9 @@
         <translation xmi:type="utility:ConstantString" string="MiniStaRes"/>
       </nodes>
       <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="660,69" computeExpression="esql://routine/#MiniStatement_Project_Flow_Compute1.Main">
-        <translation xmi:type="utility:ConstantString" string="soapTOjson"/>
+        <translation xmi:type="utility:ConstantString" string="xmlTOjson"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="344,42" wsdlFileName="services_1.wsdl" selectedPortType="T24WebServicesImpl" selectedBinding="T24WebServicesImplPortBinding" selectedOperation="MMTSTMT" selectedPort="T24WebServicesImplPort" targetNamespace="http://temenos.com/MMT" useHTTPTransport="true" webServiceURL="http://localhost:7800/TWSMMT/services" sslProtocol="TLS" messageSetProperty="{T24WSDL}" parserXmlnscBuildTreeUsingXMLSchema="false"
-          validateMaster="none">
+      <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="344,42" wsdlFileName="miniStatement.wsdl" selectedPortType="miniStatement" selectedBinding="miniStatementSOAP" selectedOperation="MiniStatement" selectedPort="miniStatementSOAP" targetNamespace="http://www.example.org/miniStatement/" useHTTPTransport="true" webServiceURL="http://localhost:7800/path" sslProtocol="TLS" messageSetProperty="{For_Project}" parserXmlnscBuildTreeUsingXMLSchema="false" validateMaster="none">
         <translation xmi:type="utility:ConstantString" string="CallBackend"/>
       </nodes>
       <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="182,77" computeExpression="esql://routine/#MiniStatement_Project_Flow_Compute.Main">

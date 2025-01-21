@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/miniStatement/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/miniStatement/">
+        
+  <xsd:element ibmSchExtn:docRoot="true" name="MiniStatement">
+            
+    <xsd:complexType>
+                
+      <xsd:sequence>
+                  	
+        <xsd:element name="WebRequestCommon" type="tns:WebRequestCommonType"/>
+                  	
+        <xsd:element name="EMMTMINISTMTType" type="tns:EMMTMINISTMTTypeType"/>
+                  
+      </xsd:sequence>
+              
+    </xsd:complexType>
+          
+  </xsd:element>
+        
+  <xsd:element ibmSchExtn:docRoot="true" name="MiniStmRes">
+            
+    <xsd:complexType>
+                
+      <xsd:sequence>
+                    
+        <xsd:element name="MiniStmRes" type="tns:MiniStmResType"/>
+                  
+      </xsd:sequence>
+              
+    </xsd:complexType>
+          
+  </xsd:element>
+      
+      
+  <xsd:complexType name="WebRequestCommonType">
+          	
+    <xsd:sequence>
+            		
+      <xsd:element name="company" type="xsd:string"/>
+            		
+      <xsd:element name="password" type="xsd:string"/>
+            		
+      <xsd:element name="userName" type="xsd:string"/>
+            	
+    </xsd:sequence>
+          
+  </xsd:complexType>
+        
+  <xsd:complexType name="EMMTMINISTMTTypeType">
+          	
+    <xsd:sequence>
+            		
+      <xsd:element name="columnName" type="xsd:string"/>
+            		
+      <xsd:element name="criteriaValue" type="xsd:string"/>
+            		
+      <xsd:element name="operand" type="xsd:string"/>
+            	
+    </xsd:sequence>
+          
+  </xsd:complexType>
+      
+      
+  <xsd:complexType name="MiniStmResType">
+          	
+    <xsd:sequence>
+            		
+      <xsd:element name="ACC_NO" type="xsd:string"/>
+            		
+      <xsd:element name="BRANCH" type="xsd:string"/>
+            		
+      <xsd:element name="LAST_TRAN" type="xsd:string"/>
+            		
+      <xsd:element name="DATE_TIME" type="xsd:string"/>
+            		
+      <xsd:element name="AVL_BAL" type="xsd:string"/>
+            		
+      <xsd:element name="REMARK" type="xsd:string"/>
+            	
+    </xsd:sequence>
+          
+  </xsd:complexType>
+      
+</xsd:schema>

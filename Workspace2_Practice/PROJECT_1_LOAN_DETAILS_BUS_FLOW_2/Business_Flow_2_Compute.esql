@@ -26,5 +26,8 @@ CREATE COMPUTE MODULE Business_Flow_2_Compute
 		
 		SET Environment.Data[] = PASSTHRU(fetch_Loan_details , inref);
 		SET OutputRoot.XMLNSC.Data.Loan_details[] = Environment.Data[];
+		
+		-- Seting service ID for response
+		SET OutputRoot.HTTPResponseHeader."SER_ID" = InputRoot.HTTPInputHeader.Ser_id ;
 	END;
 END MODULE;

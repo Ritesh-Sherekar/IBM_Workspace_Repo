@@ -1,4 +1,5 @@
 DECLARE mmt NAMESPACE 'http://temenos.com/MMT';
+DECLARE ns NAMESPACE 'http://www.example.org/miniStatement/';
 DECLARE ns2 NAMESPACE 'http://temenos.com/EMMTMINISTMT';
 
 CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
@@ -20,9 +21,24 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data.MiniStatementRequest;
 		SET OutputRoot.XMLNSC = InputRoot.JSON;
 		SET Environment.MQMD = InputRoot.MQMD;
 		SET Environment.MQMD.CorrelId = InputRoot.MQMD.MsgId;
+		
+		SET OutputRoot.SOAP.Context.Namespace.soapenv='http://temenos.com/MMT';
+		SET OutputRoot.SOAP.Context.Namespace.ns2='http://temenos.com/EMMTMINISTMT';
+		
+		SET OutputRoot.SOAP.Header = '';
+		
+		SET OutputRoot.SOAP.Body.ns:MiniStatement.WebRequestCommon.company = inref.WebRequestCommon.company;
+		SET OutputRoot.SOAP.Body.ns:MiniStatement.WebRequestCommon.password = inref.WebRequestCommon.password;
+		SET OutputRoot.SOAP.Body.ns:MiniStatement.WebRequestCommon.userName = inref.WebRequestCommon.userName;
+		
+		
+		SET OutputRoot.SOAP.Body.ns:MiniStatement.EMMTMINISTMTType.columnName = inref.EMMTMINISTMTType.Item.columnName;
+		SET OutputRoot.SOAP.Body.ns:MiniStatement.EMMTMINISTMTType.criteriaValue = inref.EMMTMINISTMTType.Item.criteriaValue;
+		SET OutputRoot.SOAP.Body.ns:MiniStatement.EMMTMINISTMTType.operand = inref.EMMTMINISTMTType.Item.operand;
 		
 	END;
 END MODULE;

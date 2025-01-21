@@ -18,13 +18,17 @@ CREATE COMPUTE MODULE Business_Flow_3_Compute
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		DECLARE inref REFERENCE TO InputRoot.XMLNSC.Data.Customer;
-	    DECLARE id CHARACTER inref.CUS_ID;
-	    DECLARE name CHARACTER inref.CUS_NAME;
-	    DECLARE address CHARACTER inref.CUS_ADDRESS;
-	    DECLARE city CHARACTER inref.CUS_CITY;
-	    DECLARE mobile INTEGER inref.CUS_MOBILE_NO;
+	    DECLARE id CHARACTER inref.XMLNSC.Data.Customer.CUS_ID;
+	    DECLARE name CHARACTER inref.XMLNSC.Data.Customer.CUS_NAME;
+	    DECLARE address CHARACTER inref.XMLNSC.Data.Customer.CUS_ADDRESS;
+	    DECLARE city CHARACTER inref.XMLNSC.Data.Customer.CUS_CITY;
+	    DECLARE mobile INTEGER inref.XMLNSC.Data.Customer.CUS_MOBILE_NO;
 		
 		CALL CREATE_ACCOUNT(id , name , address , city , mobile);
+		
+		-- Seting service ID for response
+		SET OutputRoot.HTTPResponseHeader."SER_ID" = InputRoot.HTTPInputHeader.Ser_id ;
+		
 		SET OutputRoot.XMLNSC.Data.Response = 'Account has successfully Created !';
 	END;
 END MODULE;

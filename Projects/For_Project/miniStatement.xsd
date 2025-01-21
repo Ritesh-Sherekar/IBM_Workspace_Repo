@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xsd:schema xmlns:tns="http://www.example.org/MiniStatementProject/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/MiniStatementProject/">
-  <xsd:include schemaLocation="MiniStatementProject_InlineSchema1.xsd"/>
+<xsd:schema xmlns:tns="http://www.example.org/miniStatement/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/miniStatement/">
+  <xsd:include schemaLocation="miniStatement_InlineSchema1.xsd"/>
   
   <!-- BEGIN Global group petaining to all wsdl:message definitions -->
   

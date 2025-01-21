@@ -1,5 +1,4 @@
-
-
+DECLARE ns NAMESPACE 'http://www.example.org/miniStatement/';
 CREATE COMPUTE MODULE MiniStatement_Backend_Flow_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
@@ -19,6 +18,19 @@ CREATE COMPUTE MODULE MiniStatement_Backend_Flow_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot = InputRoot;
+		DECLARE Account_No INTEGER InputRoot.SOAP.Body.ns:MiniStatement.EMMTMINISTMTType.criteriaValue;
+		
+		DECLARE sqlStatement CHARACTER 'select * from MINISTATEMENT_PROJECT where ACC_NO = ?';
+		
+		DECLARE MiniInfo ROW;
+		SET MiniInfo = PASSTHRU(sqlStatement,Account_No);
+	 
+	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.ACC_NO = FIELDVALUE(MiniInfo.ACC_NO);
+	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.BRANCH = FIELDVALUE(MiniInfo.BRANCH);
+	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.LAST_TRAN = FIELDVALUE(MiniInfo.LAST_TRAN);
+	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.DATE_TIME = FIELDVALUE(MiniInfo.DATE_TIME);
+	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.AVL_BAL = FIELDVALUE(MiniInfo.AVL_BAL);
+	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.REMARK = FIELDVALUE(MiniInfo.REMARK);
+		
 	END;
 END MODULE;

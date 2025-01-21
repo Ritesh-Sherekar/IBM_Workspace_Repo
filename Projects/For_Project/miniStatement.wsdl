@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/miniStatement/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="miniStatement" targetNamespace="http://www.example.org/miniStatement/">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="miniStatement_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="miniStatementSOAP" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+    
+  <wsdl:types>
+        
+          
+    <xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" targetNamespace="http://www.example.org/miniStatement/">
+      
+      <xsd:include schemaLocation="miniStatement_InlineSchema1.xsd"/>
+    </xsd:schema>
+        
+  </wsdl:types>
+    
+  <wsdl:message name="MiniStmtReq">
+        
+    <wsdl:part element="tns:MiniStatement" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="MiniStmRes">
+        
+    <wsdl:part element="tns:MiniStmRes" name="parameters"/>
+      
+  </wsdl:message>
+    
+  <wsdl:portType name="miniStatement">
+        
+    <wsdl:operation name="MiniStatement">
+            
+      <wsdl:input message="tns:MiniStmtReq"/>
+            
+      <wsdl:output message="tns:MiniStmRes"/>
+          
+    </wsdl:operation>
+      
+  </wsdl:portType>
+    
+  <wsdl:binding name="miniStatementSOAP" type="tns:miniStatement">
+        
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        
+    <wsdl:operation name="MiniStatement">
+            
+      <soap:operation soapAction="http://www.example.org/miniStatement/MiniStatement"/>
+            
+      <wsdl:input>
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output>
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+      
+  </wsdl:binding>
+    
+  <wsdl:service name="miniStatement">
+        
+    <wsdl:port binding="tns:miniStatementSOAP" name="miniStatementSOAP">
+            
+      <soap:address location="http://localhost:7800/path"/>
+          
+    </wsdl:port>
+      
+  </wsdl:service>
+  
+</wsdl:definitions>

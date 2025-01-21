@@ -3,7 +3,7 @@
 	<name>MiniStatement_Backend</name>
 	<comment></comment>
 	<projects>
-		<project>T24WSDL</project>
+		<project>For_Project</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

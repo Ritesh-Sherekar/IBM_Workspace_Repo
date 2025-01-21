@@ -12,6 +12,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace2_Practice\PROJECT_1_LOAN_DETAILS_BUS_FLOW_2"/>
+			<item value="C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace2_Practice\PROJECT_1_CUS_DETAIL_BUS_FLOW"/>
+			<item value="C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace2_Practice\PROJECT_1_CREATE_ACCOUNT_BUS_FLOW_3"/>
+			<item value="C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace2_Practice\PROJECT_1_CALL_API_BY_ID_ROUTER_FLOW"/>
 			<item value="C:\Users\Sreenivas Bandaru\Documents\dashenBank_accountBalanceEnquiry_app"/>
 			<item value="C:\Workspace2_Practice"/>
 		</list>

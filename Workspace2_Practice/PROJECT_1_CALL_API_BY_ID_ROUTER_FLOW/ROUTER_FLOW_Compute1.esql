@@ -3,7 +3,7 @@
 CREATE COMPUTE MODULE ROUTER_FLOW_Compute1
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-	    CALL CopyMessageHeaders();
+		CALL CopyMessageHeaders();
 		CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
@@ -20,14 +20,24 @@ CREATE COMPUTE MODULE ROUTER_FLOW_Compute1
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		DECLARE serID REFERENCE TO InputRoot.HTTPResponseHeader;
-		
+
 		IF serID.SER_ID = 'S1' OR serID.SER_ID = 'S2' THEN
 			-- Fetching customer details from Backend flow and show as a response
 			DECLARE inref REFERENCE TO InputRoot.XMLNSC.Data.Accout_Datails;
 			SET OutputRoot.JSON.Data.Account_details = inref;
-		ELSEIF serID = 'S3' THEN
+
+		ELSEIF serID.SER_ID = 'S3' THEN
 			SET OutputRoot.JSON.Data.Result = InputRoot.XMLNSC.Data.Response;
 		ELSE
-		END IF;
+			SET OutputRoot.JSON.Data.Result = 'hello';
+
+		END IF;		
+		
+		
+		
+		
+		
+
+
 	END;
 END MODULE;
