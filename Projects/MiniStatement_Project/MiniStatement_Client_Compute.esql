@@ -3,7 +3,7 @@
 CREATE COMPUTE MODULE MiniStatement_Client_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		   CALL CopyMessageHeaders();
+		   --CALL CopyMessageHeaders();
 		   CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
@@ -19,7 +19,10 @@ CREATE COMPUTE MODULE MiniStatement_Client_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot.MQMD.SourceQueue = 'Q1';
+		SET OutputRoot.MQMD.Transactional = TRUE;
 		SET OutputRoot.MQMD.MsgId = InputLocalEnvironment.Destination.HTTP.RequestIdentifier;
+		SET OutputRoot.MQMD.CorrelId = InputLocalEnvironment.Destination.HTTP.RequestIdentifier;
 		SET OutputRoot.JSON = InputRoot.JSON;
 	END;
 END MODULE;

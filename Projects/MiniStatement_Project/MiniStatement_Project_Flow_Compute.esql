@@ -40,5 +40,8 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 		SET OutputRoot.SOAP.Body.ns:MiniStatement.EMMTMINISTMTType.criteriaValue = inref.EMMTMINISTMTType.Item.criteriaValue;
 		SET OutputRoot.SOAP.Body.ns:MiniStatement.EMMTMINISTMTType.operand = inref.EMMTMINISTMTType.Item.operand;
 		
+		
+		SET Environment.MQMD = InputRoot.MQMD;
+		
 	END;
 END MODULE;

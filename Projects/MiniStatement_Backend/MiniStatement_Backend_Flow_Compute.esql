@@ -24,8 +24,18 @@ CREATE COMPUTE MODULE MiniStatement_Backend_Flow_Compute
 		
 		DECLARE MiniInfo ROW;
 		SET MiniInfo = PASSTHRU(sqlStatement,Account_No);
-	 
-	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.ACC_NO = FIELDVALUE(MiniInfo.ACC_NO);
+		
+		DECLARE fgh DECIMAL FIELDVALUE(MiniInfo.ACC_NO);
+		DECLARE accNo INTEGER CAST(fgh AS CHARACTER CCSID 1208);
+		
+		
+--		DECLARE bran CHARACTER;
+--		DECLARE lt INTEGER;
+--		DECLARE dt TIMESTAMP;
+--		DECLARE ab INTEGER;
+--		DECLARE rem CHARACTER;
+
+	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.ACC_NO = accNo;
 	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.BRANCH = FIELDVALUE(MiniInfo.BRANCH);
 	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.LAST_TRAN = FIELDVALUE(MiniInfo.LAST_TRAN);
 	    SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes.DATE_TIME = FIELDVALUE(MiniInfo.DATE_TIME);
