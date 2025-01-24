@@ -1,3 +1,7 @@
+
+
+
+
 DECLARE NS2 NAMESPACE 'http://www.example.org/miniStatement/';
 
 
@@ -16,14 +20,22 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute1
 		SET OutputRoot.MQMD =Environment.MQMD;
 		-- DECLARE dfgh CHARACTER ;
 		-- SET dfgh = InputRoot.XMLNSC.MiniStmRes.NS2;
+		-- SET Environment.data = InputRoot.XMLNSC;
+		-- DELETE FIELD Environment.data.*:NS2;
+		---- DELETE FIELD Environment.data.*:*;
+		-- DELETE FIELD Environment.data.MiniStmRes;
+		-- SET OutputRoot.JSON.Data = Environment.data;
+		-- --DELETE FIRSTCHILD OF OutputRoot.JSON.Data.MiniStmRes;
+		-- --DECLARE ms0 CHARACTER InputRoot.XMLNSC.NS2:MiniStmRes.MiniStmRes.ACC_NO;
 
-		SET Environment.data = InputRoot.XMLNSC;
-		DELETE FIELD Environment.data.MiniStmRes.*:NS2;
-		SET OutputRoot.JSON.Data = Environment.data;
+		DECLARE i INTEGER 1;
+		DECLARE inref REFERENCE TO InputRoot.XMLNSC.NS2:MiniStmRes[1];
 
-		DECLARE dfgh CHARACTER ;
-		SET dfgh = Environment.data.MiniStmRes.NS2;
-		--DECLARE ms0 CHARACTER InputRoot.XMLNSC.NS2:MiniStmRes.MiniStmRes.ACC_NO;
-
+		WHILE LASTMOVE(inref) DO
+			SET OutputRoot.JSON.Data.MiniStmRes.MiniStmRes[i] = inref.*:MiniStmRes;        
+			
+			SET i = i + 1;
+			MOVE inref NEXTSIBLING;
+		END WHILE;
 	END;
 END MODULE;
