@@ -1,0 +1,37 @@
+BROKER SCHEMA Exception_Handling
+
+
+CREATE COMPUTE MODULE Exception_Handling_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputExceptionList.*[<];
+		DECLARE outref REFERENCE TO OutputRoot.XMLNSC.EXCEPTION_HAND;
+
+		CASE
+		WHEN inref.Type = 'ComIbmThrowNode' THEN
+			SET OutputRoot.JSON.Data.EXCEPTION_HAND.Status = 'FAILURE';
+			SET OutputRoot.JSON.Data.EXCEPTION_HAND.ErrorCode = 'BIP' || '_906';
+			SET OutputRoot.JSON.Data.EXCEPTION_HAND.ErrorType = FIELDNAME(inref); -- Correct usage of FIELDNAME
+			SET OutputRoot.JSON.Data.EXCEPTION_HAND.Description = CAST(InputExceptionList.UserException.Text AS CHARACTER CCSID 1208);
+			SET OutputRoot.JSON.Data.EXCEPTION_HAND.ActualDesc = '';
+		ELSE
+			-- Handle other cases if needed (optional)
+		END CASE;
+	END;
+END MODULE;

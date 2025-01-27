@@ -22,11 +22,12 @@
     <xsd:complexType>
                 
       <xsd:sequence>
-                    
-        <xsd:element name="MiniStmRes" type="tns:MiniStmResType"/>
-                  
+
+      	<xsd:element name="MiniStmRes" type="tns:MiniStmResType" />
+
+      	<xsd:element name="MiniStmInfo" type="tns:MiniStmInfoType"></xsd:element>
       </xsd:sequence>
-              
+
     </xsd:complexType>
           
   </xsd:element>
@@ -81,4 +82,20 @@
           
   </xsd:complexType>
       
+
+
+  <xsd:complexType name="MiniStmInfoType">
+  	<xsd:sequence>
+
+  		<xsd:element name="MinistmInfoChild" type="tns:MinistmInfoChildType"></xsd:element>
+  	</xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MinistmInfoChildType">
+  	<xsd:sequence>
+  		<xsd:element name="NAME" type="xsd:string"></xsd:element>
+  		<xsd:element name="ACCOUNT_TYPE" type="xsd:string"></xsd:element>
+  		<xsd:element name="AMOUTNT_BALANCE" type="xsd:string"></xsd:element>
+  	</xsd:sequence>
+  </xsd:complexType>
 </xsd:schema>

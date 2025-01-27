@@ -6,15 +6,6 @@ CREATE COMPUTE MODULE MiniStatement_Client_Compute
 		RETURN TRUE;
 	END;
 
-	CREATE PROCEDURE CopyMessageHeaders() BEGIN
-		DECLARE I INTEGER 1;
-		DECLARE J INTEGER;
-		SET J = CARDINALITY(InputRoot.*[]);
-		WHILE I < J DO
-			SET OutputRoot.*[I] = InputRoot.*[I];
-			SET I = I + 1;
-		END WHILE;
-	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
        	SET OutputRoot.MQMD.SourceQueue = 'Q1';

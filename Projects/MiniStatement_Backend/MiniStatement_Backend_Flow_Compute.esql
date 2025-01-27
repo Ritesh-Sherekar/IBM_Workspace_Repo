@@ -1,5 +1,3 @@
-
-
 DECLARE ns NAMESPACE 'http://www.example.org/miniStatement/';
 CREATE COMPUTE MODULE MiniStatement_Backend_Flow_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
@@ -9,44 +7,46 @@ CREATE COMPUTE MODULE MiniStatement_Backend_Flow_Compute
 		RETURN TRUE;
 	END;
 
-	CREATE PROCEDURE CopyMessageHeaders() BEGIN
-		DECLARE I INTEGER 1;
-		DECLARE J INTEGER;
-		SET J = CARDINALITY(InputRoot.*[]);
-		WHILE I < J DO
-			SET OutputRoot.*[I] = InputRoot.*[I];
-			SET I = I + 1;
-		END WHILE;
-	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		DECLARE Account_No INTEGER InputRoot.SOAP.Body.ns:MiniStatement.EMMTMINISTMTType.criteriaValue;
 
-		CALL FetchCustomerDetails (Account_No, Environment.Data[]) ;
+		CALL FetchCustomerDetails (Account_No, Environment.res.Data1[], Environment.Data2[]) ;
 
+		DECLARE inref2 REFERENCE TO Environment.Data2[1];
+		DECLARE castA_B DECIMAL FIELDVALUE(inref2.AMOUNT_BALANCE);
+
+		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmInfo.MinistmInfoChild.ACC_NO = Account_No;
+		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmInfo.MinistmInfoChild.NAME = inref2.NAME;
+		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmInfo.MinistmInfoChild.ACCOUNT_TYPE = inref2.ACCOUNT_TYPE;
+		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmInfo.MinistmInfoChild.AMOUTNT_BALANCE = castA_B;
+
+
+
+      --  DELETE LASTCHILD OF Environment;
 		DECLARE i INTEGER 1;
-	    DECLARE inref REFERENCE TO Environment.Data[1];
-	WHILE LASTMOVE(inref) DO
-		
-		DECLARE castLT DECIMAL FIELDVALUE(inref.LAST_TRAN);
-		DECLARE castAB DECIMAL FIELDVALUE(inref.AVL_BAL);
+		DECLARE inref REFERENCE TO Environment.res.Data1[1];
+		WHILE LASTMOVE(inref) DO
 
-		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].ACC_NO = Account_No;
-		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].BRANCH = FIELDVALUE(inref.BRANCH);
-		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].LAST_TRAN = castLT;
-		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].DATE_TIME = FIELDVALUE(inref.DATE_TIME);
-		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].AVL_BAL = castAB;
-		SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].REMARK = FIELDVALUE(inref.REMARK);
+			DECLARE castLT DECIMAL FIELDVALUE(inref.LAST_TRAN);
+			DECLARE castAB DECIMAL FIELDVALUE(inref.AVL_BAL);
 
-		SET i = i + 1;
-		MOVE inref NEXTSIBLING;
+			SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].ACC_NO = Account_No;
+			SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].BRANCH = FIELDVALUE(inref.BRANCH);
+			SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].LAST_TRAN = castLT;
+			SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].DATE_TIME = FIELDVALUE(inref.DATE_TIME);
+			SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].AVL_BAL = castAB;
+			SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].REMARK = FIELDVALUE(inref.REMARK);
+			SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].TRAN_STATUS = FIELDVALUE(inref.TRAN_STATUS);
+			SET OutputRoot.SOAP.Body.ns:MiniStmRes.MiniStmRes[i].TRAN = FIELDVALUE(inref.TRAN);
 
-	END WHILE;
-
-END;
+			SET i = i + 1;
+			MOVE inref NEXTSIBLING;
+		END WHILE;
+	END;
 END MODULE;
 
 CREATE PROCEDURE FetchCustomerDetails (IN Account_No INTEGER )
 LANGUAGE DATABASE
-DYNAMIC RESULT SETS 1
+DYNAMIC RESULT SETS 2
 EXTERNAL NAME "FETCH_DATA_MINI";
