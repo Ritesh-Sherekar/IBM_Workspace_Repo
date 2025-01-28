@@ -1,0 +1,13 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace2_Practice\ExampleResetContentDescriptor\My.xsd
+
+BIP0224W The message set has no XML Wire Format layer defined. Only the logical information will appear in the model.
+
+Elapsed time processing this message definition file: 0.064 seconds
+Number of warnings for this message definition file: 1
+
+
+Number of files processed: 1
+
+

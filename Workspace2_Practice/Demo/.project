@@ -3,6 +3,7 @@
 	<name>Demo</name>
 	<comment></comment>
 	<projects>
+		<project>DemoMessageSet</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

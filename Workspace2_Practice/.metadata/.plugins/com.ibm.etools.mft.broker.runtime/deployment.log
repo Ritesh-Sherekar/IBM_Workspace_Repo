@@ -772,3 +772,38 @@ BIP9326I<<The source 'PROJECT_1_CALL_API_BY_ID_ROUTER_FLOWproject.generated.bar'
 PROJECT_1_CREATE_ACCOUNT_BUS_FLOW_3>>broker1>>server1>>SUCCESS>>1737441561030
 BIP9332I<<Application 'PROJECT_1_CREATE_ACCOUNT_BUS_FLOW_3' has been changed successfully. <<1737441561030
 BIP9326I<<The source 'PROJECT_1_CREATE_ACCOUNT_BUS_FLOW_3project.generated.bar' has been successfully deployed. <<1737441561030
+ExampleResetContentDescriptor>>broker>>server>>SUCCESS>>1738054960887
+BIP9332I<<Application 'ExampleResetContentDescriptor' has been created successfully. <<1738054960887
+BIP9326I<<The source 'ExampleResetContentDescriptorproject.generated.bar' has been successfully deployed. <<1738054960887
+ExampleResetContentDescriptor>>broker>>server>>SUCCESS>>1738055510950
+BIP9332I<<Application 'ExampleResetContentDescriptor' has been changed successfully. <<1738055510950
+BIP9326I<<The source 'ExampleResetContentDescriptorproject.generated.bar' has been successfully deployed. <<1738055510950
+ExampleResetContentDescriptor>>broker>>server>>SUCCESS>>1738055589684
+BIP9332I<<Application 'ExampleResetContentDescriptor' has been changed successfully. <<1738055589684
+BIP9326I<<The source 'ExampleResetContentDescriptorproject.generated.bar' has been successfully deployed. <<1738055589684
+ExampleResetContentDescriptor>>broker>>server>>WARNING>>1738055631334
+BIP9318E<<Request to 'PreSetupValidate' resource 'ExampleResetContentDescriptor', 'ExampleResetContentDescriptor' of type 'Application' failed. <<1738055631334
+BIP2432E<<(.ResetContentDescriptor_Compute.Main, 6.32) : The correlation name 'JSON.Data.CDataField' is not valid. Those in scope are: Environment, InputLocalEnvironment, OutputLocalEnvironment, InputRoot, InputBody, InputProperties, OutputRoot, InputExceptionList, OutputExceptionList, InputDestinationList, OutputDestinationList. <<1738055631334
+BIP9333W<<Application 'ExampleResetContentDescriptor' has been changed but contains errors which has prevented some resources from starting. <<1738055631334
+BIP1096E<<The source 'ExampleResetContentDescriptorproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1738055631334
+ExampleResetContentDescriptor>>broker>>server>>SUCCESS>>1738055652372
+BIP9332I<<Application 'ExampleResetContentDescriptor' has been changed successfully. <<1738055652372
+BIP9326I<<The source 'ExampleResetContentDescriptorproject.generated.bar' has been successfully deployed. <<1738055652372
+ExampleResetContentDescriptor>>broker>>server>>SUCCESS>>1738055696291
+BIP9332I<<Application 'ExampleResetContentDescriptor' has been changed successfully. <<1738055696291
+BIP9326I<<The source 'ExampleResetContentDescriptorproject.generated.bar' has been successfully deployed. <<1738055696291
+ExampleResetContentDescriptor>>broker>>server>>SUCCESS>>1738057558818
+BIP9332I<<Application 'ExampleResetContentDescriptor' has been changed successfully. <<1738057558818
+BIP9326I<<The source 'ExampleResetContentDescriptorproject.generated.bar' has been successfully deployed. <<1738057558818
+Example_JSONObject_Mapping>>broker>>server>>SUCCESS>>1738061394446
+BIP9332I<<Application 'Example_JSONObject_Mapping' has been created successfully. <<1738061394446
+BIP9326I<<The source 'Example_JSONObject_Mappingproject.generated.bar' has been successfully deployed. <<1738061394446
+Example_JSONObject_Mapping>>broker>>server>>SUCCESS>>1738063786480
+BIP9332I<<Application 'Example_JSONObject_Mapping' has been changed successfully. <<1738063786480
+BIP9326I<<The source 'Example_JSONObject_Mappingproject.TestMode.bar' has been successfully deployed. <<1738063786480
+Mapping_App>>broker>>server>>SUCCESS>>1738066420110
+BIP9332I<<Application 'Mapping_App' has been created successfully. <<1738066420110
+BIP9326I<<The source 'Mapping_Appproject.generated.bar' has been successfully deployed. <<1738066420110
+Mapping_App>>broker>>server>>SUCCESS>>1738066512256
+BIP9332I<<Application 'Mapping_App' has been changed successfully. <<1738066512256
+BIP9326I<<The source 'Mapping_Appproject.generated.bar' has been successfully deployed. <<1738066512256
