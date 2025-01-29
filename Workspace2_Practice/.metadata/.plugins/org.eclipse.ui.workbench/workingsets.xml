@@ -134,6 +134,16 @@
 <workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1738066177614_46" label="[Mapping_App]" name="[Mapping_App]">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Mapping_App" type="4"/>
 </workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1738143495567_46" label="[Soap_to_json_Map]" name="[Soap_to_json_Map]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Soap_to_json_Map" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1738144999444_47" label="[Json_TO_XML_Map]" name="[Json_TO_XML_Map]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Json_TO_XML_Map" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1738155657314_48" label="[DFDL]" name="[DFDL]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DFDL" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1732828250113_13" label="Window Working Set" name="Aggregate for window 1732828250113"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1733421561316_25" label="Window Working Set" name="Aggregate for window 1733421561316"/>
+<mruList name="[DFDL]"/>
 </workingSetManager>

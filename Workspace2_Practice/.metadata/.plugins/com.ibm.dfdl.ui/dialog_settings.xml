@@ -8,10 +8,7 @@
 		<item key="ByteOrder" value="bigEndian"/>
 		<item key="RuntimeValidation" value="false"/>
 		<list key="ParserInputs">
-			<item value="C:\Users\Sreenivas Bandaru\Documents\Xmldata.xml.txt"/>
-			<item value="C:\Users\Sreenivas Bandaru\Desktop\Delimeated.txt"/>
-			<item value="C:\Users\Sreenivas Bandaru\Downloads\fixed.txt"/>
-			<item value="C:\Users\Sreenivas Bandaru\Downloads\fixed2.txt"/>
+			<item value="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\New Text Document (2).txt"/>
 		</list>
 		<list key="SerializerInputs">
 		</list>

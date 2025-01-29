@@ -807,3 +807,24 @@ BIP9326I<<The source 'Mapping_Appproject.generated.bar' has been successfully de
 Mapping_App>>broker>>server>>SUCCESS>>1738066512256
 BIP9332I<<Application 'Mapping_App' has been changed successfully. <<1738066512256
 BIP9326I<<The source 'Mapping_Appproject.generated.bar' has been successfully deployed. <<1738066512256
+Soap_to_json_Map>>broker>>server>>SUCCESS>>1738143911081
+BIP9332I<<Application 'Soap_to_json_Map' has been created successfully. <<1738143911081
+BIP9326I<<The source 'Soap_to_json_Mapproject.generated.bar' has been successfully deployed. <<1738143911081
+Soap_to_json_Map>>broker>>server>>SUCCESS>>1738144447221
+BIP9332I<<Application 'Soap_to_json_Map' has been changed successfully. <<1738144447221
+BIP9326I<<The source 'Soap_to_json_Mapproject.generated.bar' has been successfully deployed. <<1738144447221
+Json_TO_XML_Map>>broker>>server>>SUCCESS>>1738145383470
+BIP9332I<<Application 'Json_TO_XML_Map' has been created successfully. <<1738145383470
+BIP9326I<<The source 'Json_TO_XML_Mapproject.generated.bar' has been successfully deployed. <<1738145383470
+Soap_to_json_Map>>broker>>server>>SUCCESS>>1738145641643
+BIP9332I<<Application 'Soap_to_json_Map' has been created successfully. <<1738145641643
+BIP9326I<<The source 'Soap_to_json_Mapproject.generated.bar' has been successfully deployed. <<1738145641643
+Soap_to_json_Map>>broker>>server>>SUCCESS>>1738148232790
+BIP9332I<<Application 'Soap_to_json_Map' has been changed successfully. <<1738148232790
+BIP9326I<<The source 'Soap_to_json_Mapproject.generated.bar' has been successfully deployed. <<1738148232790
+Soap_to_json_Map>>broker>>server>>SUCCESS>>1738148347113
+BIP9332I<<Application 'Soap_to_json_Map' has been changed successfully. <<1738148347113
+BIP9326I<<The source 'Soap_to_json_Mapproject.generated.bar' has been successfully deployed. <<1738148347113
+DFDL>>dfdl>>s>>SUCCESS>>1738156590820
+BIP9332I<<Application 'DFDL' has been created successfully. <<1738156590820
+BIP9326I<<The source 'DFDLproject.generated.bar' has been successfully deployed. <<1738156590820

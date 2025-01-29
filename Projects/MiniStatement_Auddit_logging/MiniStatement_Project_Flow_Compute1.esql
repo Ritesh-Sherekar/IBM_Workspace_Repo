@@ -1,0 +1,64 @@
+
+
+CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		   CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data.Request.Item;
+		DECLARE MSGID BLOB InputRoot.MQMD.MsgId;
+		CALL ForLogging(inref , MSGID);
+	END;
+END MODULE;
+
+CREATE PROCEDURE ForLogging (IN inref REFERENCE , IN MSGID REFERENCE)
+BEGIN
+	-- Converting XML format to Blob format
+	DECLARE blobData BLOB;
+	SET blobData = ASBITSTREAM(inref);
+	
+	-- Converting Blob format to Char
+	DECLARE charData CHARACTER;
+	SET charData = CAST(blobData AS CHAR CCSID 1208);
+	
+	-- Extract Application name
+	DECLARE APPLICATION_NAME CHARACTER;
+	SET APPLICATION_NAME = 'MiniStatement_Project';
+	
+	-- Set Current Time
+	DECLARE LOG_TIME TIMESTAMP CURRENT_TIMESTAMP;
+	
+	-- Set Request_Type
+	DECLARE LOCK_TYPE CHARACTER;
+	SET LOCK_TYPE = 'Channel_Request';
+	
+	-- Set Broker Name
+	DECLARE Broker_Name CHARACTER;
+	SET Broker_Name = BrokerName;
+	
+	-- Set Message ID 
+	DECLARE MSG_ID CHARACTER;
+	SET MSG_ID = MSGID;
+	
+	CALL MINI_STA_Log(LOCK_TYPE, Broker_Name, APPLICATION_NAME, charData, LOG_TIME, MSG_ID);
+	
+END;
+
+CREATE PROCEDURE MINI_STA_Log (IN LOGGING_TYPE CHARACTER ,IN BROKER_NAME CHARACTER ,IN APPLICATION_NAME CHARACTER ,IN PAYLOAD CHARACTER ,IN TIME_M TIMESTAMP, IN MSGID CHARACTER )
+LANGUAGE DATABASE
+EXTERNAL NAME "MINI_LOGGING_PROCEDURE";
+

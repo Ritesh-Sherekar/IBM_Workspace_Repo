@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <inlinedXMLSchema>
+        <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+       
+  <xsd:element name="EMP" nillable="true"> 
+    <xsd:complexType> 
+      <xsd:sequence> 
+        <xsd:element name="a" nillable="true" type="xsd:string"/> 
+        <xsd:element name="b" nillable="true" type="xsd:string"/> 
+      </xsd:sequence> 
+    </xsd:complexType> 
+  </xsd:element> 
+   
+</xsd:schema> 
+]]>
+    </inlinedXMLSchema>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var1"/>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/SOAPDomainMsg.xsd" var="var6"/>
+    <input path="/NewWSDLFile_InlineSchema1.xsd" var="var5"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var3"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.example.org/NewWSDLFile/"/>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="soap_to_json_map_flow_Mapping">
+        <input path="$var6/mb:msg(SOAP_Domain_Msg,assembly,SOAP,Properties)" var="MessageAssembly">
+            <cast path="$MessageAssembly/SOAP_Domain_Msg/Body/any" qualifier="{http://www.example.org/NewWSDLFile/}NewOperation" ref="var5"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var3/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly2">
+            <cast castType="userDefined" path="$MessageAssembly2/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var3"/>
+            <cast castType="userDefined" path="$MessageAssembly2/JSON/spath('Data',2)/any" qualifier="EMP" ref="var1"/>
+        </output>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$MessageAssembly2/Properties"/>
+        </move>
+        <function ref="fn:concat">
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/NewOperation/a" var="a1"/>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/NewOperation/b" var="b1"/>
+            <output path="$MessageAssembly2/JSON/spath('Data',2)/EMP/a"/>
+            <param name="string1" value="$a1"/>
+            <param name="string2" value="$b1"/>
+        </function>
+    </mappingDeclaration>
+</mappingRoot>
