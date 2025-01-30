@@ -143,6 +143,9 @@
 <workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1738155657314_48" label="[DFDL]" name="[DFDL]">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DFDL" type="4"/>
 </workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1738214035605_50" label="[11111111111_AAAAAAAAAAAAAA]" name="[11111111111_AAAAAAAAAAAAAA]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/11111111111_AAAAAAAAAAAAAA" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1732828250113_13" label="Window Working Set" name="Aggregate for window 1732828250113"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1733421561316_25" label="Window Working Set" name="Aggregate for window 1733421561316"/>
 <mruList name="[DFDL]"/>
