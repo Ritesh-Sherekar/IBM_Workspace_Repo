@@ -54,20 +54,3 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 		----------------------------------------------------------Logging-----------------------------------
 	END;
 END MODULE;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
