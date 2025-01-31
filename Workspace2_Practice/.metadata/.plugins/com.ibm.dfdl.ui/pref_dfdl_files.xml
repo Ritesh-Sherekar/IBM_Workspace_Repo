@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
+<preferenceForDFDLFile dfdlFileLocation="/DFDL/csvSchema.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\CSV2.txt" messageRootUsedForLastParse="csvSchema"/>
 <preferenceForDFDLFile dfdlFileLocation="/File_Delimated/Delimeated.xsd" didLastParseUseOutputFromUnparser="false" messageRootUsedForLastParse="Parent"/>
+<preferenceForDFDLFile dfdlFileLocation="/DFDL/JsonDFDL.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\JSON.txt" messageRootUsedForLastParse="JsonDFDL"/>
 <preferenceForDFDLFile dfdlFileLocation="/File_FixedLength/Fix.xsd" didLastParseUseOutputFromUnparser="false" messageRootUsedForLastParse="Fix"/>
 <preferenceForDFDLFile dfdlFileLocation="/DFDL/myDfdl.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\New Text Document (2).txt" messageRootUsedForLastParse="myDfdl"/>
+<preferenceForDFDLFile dfdlFileLocation="/DFDL/JSon.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\JSON.txt" messageRootUsedForLastParse="JSon"/>
+<preferenceForDFDLFile dfdlFileLocation="/DFDL/JSON.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\JSON.txt" messageRootUsedForLastParse="JSON"/>
 </preferences>

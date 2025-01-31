@@ -9,6 +9,9 @@
 		<item key="RuntimeValidation" value="false"/>
 		<list key="ParserInputs">
 			<item value="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\New Text Document (2).txt"/>
+			<item value="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\CSV.txt"/>
+			<item value="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\CSV2.txt"/>
+			<item value="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Demo_Files\JSON.txt"/>
 		</list>
 		<list key="SerializerInputs">
 		</list>
