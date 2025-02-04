@@ -831,3 +831,27 @@ BIP9326I<<The source 'DFDLproject.generated.bar' has been successfully deployed.
 DFDL>>dfdl>>s>>SUCCESS>>1738299785640
 BIP9332I<<Application 'DFDL' has been created successfully. <<1738299785640
 BIP9326I<<The source 'DFDLproject.generated.bar' has been successfully deployed. <<1738299785640
+Control_node>>broker>>server>>WARNING>>1738600077379
+BIP9320E<<Message Flow 'dvbjn', 'dvbjn' encountered a failure and could not start. <<1738600077379
+BIP2685E<<The node of type 'Collector' named 'Collector' requires a queue manager to be specified on the integration node. <<1738600077379
+BIP9333W<<Application 'Control_node' has been created but contains errors which has prevented some resources from starting. <<1738600077379
+BIP1096E<<The source 'Control_nodeproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1738600077379
+Control_node>>broker>>server>>WARNING>>1738600191284
+BIP9320E<<Message Flow 'dvbjn', 'dvbjn' encountered a failure and could not start. <<1738600191284
+BIP2685E<<The node of type 'Collector' named 'Collector' requires a queue manager to be specified on the integration node. <<1738600191284
+BIP9333W<<Application 'Control_node' has been changed but contains errors which has prevented some resources from starting. <<1738600191284
+BIP1096E<<The source 'Control_nodeproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1738600191284
+Control_node>>broker>>server>>WARNING>>1738600221633
+BIP9320E<<Message Flow 'dvbjn', 'dvbjn' encountered a failure and could not start. <<1738600221633
+BIP2685E<<The node of type 'Collector' named 'Collector' requires a queue manager to be specified on the integration node. <<1738600221633
+BIP9333W<<Application 'Control_node' has been changed but contains errors which has prevented some resources from starting. <<1738600221633
+BIP1096E<<The source 'Control_nodeproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1738600221633
+Control_node>>mini>>serverMini>>SUCCESS>>1738600266699
+BIP9332I<<Application 'Control_node' has been created successfully. <<1738600266699
+BIP9326I<<The source 'Control_nodeproject.generated.bar' has been successfully deployed. <<1738600266699
+Control_node>>mini>>serverMini>>SUCCESS>>1738600908322
+BIP9332I<<Application 'Control_node' has been created successfully. <<1738600908322
+BIP9326I<<The source 'Control_nodeproject.generated.bar' has been successfully deployed. <<1738600908322
+Control_node>>mini>>serverMini>>SUCCESS>>1738601016474
+BIP9332I<<Application 'Control_node' has been created successfully. <<1738601016474
+BIP9326I<<The source 'Control_nodeproject.generated.bar' has been successfully deployed. <<1738601016474
