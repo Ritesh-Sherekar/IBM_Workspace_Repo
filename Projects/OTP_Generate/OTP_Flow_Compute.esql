@@ -1,10 +1,8 @@
-
-
-CREATE COMPUTE MODULE asdfgjh_Compute
+CREATE COMPUTE MODULE OTP_Flow_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		-- CALL CopyMessageHeaders();
-		    CALL CopyEntireMessage();
+		CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
 
@@ -19,6 +17,10 @@ CREATE COMPUTE MODULE asdfgjh_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot = InputRoot;
-	END;
+		DECLARE otp INTEGER;
+		-- Generate a pseudo-random number using the timestamp
+		SET otp = MOD(CAST(EXTRACT(SECOND FROM CURRENT_TIMESTAMP) AS INTEGER) * 12345, 900000) + 100000;
+		-- Store OTP in the output message
+		SET OutputRoot.JSON.Data.OTP = otp;
+ 		END;
 END MODULE;
