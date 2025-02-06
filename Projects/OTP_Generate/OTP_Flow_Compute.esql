@@ -2,25 +2,21 @@ CREATE COMPUTE MODULE OTP_Flow_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		-- CALL CopyMessageHeaders();
-		CALL CopyEntireMessage();
+	    CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
 
-	CREATE PROCEDURE CopyMessageHeaders() BEGIN
-		DECLARE I INTEGER 1;
-		DECLARE J INTEGER;
-		SET J = CARDINALITY(InputRoot.*[]);
-		WHILE I < J DO
-			SET OutputRoot.*[I] = InputRoot.*[I];
-			SET I = I + 1;
-		END WHILE;
-	END;
-
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		DECLARE otp INTEGER;
+		DECLARE CUS_ID CHARACTER InputRoot.JSON.Data.Root.CUS_ID; 
+		DECLARE STATUS CHARACTER 'Active';
+		DECLARE otp CHARACTER;
 		-- Generate a pseudo-random number using the timestamp
 		SET otp = MOD(CAST(EXTRACT(SECOND FROM CURRENT_TIMESTAMP) AS INTEGER) * 12345, 900000) + 100000;
-		-- Store OTP in the output message
-		SET OutputRoot.JSON.Data.OTP = otp;
+		
+		CALL mypro(CUS_ID,otp,STATUS);
  		END;
 END MODULE;
+
+CREATE PROCEDURE mypro (IN CUS_ID CHARACTER , IN otp CHARACTER , IN STATUS CHARACTER )
+LANGUAGE DATABASE
+EXTERNAL NAME "OTP_SER_PRO";
