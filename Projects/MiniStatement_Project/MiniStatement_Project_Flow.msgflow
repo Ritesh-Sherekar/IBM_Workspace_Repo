@@ -10,7 +10,7 @@
       <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="68,77" queueName="IN" destinationQueueManagerName="For_Project" messageDomainProperty="JSON">
         <translation xmi:type="utility:ConstantString" string="MiniStaReq"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="625,59" dataSource="NewODBC" transaction="commit" computeExpression="esql://routine/#MiniStatement_Project_Flow_Compute1.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="622,45" dataSource="NewODBC" transaction="commit" computeExpression="esql://routine/#MiniStatement_Project_Flow_Compute1.Main">
         <translation xmi:type="utility:ConstantString" string="xmlTOjson"/>
       </nodes>
       <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="344,42" wsdlFileName="miniStatement.wsdl" selectedPortType="miniStatement" selectedBinding="miniStatementSOAP" selectedOperation="MiniStatement" selectedPort="miniStatementSOAP" targetNamespace="http://www.example.org/miniStatement/" useHTTPTransport="true" webServiceURL="http://localhost:7801/path" sslProtocol="TLS" messageSetProperty="{For_Project}" parserXmlnscBuildTreeUsingXMLSchema="false" validateMaster="none">
@@ -19,10 +19,10 @@
       <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="182,77" dataSource="NewODBC" transaction="commit" computeExpression="esql://routine/#MiniStatement_Project_Flow_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPExtract.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="499,39">
+      <nodes xmi:type="ComIbmSOAPExtract.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="492,41">
         <translation xmi:type="utility:ConstantString" string="SOAP Extract"/>
       </nodes>
-      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="774,123" queueName="NEWOUT" destinationQueueManagerName="For_Project">
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="765,128" queueName="NEWOUT" destinationQueueManagerName="For_Project">
         <translation xmi:type="utility:ConstantString" string="MQ Output"/>
       </nodes>
       <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="686,199" queueName="ForLogging" destinationQueueManagerName="For_Project">

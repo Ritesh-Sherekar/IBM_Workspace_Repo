@@ -43,7 +43,7 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 
 		SET Environment.MQMD = InputRoot.MQMD;
 		
-		------------------------------------------------------------Logging--------------------------------------
+		------------------------------------------------------------Logging-------------------------------------- 
 		SET OutputRoot.JSON.Data.Response.MSGID = InputRoot.MQMD.MsgId;
 		SET OutputRoot.JSON.Data.Response.Logging_Type = 'Channel_Request';
 		SET OutputRoot.JSON.Data.Response.Application_Name = 'MiniStatement_Project';
@@ -51,6 +51,8 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 		SET OutputRoot.JSON.Data.Response.Time = CURRENT_TIMESTAMP;
 		PROPAGATE TO TERMINAL 'out1'; 
 		
+		--Set OutputDestinationList
+		--sdfghjkl
 		----------------------------------------------------------Logging-----------------------------------
 	END;
 END MODULE;
