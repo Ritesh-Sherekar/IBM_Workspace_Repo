@@ -17,6 +17,6 @@ CREATE COMPUTE MODULE Flow_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot = InputRoot;
+		SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
 	END;
 END MODULE;

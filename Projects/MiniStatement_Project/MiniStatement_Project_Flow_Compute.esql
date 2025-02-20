@@ -51,8 +51,6 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 		SET OutputRoot.JSON.Data.Response.Time = CURRENT_TIMESTAMP;
 		PROPAGATE TO TERMINAL 'out1'; 
 		
-		--Set OutputDestinationList
-		--sdfghjkl
-		----------------------------------------------------------Logging-----------------------------------
+		----------------------------------------------------------Logging-------- ---------------------------
 	END;
 END MODULE;
