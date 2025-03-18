@@ -3913,3 +3913,6 @@ BIP9326I<<The source 'Timer_Control_Practiceproject.generated.bar' has been succ
 File_RecordByrecord>>broker2>>s2>>SUCCESS>>1733333149392
 BIP9332I<<Application 'File_RecordByrecord' has been created successfully. <<1733333149392
 BIP9326I<<The source 'File_RecordByrecordproject.generated.bar' has been successfully deployed. <<1733333149392
+Error_H_Validation>>broker>>server>>SUCCESS>>1740505847524
+BIP9332I<<Application 'Error_H_Validation' has been created successfully. <<1740505847524
+BIP9326I<<The source 'Error_H_Validationproject.generated.bar' has been successfully deployed. <<1740505847524

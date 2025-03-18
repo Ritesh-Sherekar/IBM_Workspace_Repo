@@ -14,7 +14,7 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		DECLARE inref REFERENCE TO InputRoot.JSON.Data.MiniStatementRequest;
 		
-		---------------------------------------Logging----------------------------------------
+		---------------------------------------Logging-Start----------------------------------------
 		CREATE FIELD OutputRoot.JSON.Data;
 		SET OutputRoot.JSON.Data.Request.MSGID = InputRoot.MQMD.MsgId;
 		SET OutputRoot.JSON.Data.Request.Logging_Type = 'Channel_Request';
@@ -22,7 +22,7 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 		SET OutputRoot.JSON.Data.Request.Payload = inref;
 		SET OutputRoot.JSON.Data.Request.Time = CURRENT_TIMESTAMP;
 		
-		------------------------------------Logging---------------------------------------------
+		------------------------------------Logging-End---------------------------------------------
 		
 		SET OutputRoot.XMLNSC = InputRoot.JSON;
 		SET Environment.MQMD = InputRoot.MQMD;
@@ -43,7 +43,7 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 
 		SET Environment.MQMD = InputRoot.MQMD;
 		
-		------------------------------------------------------------Logging-------------------------------------- 
+		------------------------------------------------------------Logging-Start-------------------------------------- 
 		SET OutputRoot.JSON.Data.Response.MSGID = InputRoot.MQMD.MsgId;
 		SET OutputRoot.JSON.Data.Response.Logging_Type = 'Channel_Request';
 		SET OutputRoot.JSON.Data.Response.Application_Name = 'MiniStatement_Project';
@@ -51,6 +51,6 @@ CREATE COMPUTE MODULE MiniStatement_Project_Flow_Compute
 		SET OutputRoot.JSON.Data.Response.Time = CURRENT_TIMESTAMP;
 		PROPAGATE TO TERMINAL 'out1'; 
 		
-		----------------------------------------------------------Logging-------- ---------------------------
+		----------------------------------------------------------Logging-End-------- ---------------------------
 	END;
 END MODULE;
