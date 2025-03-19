@@ -6,13 +6,15 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/FTP_REMOTE/icons/full/obj16/Flow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/FTP_REMOTE/icons/full/obj30/Flow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="221,106" inputDirectory="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Folder\InD">
+      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="161,94" inputDirectory="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Folder\InD">
         <translation xmi:type="utility:ConstantString" string="File Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="615,107" outputDirectory="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Folder\OutD" outputFilename="Hello.txt" outputMode="append" fileFtp="true" fileFtpServer="192.168.3.1:21" fileFtpUser="AnyName" fileFtpDirectory="/ss/">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="555,95" outputDirectory="C:\Users\Sreenivas Bandaru\Desktop\General_Floder\Folder\OutD" outputFilename="Hello.txt" outputMode="append" fileFtp="true" fileFtpServer="192.168.3.1:21" fileFtpDirectory="/ss/">
         <translation xmi:type="utility:ConstantString" string="File Output"/>
       </nodes>
-      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in">
+        <bendPoints>194,-69,-206,-70</bendPoints>
+      </connections>
     </composition>
     <propertyOrganizer/>
     <stickyBoard/>
