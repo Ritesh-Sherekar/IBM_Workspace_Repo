@@ -1,8 +1,12 @@
+
+
+
+
 CREATE COMPUTE MODULE Flow_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		-- CALL CopyMessageHeaders();
-		   CALL CopyEntireMessage();
+		CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
 
@@ -17,7 +21,12 @@ CREATE COMPUTE MODULE Flow_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		--DECLARE inref REFERENCE TO InputRoot.JSON.Data.Currency;
-		SET OutputRoot = InputRoot;
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data;
+		SET OutputRoot.JSON.Data.Last_Time_Update = inref.time_last_update_utc;
+		SET OutputRoot.JSON.Data.Next_Time_Update = inref.time_next_update_utc;
+		SET OutputRoot.JSON.Data.Base_Code = inref.base_code;
+		SET OutputRoot.JSON.Data.Target_Code = inref.target_code;
+		SET OutputRoot.JSON.Data.Convertion_Rate = inref.conversion_rate;
+		SET OutputRoot.JSON.Data.Convertion_Result = inref.conversion_result;
 	END;
 END MODULE;
