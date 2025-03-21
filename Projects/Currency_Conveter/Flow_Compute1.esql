@@ -23,9 +23,9 @@ CREATE COMPUTE MODULE Flow_Compute1
 		DECLARE type CHARACTER;
 		SET type = CAST(InputRoot.JSON.Data.Currency.Type AS CHARACTER);
 		
-		DECLARE url CHARACTER 'https://v6.exchangerate-api.com/v6/0f3b6ee912c20c6fb79e0e9b/pair/' || type || '/INR/' || amount;
+		--DECLARE url CHARACTER 'https://v6.exchangerate-api.com/v6/0f3b6ee912c20c6fb79e0e9b/pair/' || type || '/INR/' || amount;
 		
-		SET OutputLocalEnvironment.Destination.HTTP.RequestURL =url;
+		SET OutputLocalEnvironment.Destination.HTTP.RequestURL ='https://v6.exchangerate-api.com/v6/0f3b6ee912c20c6fb79e0e9b/pair/' || type || '/INR/' || amount;
 		
 		-- Set HTTP Headers
 		SET OutputRoot.HTTPRequestHeader."Content-Type" = 'application/json';
