@@ -376,5 +376,8 @@
 <workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1742383250034_125" label="[OverRide_Queue]" name="[OverRide_Queue]">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/OverRide_Queue" type="4"/>
 </workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1742799612779_126" label="[Task_Fetch_AccountDetail_24Mar]" name="[Task_Fetch_AccountDetail_24Mar]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Task_Fetch_AccountDetail_24Mar" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1730787602582_100" label="Window Working Set" name="Aggregate for window 1730787602582"/>
 </workingSetManager>
