@@ -1,0 +1,42 @@
+BROKER SCHEMA Exception_log4j
+
+DECLARE hello EXTERNAL CHARACTER 'C:/Log4JNew/Log4jConfigurationFile.xml';
+DECLARE var BOOLEAN;
+
+CREATE COMPUTE MODULE log4j_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		   CALL initLog4j(hello) INTO var;
+		   CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputExceptionList.*[1];
+		
+		DECLARE ex_line INTEGER inref.Line;
+		DECLARE ex_type CHARACTER inref.Type;
+		DECLARE ex_lable CHARACTER inref.Label;
+		DECLARE ex_text CHARACTER inref.Text;
+		
+		DECLARE Excep CHARACTER;
+		SET Excep =  CAST(ex_line AS CHARACTER CCSID 1208) || ex_type ||  ex_lable || ex_text;
+		
+		WHILE inref.Number IS NOT NULL DO
+			
+			 CALL logwrite('MessageFlowLabel', 'errlog', 'ERROR', 'Excep') into var;
+			 
+			MOVE inref LASTCHILD;
+		END WHILE;
+	END;
+END MODULE;
+
+CREATE FUNCTION logwrite(in mfname CHARACTER, in result CHARACTER, in level CHARACTER , in line CHARACTER)
+RETURNS boolean
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.log";
+
+CREATE FUNCTION initLog4j(in logConfigPath CHARACTER) RETURNS BOOLEAN
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.initLog4j";

@@ -1,0 +1,51 @@
+DECLARE hello EXTERNAL CHARACTER 'C:/Log4JNew/Log4jConfigurationFile.xml';
+DECLARE var BOOLEAN;
+
+CREATE COMPUTE MODULE CRUD_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL initLog4j(hello) INTO var;
+	    CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data.Emp;
+		DECLARE in_Id INTEGER inref.ID;
+		DECLARE in_Name CHARACTER inref.Name;
+		DECLARE in_Salary INTEGER inref.Salary;
+		DECLARE in_Age INTEGER inref.Age;
+		
+		DECLARE In_data BLOB;
+		SET In_data = CAST(inref AS BLOB CCSID 1208 );
+		
+		DECLARE In_data1 CHARACTER;
+		SET In_data1 = CAST(In_data AS CHARACTER CCSID 1208);
+		
+		DECLARE ANS CHARACTER;
+	    CALL InsertData(in_Id,in_Name, in_Salary, in_Age) INTO ANS ;	
+	    SET OutputRoot.JSON.Data.Result = ANS;    
+	    
+	   CALL logwrite(MessageFlowLabel, 'Logger2', 'INFO', 'Application_data: ' || In_data1) into var;
+	END;
+END MODULE;
+
+CREATE FUNCTION InsertData(IN input_id INTEGER,IN input_name CHARACTER,IN input_Salary INTEGER, IN input_Age INTEGER) RETURNS CHARACTER
+ BEGIN
+	INSERT INTO Database.NewODBC.system.EMP VALUES (input_id, input_name, input_Salary, input_Age);
+	DECLARE result CHARACTER;
+    SET result = 'Record Inserted';
+ RETURN result;
+END;
+
+	
+CREATE FUNCTION logwrite(in mfname CHARACTER, in result CHARACTER, in level CHARACTER , in data CHARACTER)
+RETURNS boolean
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.log";
+
+CREATE FUNCTION initLog4j(in logConfigPath CHARACTER) RETURNS BOOLEAN
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.initLog4j";
+	
