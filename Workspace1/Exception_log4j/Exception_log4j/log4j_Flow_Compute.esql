@@ -1,6 +1,6 @@
 BROKER SCHEMA Exception_log4j
 
-DECLARE hello EXTERNAL CHARACTER 'C:/Log4JNew/Log4jConfigurationFile.xml';
+DECLARE hello EXTERNAL CHARACTER '/home/bandaru/Desktop/Ritesh/Log4jConfigurationFile.xml';
 DECLARE var BOOLEAN;
 
 CREATE COMPUTE MODULE log4j_Flow_Compute

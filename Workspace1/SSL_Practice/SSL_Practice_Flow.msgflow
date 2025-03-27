@@ -6,13 +6,13 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/SSL_Practice/icons/full/obj16/SSL_Practice_Flow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/SSL_Practice/icons/full/obj30/SSL_Practice_Flow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="714,103">
+      <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="630,110">
         <translation xmi:type="utility:ConstantString" string="HTTP Reply"/>
       </nodes>
-      <nodes xmi:type="ComIbmWSRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="426,72" URLSpecifier="https://localhost:7843/pro" httpVersion="1.1" protocol="TLS" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmWSRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="350,50" URLSpecifier="https://localhost:7843/pro" httpVersion="1.1" protocol="TLS" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="HTTP Request"/>
       </nodes>
-      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="150,110" URLSpecifier="/pra" messageDomainProperty="JSON">
+      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="110,110" URLSpecifier="/pra" messageDomainProperty="JSON">
         <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

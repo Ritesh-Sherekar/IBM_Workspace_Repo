@@ -356,6 +356,15 @@
 <workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1742979118238_121" label="[Exception_log4j]" name="[Exception_log4j]">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Exception_log4j" type="4"/>
 </workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1743058579368_122" label="[Task_SSL_Client]" name="[Task_SSL_Client]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Task_SSL_Client" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1743058711322_123" label="[Task_SSL_Server]" name="[Task_SSL_Server]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Task_SSL_Server" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1743073585298_124" label="[ExampleResetContentDescriptor]" name="[ExampleResetContentDescriptor]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ExampleResetContentDescriptor" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1725050738033_32" label="Window Working Set" name="Aggregate for window 1725050738032"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1725060162053_33" label="Window Working Set" name="Aggregate for window 1725060162053"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1731056878902_106" label="Window Working Set" name="Aggregate for window 1731056878902"/>
