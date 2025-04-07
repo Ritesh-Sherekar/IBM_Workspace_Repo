@@ -1,0 +1,66 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL initLog4j(hello) INTO var;
+		-- Check Method-----
+		DECLARE method_type CHARACTER;
+		SET method_type = SUBSTRING(InputRoot.HTTPInputHeader."X-Original-HTTP-Command" FROM 1 FOR 4);
+
+		IF method_type = 'POST' THEN
+			CALL CopyEntireMessage();
+		ELSE
+			THROW USER EXCEPTION CATALOG 'BIPmsgs' MESSAGE 2230 VALUES('Unsupported HTTP Method');
+			PROPAGATE TO TERMINAL 'Catch';
+		END IF;
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		----------------------------Logging------------------------------
+		DECLARE input_request CHARACTER;
+
+		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+
+		CALL logwrite(MessageFlowLabel,'Logger2', 'INFO', 'Application_Input_data:' || input_request) into var;
+		----------------------------Logging------------------------------
+
+
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data;
+		DECLARE bank_id INTEGER inref.bankId;
+		DECLARE mobile_No INTEGER inref.mobileNo;
+
+		DECLARE sqlStatement CHARACTER;
+		DECLARE DatabaseData ROW;
+		SET sqlStatement = 'SELECT BANK_NAME, DSN, D_SCHEMA FROM ACC_DISCOVERY_TABLE WHERE BANKID = ? AND BANKID = ?';
+
+		SET DatabaseData.Data[] = PASSTHRU(sqlStatement, bank_id, bank_id);
+
+		DECLARE bank_Name CHARACTER DatabaseData.Data.BANK_NAME;
+		DECLARE Dsn_Name CHARACTER DatabaseData.Data.DSN;
+		DECLARE Schema_Name CHARACTER DatabaseData.Data.D_SCHEMA;
+		
+		SET Environment.Data[]=(SELECT AI.* FROM Database.{Dsn_Name}.{Schema_Name}.SBI AS AI WHERE AI.MOBILE_NO = InputRoot.JSON.Data.mobileNo);
+		SET OutputRoot.JSON.Data.Result.status = Environment.Data.STATUS;
+		SET OutputRoot.JSON.Data.Result.accounts.accountNumber = Environment.Data.ACCOUNTNUMBER;
+		SET OutputRoot.JSON.Data.Result.accounts.accType = Environment.Data.ACCTYPE;
+		SET OutputRoot.JSON.Data.Result.accounts.fiType = Environment.Data.FITYPE;
+	
+		----------------------------Logging------------------------------
+		DECLARE output_response CHARACTER;
+
+		SET output_response = cast(ASBITSTREAM(OutputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+
+		CALL logwrite(MessageFlowLabel,'Logger2', 'INFO', 'Application_Output_data: ' || output_response) into var;
+		----------------------------Logging------------------------------
+
+	END;

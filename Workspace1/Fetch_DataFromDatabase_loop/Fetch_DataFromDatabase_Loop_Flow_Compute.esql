@@ -1,41 +1,120 @@
-PATH For_Broker_Schema;
-
-
-
-CREATE COMPUTE MODULE Fetch_DataFromDatabase_Loop_Flow_Compute
-	CREATE FUNCTION Main() RETURNS BOOLEAN
-	BEGIN
-		-- CALL CopyMessageHeaders();
-		CALL CopyEntireMessage();
-		RETURN TRUE;
-	END;
-
-	CREATE PROCEDURE CopyMessageHeaders() BEGIN
-		DECLARE I INTEGER 1;
-		DECLARE J INTEGER;
-		SET J = CARDINALITY(InputRoot.*[]);
-		WHILE I < J DO
-			SET OutputRoot.*[I] = InputRoot.*[I];
-			SET I = I + 1;
-		END WHILE;
-	END;
-
-	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot.XMLNSC.Result = Mult(12 , 12);
---		DECLARE var CHARACTER 'SELECT * FROM STUDENT';
---		SET Environment.data[] = PASSTHRU(var);
---		SET OutputRoot.XMLNSC.Hello.Result[] = Environment.data[];
-		
---		CREATE FIELD OutputRoot.JSON.Data.Student.StudentInfo IDENTITY (JSON.Array) StudentInfo;
---		DECLARE inref REFERENCE TO OutputRoot.JSON.Data.Student.StudentInfo;
---		
---		DECLARE i INTEGER 1;
---		WHILE i <= CARDINALITY(Result[]) DO
---			SET OutputRoot.JSON.Data.Emp.Item[i] = InputRoot.XMLNSC.Hello.Result[];
---		END WHILE;
-
-
-
-		
-	END;
-END MODULE;
+ExceptionList
+	RecoverableException
+			File:CHARACTER:C:\ci\product-build\WMB\src\DataFlowEngine\MessageServices\ImbDataFlowNode.cpp
+			Line:INTEGER:1867
+			Function:CHARACTER:ImbDataFlowNode::createExceptionList
+			Type:CHARACTER:ComIbmWSInputNode
+			Name:CHARACTER:Acc_Discovery_Flow#FCMComposite_1_1
+			Label:CHARACTER:Acc_Discovery_Flow.HTTP Input
+			Catalog:CHARACTER:BIPmsgs
+			Severity:INTEGER:3
+			Number:INTEGER:2230
+			Text:CHARACTER:Node throwing exception
+			Insert
+					Type:INTEGER:14
+					Text:CHARACTER:Acc_Discovery_Flow.HTTP Input
+			RecoverableException
+					File:CHARACTER:C:\ci\product-build\WMB\src\DataFlowEngine\SQLNodeLibrary\ImbComputeNode.cpp
+					Line:INTEGER:343
+					Function:CHARACTER:ImbComputeNode::evaluate
+					Type:CHARACTER:ComIbmComputeNode
+					Name:CHARACTER:Acc_Discovery_Flow#FCMComposite_1_3
+					Label:CHARACTER:Acc_Discovery_Flow.Compute
+					Catalog:CHARACTER:BIPmsgs
+					Severity:INTEGER:3
+					Number:INTEGER:2230
+					Text:CHARACTER:Caught exception and rethrowing
+					Insert
+							Type:INTEGER:14
+							Text:CHARACTER:Acc_Discovery_Flow.Compute
+					RecoverableException
+							File:CHARACTER:C:\ci\product-build\WMB\src\DataFlowEngine\ImbRdl\ImbRdlStatementGroup.cpp
+							Line:INTEGER:785
+							Function:CHARACTER:SqlStatementGroup::execute
+							Type:CHARACTER:
+							Name:CHARACTER:
+							Label:CHARACTER:
+							Catalog:CHARACTER:BIPmsgs
+							Severity:INTEGER:3
+							Number:INTEGER:2488
+							Text:CHARACTER:Error detected, rethrowing
+							Insert
+									Type:INTEGER:5
+									Text:CHARACTER:.Acc_Discovery_Flow_Compute.Main
+							Insert
+									Type:INTEGER:5
+									Text:CHARACTER:4.6
+							Insert
+									Type:INTEGER:5
+									Text:CHARACTER:CALL CopyEntireMessage();
+							RecoverableException
+									File:CHARACTER:C:\ci\product-build\WMB\src\DataFlowEngine\ImbRdl\ImbRdlRoutine.cpp
+									Line:INTEGER:1337
+									Function:CHARACTER:SqlRoutine::invoke
+									Type:CHARACTER:
+									Name:CHARACTER:
+									Label:CHARACTER:
+									Catalog:CHARACTER:BIPmsgs
+									Severity:INTEGER:3
+									Number:INTEGER:2934
+									Text:CHARACTER:Error occured in procedure
+									Insert
+											Type:INTEGER:5
+											Text:CHARACTER:CopyEntireMessage
+									RecoverableException
+											File:CHARACTER:C:\ci\product-build\WMB\src\DataFlowEngine\ImbRdl\ImbRdlStatementGroup.cpp
+											Line:INTEGER:760
+											Function:CHARACTER:SqlStatementGroup::execute
+											Type:CHARACTER:
+											Name:CHARACTER:
+											Label:CHARACTER:
+											Catalog:CHARACTER:BIPmsgs
+											Severity:INTEGER:3
+											Number:INTEGER:2488
+											Text:CHARACTER:Error detected, rethrowing
+											Insert
+													Type:INTEGER:5
+													Text:CHARACTER:.Acc_Discovery_Flow_Compute.CopyEntireMessage
+											Insert
+													Type:INTEGER:5
+													Text:CHARACTER:8.6
+											Insert
+													Type:INTEGER:5
+													Text:CHARACTER:SET Environment.data[] = DEFAULTPASSTHRU(sqlStatement);
+											DatabaseException
+													File:CHARACTER:C:\ci\product-build\WMB\src\DataFlowEngine\MessageServices\ImbODBC.cpp
+													Line:INTEGER:3923
+													Function:CHARACTER:ImbODBCStatement::checkRcInner
+													Type:CHARACTER:
+													Name:CHARACTER:
+													Label:CHARACTER:
+													Catalog:CHARACTER:BIPmsgs
+													Severity:INTEGER:3
+													Number:INTEGER:2321
+													Text:CHARACTER:Root SQL exception
+													Insert
+															Type:INTEGER:2
+															Text:CHARACTER:-1
+													Insert
+															Type:INTEGER:14
+															Text:CHARACTER:odbc32.dll
+													DatabaseException
+															File:CHARACTER:C:\ci\product-build\WMB\src\DataFlowEngine\MessageServices\ImbODBC.cpp
+															Line:INTEGER:4142
+															Function:CHARACTER:ImbODBCStatement::checkRcInner
+															Type:CHARACTER:
+															Name:CHARACTER:
+															Label:CHARACTER:
+															Catalog:CHARACTER:BIPmsgs
+															Severity:INTEGER:3
+															Number:INTEGER:2322
+															Text:CHARACTER:Child SQL exception
+															Insert
+																	Type:INTEGER:5
+																	Text:CHARACTER:42S22
+															Insert
+																	Type:INTEGER:2
+																	Text:CHARACTER:904
+															Insert
+																	Type:INTEGER:5
+																	Text:CHARACTER:[IBM][ODBC Oracle Wire Protocol driver][Oracle]ORA-00904: "BANK_ID": invalid identifier 

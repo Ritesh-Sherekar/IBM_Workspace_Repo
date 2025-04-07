@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<MessageBroker name="File_Fix_To_XML">
-  <XSDCollection href="platform:/resource/File_Fix_To_XML/IBMdefined/CommaSeparatedFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
-  <XSDCollection href="platform:/resource/File_Fix_To_XML/FixXML.xsd" prefix="" targetNamespace="">
-    <import name="IBMdefined/CommaSeparatedFormat.xsd" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
-    <element href="platform:/resource/File_Fix_To_XML/FixXML.xsd#//FixXML;XSDElementDeclaration" name="FixXML"/>
-  </XSDCollection>
-</MessageBroker>

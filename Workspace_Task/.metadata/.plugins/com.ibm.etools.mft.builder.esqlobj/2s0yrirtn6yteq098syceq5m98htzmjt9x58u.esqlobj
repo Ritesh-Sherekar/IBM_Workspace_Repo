@@ -1,0 +1,37 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+ -- Declare input and output references
+        DECLARE reqRef REFERENCE TO InputRoot.XMLNSC.*:Envelope.*:Body.*:GIPTransactionOp.*:ReqGIPTransaction;
+        DECLARE respRef REFERENCE TO OutputRoot.XMLNSC;
+        
+        -- Build the SOAP Envelope
+        SET OutputRoot.XMLNSC.(XMLNSC.NamespaceDecl)xmlns:soap = 'http://schemas.xmlsoap.org/soap/envelope/';
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.(XMLNSC.NamespaceDecl)xmlns:ns2 = 'com.ghipss.gip';
+        
+        -- Create the Response Structure
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.Amount = reqRef.Amount;
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.datetime = reqRef.datetime;
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.TrackingNum = reqRef.TrackingNum;
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.FunctionCode = reqRef.FunctionCode;
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.OrigineBank = reqRef.OrigineBank;
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.DestBank = reqRef.DestBank;
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.SessionID = reqRef.SessionID;
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.NameToDebit = reqRef.NameToDebit;
+        
+        -- Modify AccountToDebit as per response requirement
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.AccountToDebit = '1090099199418';
+
+        -- Modify NameToCredit as per response requirement
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.NameToCredit = 'OLAM PURCHASE ACCOUNT';
+
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.AccountToCredit = reqRef.AccountToCredit;
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.Narration = reqRef.Narration;
+        
+        -- Set nil attributes for optional fields
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.OneTimePassword.(XMLNSC.Attribute)xsi:nil = 'true';
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.Login.(XMLNSC.Attribute)xsi:nil = 'true';
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.Password.(XMLNSC.Attribute)xsi:nil = 'true';
+        
+        -- Set approval and action codes
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.ActCode = '000';
+        SET respRef.soap:Envelope.soap:Body.ns2:GIPTransactionOpResponse.GIPTransactionResponse.AprvCode = '577294';
+        

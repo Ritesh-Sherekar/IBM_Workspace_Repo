@@ -1,0 +1,11 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\Task_\new_task.wsdl
+
+The WSDL import will proceed with bindings GIPTransactionBinding.
+Creating wsdl schema document for file:///C:/Users/Sreenivas Bandaru/IBM/ACET12/Workspace_Task/Task_/new_task.wsdl.
+Parsing wsdl binding {http://com.ghipss.gip/}GIPTransactionBinding.
+Parsing wsdl binding input GIPTransactionOp.
+Parsing wsdl binding output GIPTransactionOp.
+Processing doc style for operation GIPTransactionOp.
+Populating WSDL schema new_task.xsd.

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://com.ghipss.gip/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://com.ghipss.gip/">
+              
+            
+  <!-- Request Complex Type -->
+              
+  <xsd:complexType name="ReqGIPTransaction">
+                    
+    <xsd:sequence>
+                          
+      <xsd:element name="Amount" type="xsd:string"/>
+                          
+      <xsd:element name="datetime" type="xsd:string"/>
+                          
+      <xsd:element name="TrackingNum" type="xsd:string"/>
+                          
+      <xsd:element name="FunctionCode" type="xsd:string"/>
+                          
+      <xsd:element name="OriginBank" type="xsd:string"/>
+                          
+      <xsd:element name="DestBank" type="xsd:string"/>
+                          
+      <xsd:element name="SessionID" type="xsd:string"/>
+                          
+      <xsd:element name="ChannelCode" type="xsd:string"/>
+                          
+      <xsd:element name="AccountToDebit" type="xsd:string"/>
+                          
+      <xsd:element name="NameToDebit" type="xsd:string"/>
+                          
+      <xsd:element name="AccountToCredit" type="xsd:string"/>
+                          
+      <xsd:element name="NameToCredit" type="xsd:string"/>
+                          
+      <xsd:element name="Narration" type="xsd:string"/>
+                          
+      <xsd:element name="Login" type="xsd:string"/>
+                          
+      <xsd:element name="Password" type="xsd:string"/>
+                      
+    </xsd:sequence>
+                
+  </xsd:complexType>
+              
+  <xsd:element ibmSchExtn:docRoot="true" name="GIPTransactionOp" type="tns:ReqGIPTransaction"/>
+              
+            
+  <!-- Response Complex Type -->
+              
+  <xsd:complexType name="GIPTransactionResponse">
+                    
+    <xsd:sequence>
+                          
+      <xsd:element name="Amount" type="xsd:string"/>
+                          
+      <xsd:element name="datetime" type="xsd:string"/>
+                          
+      <xsd:element name="TrackingNum" type="xsd:string"/>
+                          
+      <xsd:element name="FunctionCode" type="xsd:string"/>
+                          
+      <xsd:element name="OriginBank" type="xsd:string"/>
+                          
+      <xsd:element name="DestBank" type="xsd:string"/>
+                          
+      <xsd:element name="SessionID" type="xsd:string"/>
+                          
+      <xsd:element name="NameToDebit" type="xsd:string"/>
+                          
+      <xsd:element name="AccountToDebit" type="xsd:string"/>
+                          
+      <xsd:element name="NameToCredit" type="xsd:string"/>
+                          
+      <xsd:element name="AccountToCredit" type="xsd:string"/>
+                          
+      <xsd:element name="Narration" type="xsd:string"/>
+                          
+      <xsd:element minOccurs="0" name="OneTimePassword" nillable="true" type="xsd:string"/>
+                          
+      <xsd:element minOccurs="0" name="Login" nillable="true" type="xsd:string"/>
+                          
+      <xsd:element minOccurs="0" name="Password" nillable="true" type="xsd:string"/>
+                          
+      <xsd:element name="ActCode" type="xsd:string"/>
+                          
+      <xsd:element name="AprvCode" type="xsd:string"/>
+                      
+    </xsd:sequence>
+                
+  </xsd:complexType>
+              
+  <xsd:element ibmSchExtn:docRoot="true" name="GIPTransactionOpResponse" type="tns:GIPTransactionResponse"/>
+          
+</xsd:schema>

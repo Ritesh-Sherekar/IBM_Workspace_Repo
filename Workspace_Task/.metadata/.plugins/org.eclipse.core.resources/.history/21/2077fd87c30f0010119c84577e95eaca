@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:tns="http://com.ghipss.gip/"
+                  targetNamespace="http://com.ghipss.gip/">
+
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://com.ghipss.gip/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            
+            <!-- Request Complex Type -->
+            <xsd:complexType name="ReqGIPTransaction">
+                <xsd:sequence>
+                    <xsd:element name="Amount" type="xsd:string"/>
+                    <xsd:element name="datetime" type="xsd:string"/>
+                    <xsd:element name="TrackingNum" type="xsd:string"/>
+                    <xsd:element name="FunctionCode" type="xsd:string"/>
+                    <xsd:element name="OriginBank" type="xsd:string"/>
+                    <xsd:element name="DestBank" type="xsd:string"/>
+                    <xsd:element name="SessionID" type="xsd:string"/>
+                    <xsd:element name="ChannelCode" type="xsd:string"/>
+                    <xsd:element name="AccountToDebit" type="xsd:string"/>
+                    <xsd:element name="NameToDebit" type="xsd:string"/>
+                    <xsd:element name="AccountToCredit" type="xsd:string"/>
+                    <xsd:element name="NameToCredit" type="xsd:string"/>
+                    <xsd:element name="Narration" type="xsd:string"/>
+                    <xsd:element name="Login" type="xsd:string"/>
+                    <xsd:element name="Password" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:element name="GIPTransactionOp" type="tns:ReqGIPTransaction"/>
+            
+            <!-- Response Complex Type -->
+            <xsd:complexType name="GIPTransactionResponse">
+                <xsd:sequence>
+                    <xsd:element name="Amount" type="xsd:string"/>
+                    <xsd:element name="datetime" type="xsd:string"/>
+                    <xsd:element name="TrackingNum" type="xsd:string"/>
+                    <xsd:element name="FunctionCode" type="xsd:string"/>
+                    <xsd:element name="OriginBank" type="xsd:string"/>
+                    <xsd:element name="DestBank" type="xsd:string"/>
+                    <xsd:element name="SessionID" type="xsd:string"/>
+                    <xsd:element name="NameToDebit" type="xsd:string"/>
+                    <xsd:element name="AccountToDebit" type="xsd:string"/>
+                    <xsd:element name="NameToCredit" type="xsd:string"/>
+                    <xsd:element name="AccountToCredit" type="xsd:string"/>
+                    <xsd:element name="Narration" type="xsd:string"/>
+                    <xsd:element name="OneTimePassword" type="xsd:string" minOccurs="0" nillable="true"/>
+                    <xsd:element name="Login" type="xsd:string" minOccurs="0" nillable="true"/>
+                    <xsd:element name="Password" type="xsd:string" minOccurs="0" nillable="true"/>
+                    <xsd:element name="ActCode" type="xsd:string"/>
+                    <xsd:element name="AprvCode" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:element name="GIPTransactionOpResponse" type="tns:GIPTransactionResponse"/>
+
+        </xsd:schema>
+    </wsdl:types>
+
+    <!-- Messages -->
+    <wsdl:

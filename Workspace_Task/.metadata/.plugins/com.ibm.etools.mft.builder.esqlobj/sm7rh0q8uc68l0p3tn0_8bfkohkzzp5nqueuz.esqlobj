@@ -1,0 +1,4 @@
+CREATE FUNCTION logwrite(in mfname1 CHARACTER, in logger_name1 CHARACTER, in level1 CHARACTER , in data1 CHARACTER)
+RETURNS boolean
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.log";

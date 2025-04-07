@@ -7,6 +7,5 @@
 	<classpathentry kind="lib" path="C:/Program Files/IBM/ACE/12.0.12.0/common/classes/IntegrationAPI.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/IBM/ACE/12.0.12.0/server/classes/javacompute.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/IBM/ACE/12.0.12.0/server/classes/jplugin2.jar"/>
-	<classpathentry kind="con" path="com.ibm.etools.mft.uri.classpath.MBProjectReference"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

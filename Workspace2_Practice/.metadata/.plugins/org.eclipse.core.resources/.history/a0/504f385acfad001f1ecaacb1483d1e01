@@ -1,9 +1,0 @@
-package myPackage;
-
-public class myClass {
-    public static int myMethod(int var1, int var2) {
-        int ans = var1 + var2; 
-        System.out.println("Sum is: " + ans); // Print result for logging/debugging
-        return ans; // Return the result to ESQL
-    }
-}

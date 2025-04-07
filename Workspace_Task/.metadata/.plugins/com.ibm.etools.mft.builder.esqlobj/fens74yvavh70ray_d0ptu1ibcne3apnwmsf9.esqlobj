@@ -1,0 +1,40 @@
+CREATE COMPUTE MODULE T_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		   CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		
+		SET OutputRoot.SOAP.Context.Namespace.ns= 'com.ghipss.gip';
+		SET OutputRoot.SOAP.Header = '';
+		
+		SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.Amount =000000000000;
+		SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.datetime =230630181136;
+		SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.TrackingNum = 125278;
+		SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.FunctionCode = 230;
+		SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.OrigineBank = 300323;
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.DestBank = 300315;
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.SessionID = 101900166252;
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.ChannelCode = 100;
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.AccountToDebit = 1090033199418;
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.NameToCredit = 'AUGSUTINE  JESSON';
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.AccountToCredit = 1020820171412;
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.Narration = 'TEST';
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.Login = 300323;
+	    SET OutputRoot.SOAP.Body.ns:GIPTransactionOpRequest.Password = 'c941a4ec7bd7937a581e42f29d09cdda2b2ece8459db0b07444c20b9c1e6ac9a538275698af192af5634ca3fdae3dd50160dcc14d6f10c754041d7b74f9a84d2';
+	
+	END;
+END MODULE;

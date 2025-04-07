@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="com.ghipss.gip" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="com.ghipss.gip">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="NewWSDLFile_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="GIPTransactionOpBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+      
+    
+  <wsdl:types>
+            
+            
+    <xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" targetNamespace="com.ghipss.gip">
+      
+      <xsd:include schemaLocation="NewWSDLFile_InlineSchema1.xsd"/>
+    </xsd:schema>
+        
+  </wsdl:types>
+      
+  <wsdl:message name="GIPTransactionOpRequestMessage">
+            
+    <wsdl:part element="tns:GIPTransactionOpRequest" name="parameters"/>
+        
+  </wsdl:message>
+      
+    
+  <wsdl:message name="GIPTransactionOpResponseMessage">
+            
+    <wsdl:part element="tns:GIPTransactionOpResponse" name="parameters"/>
+        
+  </wsdl:message>
+      
+    
+  <wsdl:portType name="GIPTransactionOpPortType">
+            
+    <wsdl:operation name="GIPTransactionOp">
+                  
+      <wsdl:input message="tns:GIPTransactionOpRequestMessage"/>
+                  
+      <wsdl:output message="tns:GIPTransactionOpResponseMessage"/>
+              
+    </wsdl:operation>
+        
+  </wsdl:portType>
+      
+    
+  <wsdl:binding name="GIPTransactionOpBinding" type="tns:GIPTransactionOpPortType">
+            
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+            
+    <wsdl:operation name="GIPTransactionOp">
+                  
+      <soap:operation soapAction="com.ghipss.gip/GIPTransactionOp"/>
+                  
+      <wsdl:input>
+                        
+        <soap:body use="literal"/>
+                    
+      </wsdl:input>
+                  
+      <wsdl:output>
+                        
+        <soap:body use="literal"/>
+                    
+      </wsdl:output>
+              
+    </wsdl:operation>
+        
+  </wsdl:binding>
+      
+    
+  <wsdl:service name="GIPTransactionOpService">
+            
+    <wsdl:port binding="tns:GIPTransactionOpBinding" name="GIPTransactionOpPort">
+                  
+      <soap:address location="http://example.com/GIPTransactionOp"/>
+              
+    </wsdl:port>
+        
+  </wsdl:service>
+  
+</wsdl:definitions>

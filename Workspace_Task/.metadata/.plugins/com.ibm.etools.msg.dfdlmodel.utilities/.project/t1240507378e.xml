@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="Task_FetchAccountDetail_24Mar">
+  <XSDCollection href="platform:/resource/Task_FetchAccountDetail_24Mar/myDFDL_Acc.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/Task_FetchAccountDetail_24Mar/myDFDL_Acc.xsd#//myDFDL_Acc;XSDElementDeclaration" name="myDFDL_Acc"/>
+  </XSDCollection>
+</MessageBroker>

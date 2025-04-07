@@ -1,0 +1,83 @@
+DECLARE hello EXTERNAL CHARACTER 'C:\Log4JNew\Log4jConfigurationFile.xml';
+DECLARE var BOOLEAN;
+
+CREATE COMPUTE MODULE Acc_Discovery_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL initLog4j(hello) INTO var;
+		-- Check Method-----
+		DECLARE method_type CHARACTER;
+		SET method_type = SUBSTRING(InputRoot.HTTPInputHeader."X-Original-HTTP-Command" FROM 1 FOR 4);
+
+		IF method_type = 'POST' THEN
+			CALL CopyEntireMessage();
+		ELSE
+			THROW USER EXCEPTION CATALOG 'BIPmsgs' MESSAGE 2230 VALUES('Unsupported HTTP Method');
+
+		END IF;
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		----------------------------Logging------------------------------
+		DECLARE input_request CHARACTER;
+
+		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+
+		CALL logwrite(MessageFlowLabel,'Logger2', 'INFO', 'Application_Input_data: ' || input_request) into var;
+		----------------------------Logging------------------------------
+
+
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data;
+		DECLARE bank_id INTEGER inref.bankId;
+		DECLARE mobile_No INTEGER inref.mobileNo;
+
+		DECLARE sqlStatement CHARACTER;
+		DECLARE DatabaseData ROW;
+		SET sqlStatement = 'SELECT BANK_NAME, DSN, D_SCHEMA FROM ACC_DISCOVERY_TABLE WHERE BANKID = ? AND MOBILE_NO = ?';
+
+		SET DatabaseData.Data[] = PASSTHRU(sqlStatement, bank_id, mobile_No);
+		--SET OutputRoot.JSON.Data.Result[] = DatabaseData.Data[];
+
+		DECLARE bank_Name CHARACTER DatabaseData.Data.BANK_NAME;
+		DECLARE Dsn_Name CHARACTER DatabaseData.Data.DSN;
+		DECLARE Schema_Name CHARACTER DatabaseData.Data.D_SCHEMA;
+
+		DECLARE sqlStatement1 CHARACTER;
+		DECLARE DatabaseData1 ROW;
+		SET sqlStatement1 = 'SELECT * FROM ' || Schema_Name || '.' || bank_Name || ' WHERE MOBILE_NO = ?';
+		SET DatabaseData1.Data[] = PASSTHRU(sqlStatement1 , mobile_No);
+		--SET DatabaseData1.Data[] = PASSTHRU(sqlStatement1 TO Database.Dsn_Name VALUES(mobile_No));
+		SET OutputRoot.JSON.Data.Result[] = DatabaseData1.Data[];
+		
+		
+		----------------------------Logging------------------------------
+		DECLARE output_response CHARACTER;
+
+		SET output_response = cast(ASBITSTREAM(OutputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+
+		CALL logwrite(MessageFlowLabel,'Logger2', 'INFO', 'Application_Output_data: ' || output_response) into var;
+		----------------------------Logging------------------------------
+
+	END;
+END MODULE;
+
+CREATE FUNCTION logwrite(in mfname CHARACTER, in logger_name CHARACTER, in level CHARACTER , in data CHARACTER)
+RETURNS boolean
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.log";
+
+CREATE FUNCTION initLog4j(in logConfigPath CHARACTER) RETURNS BOOLEAN
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.initLog4j";

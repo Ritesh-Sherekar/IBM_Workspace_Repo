@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<MessageBroker name="DataBaseInput">
-  <XSDCollection href="platform:/resource/DataBaseInput/xe/system/hello.xsd" prefix="xesystem" targetNamespace="http://xe/system">
-    <element href="platform:/resource/DataBaseInput/xe/system/hello.xsd#//CUS;XSDElementDeclaration" name="CUS" type="mlib://DataBaseInput#/-/complexType{http://xe/system}CUSType"/>
-    <element href="platform:/resource/DataBaseInput/xe/system/hello.xsd#//CUS_EVENT;XSDElementDeclaration=1" name="CUS_EVENT" type="mlib://DataBaseInput#/-/complexType{http://xe/system}CUS_EVENTType"/>
-    <complexType baseType="mlib://DataBaseInput#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/DataBaseInput/xe/system/hello.xsd#//CUSType;XSDComplexTypeDefinition" name="CUSType"/>
-    <complexType baseType="mlib://DataBaseInput#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/DataBaseInput/xe/system/hello.xsd#//CUS_EVENTType;XSDComplexTypeDefinition=1" name="CUS_EVENTType"/>
-  </XSDCollection>
-</MessageBroker>

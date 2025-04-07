@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target name="Running Platform">
+	<locations>
+		<location configuration="/C:/Users/Sreenivas Bandaru/AppData/Local/IBM/ACET12-config/12.0.12.0/configuration/" path="${eclipse_home}" type="Profile"/>
+	</locations>
+	<environment>
+		<arch>x86_64</arch>
+		<os>win32</os>
+		<ws>win32</ws>
+		<nl>en_US</nl>
+	</environment>
+	<launcherArgs>
+		<vmArgs>--add-modules=ALL-SYSTEM -Dosgi.requiredJavaVersion=11 -Dosgi.dataAreaRequiresExplicitInit=true -Xquickstart -Xms512m -Xmx1024m -Xmnx64m -Xgcpolicy:gencon -Xss2m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+UseParallelGC -Declipse.p2.data.area=@config.dir/../p2/ -Dorg.osgi.framework.os.name=win32</vmArgs>
+	</launcherArgs>
+</target>

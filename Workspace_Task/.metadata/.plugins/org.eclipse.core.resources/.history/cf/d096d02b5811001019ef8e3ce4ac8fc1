@@ -1,0 +1,83 @@
+DECLARE hello EXTERNAL CHARACTER '/home/bandaru/Desktop/LOGS/Log4jConfigurationFile.xml';
+DECLARE var BOOLEAN;
+
+
+CREATE COMPUTE MODULE Acc_Linking_Req_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL initLog4j(hello) INTO var;
+		DECLARE method_type CHARACTER;
+		SET method_type = SUBSTRING(InputRoot.HTTPInputHeader."X-Original-HTTP-Command" FROM 1 FOR 4);
+
+		IF method_type = 'POST' THEN
+			CALL CopyEntireMessage();
+		ELSE
+			THROW USER EXCEPTION CATALOG 'BIPmsgs' MESSAGE 2230 VALUES('Unsupported HTTP Method');
+			PROPAGATE TO TERMINAL 'Catch';
+		END IF;
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data;
+		DECLARE bank_ID INTEGER inref.bankId;
+		DECLARE mobile_no INTEGER inref.mobileNo;
+		DECLARE acc_no INTEGER inref.accNo;
+		-- Generate OTP
+		DECLARE otp INTEGER;
+		SET otp = MOD(CAST(EXTRACT(SECOND FROM CURRENT_TIMESTAMP) AS INTEGER) * 12345, 900000) + 100000;
+		--SET OutputRoot.JSON.Data.Both.OTP = otp;
+		
+		-- Generate Reffrence Number
+		DECLARE reff_no CHARACTER UUIDASCHAR;
+		SET Environment.ref = reff_no;
+		--SET OutputRoot.JSON.Data.Both.ref = reff_no;
+
+		CALL ACC_Linking_Data_Stored(acc_no, bank_ID, mobile_no, otp, reff_no, CURRENT_TIMESTAMP);
+		------- Sending OTP By Overriding the Email Output Node properties-----------------
+		SET OutputLocalEnvironment.Destination.Email.SMTPServer = 'mail.eidiko-india.com';
+		SET OutputRoot.EmailOutputHeader.From = 'riteshpradip.sherekar@eidiko-india.com';
+		SET OutputRoot.EmailOutputHeader.To = 'bhargavreddy.lingala@eidiko-india.com';
+		SET OutputRoot.EmailOutputHeader.Subject = 'Your One-Time Password (OTP)';
+		SET OutputRoot.BLOB.BLOB = CAST('Your OTP is: ' || CAST(otp AS CHAR) AS BLOB CCSID 1208);
+		
+		-----------------------------------------Logging-------------------------------------------
+		DECLARE All_Data CHARACTER;
+		DECLARE ch_otp CHARACTER  CAST(otp AS CHARACTER);
+		DECLARE ch_reff CHARACTER CAST(reff_no AS CHARACTER);
+		DECLARE ch_req CHARACTER;
+		SET ch_req =  CAST(inref AS CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+		
+		SET All_Data = ch_req || ' OTP IS: ' || ch_otp || ' Reference Number IS: ' || ch_reff;
+
+		CALL logwrite(MessageFlowLabel, 'Logger2', 'INFO', 'Application_Input_data: ' || All_Data) INTO var;
+		-----------------------------------------Logging-------------------------------------------------
+
+
+	END;
+END MODULE;
+
+CREATE PROCEDURE ACC_Linking_Data_Stored (IN acc_no INTEGER, IN bank_ID INTEGER, IN mobile_no INTEGER, IN otp INTEGER, IN reff_no CHARACTER, IN otp_gen_time TIMESTAMP )
+LANGUAGE DATABASE
+EXTERNAL NAME "ACC_LINKING_REQ_PROCEDURE";
+
+
+CREATE FUNCTION logwrite(in mfname CHARACTER, in logger_name CHARACTER, in level CHARACTER , in data CHARACTER)
+RETURNS boolean
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.log";
+
+CREATE FUNCTION initLog4j(in logConfigPath CHARACTER) RETURNS BOOLEAN
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.initLog4j";

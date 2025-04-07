@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<MRMessageSet id="KREQUC0002001" name="XMLValidation" parser="XMLNSC">
-  <MRMsgCollection href="platform:/resource/XMLValidation/XMLValidation/XMLValidataionDefination.mxsd" prefix="" targetNamespace="">
-    <message href="platform:/resource/XMLValidation/XMLValidation/XMLValidataionDefination.mxsd#/0/Root;XSDElementDeclaration$MRMessage" name="Root"/>
-    <element href="platform:/resource/XMLValidation/XMLValidation/XMLValidataionDefination.mxsd#/0/Root;XSDElementDeclaration" name="Root" type="mset://XMLValidation#/-/complexType{}complexType"/>
-    <complexType baseType="mset://XMLValidation#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/XMLValidation/XMLValidation/XMLValidataionDefination.mxsd#/0/complexType;XSDComplexTypeDefinition" name="complexType"/>
-  </MRMsgCollection>
-</MRMessageSet>
