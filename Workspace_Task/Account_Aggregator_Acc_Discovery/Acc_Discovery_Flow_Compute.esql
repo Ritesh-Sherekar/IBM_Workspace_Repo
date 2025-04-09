@@ -37,7 +37,7 @@ CREATE COMPUTE MODULE Acc_Discovery_Flow_Compute
 		DECLARE input_request CHARACTER;
 
 		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
-
+        CALL logwrite(MessageFlowLabel,'Logger2','INFO',' ---------------------------Start Log -----------------------------------') INTO var;
 		CALL logwrite(MessageFlowLabel,'Logger2', 'INFO', 'Application_Input_data:' || input_request) into var;
 		----------------------------Logging------------------------------
 
@@ -61,11 +61,12 @@ CREATE COMPUTE MODULE Acc_Discovery_Flow_Compute
 		SET OutputRoot.JSON.Data.Result.accounts.fiType = Environment.Data.Bank_Detail.FITYPE;
 		
 		----------------------------Logging------------------------------
+		
 		DECLARE output_response CHARACTER;
-
 		SET output_response = cast(ASBITSTREAM(OutputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
-
-		CALL logwrite(MessageFlowLabel,'Logger2', 'INFO', 'Application_Output_data: ' || output_response) into var;
+		CALL logwrite(MessageFlowLabel,'Logger2', 'INFO', 'Application_Output_data: ' || output_response) into var;	
+		CALL logwrite(MessageFlowLabel,'Logger2','INFO',' ---------------------------End Log -----------------------------------') INTO var;
+		
 		----------------------------Logging------------------------------
 	END;
 END MODULE;
