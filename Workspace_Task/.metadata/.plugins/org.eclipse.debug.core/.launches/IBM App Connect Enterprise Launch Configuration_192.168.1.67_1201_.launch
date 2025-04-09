@@ -2,7 +2,7 @@
 <launchConfiguration type="com.ibm.etools.mft.debug.internal.mbLaunchConfigurationDelegate">
     <stringAttribute key="BRName" value="Broker_r"/>
     <stringAttribute key="ConnectionInfo" value="192.168.1.67:4415"/>
-    <stringAttribute key="EGName" value="S1"/>
+    <stringAttribute key="EGName" value="s1"/>
     <stringAttribute key="com.ibm.debug.wsa.attr_vm_name" value="IBM J9 VM"/>
     <stringAttribute key="com.ibm.debug.wsa.attr_vm_version" value="1.8.0_301"/>
     <intAttribute key="com.ibm.debug.wsa.attr_was_version" value="61"/>

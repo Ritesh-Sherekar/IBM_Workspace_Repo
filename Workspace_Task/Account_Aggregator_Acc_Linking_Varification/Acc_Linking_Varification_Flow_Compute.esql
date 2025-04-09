@@ -44,8 +44,8 @@ CREATE COMPUTE MODULE Acc_Linking_Varification_Flow_Compute
 		
 		DECLARE input_request CHARACTER;
 		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
-		CALL logwrite_Verification(MessageFlowLabel,'Logger2','INFO',' ---------------------------Start Log -----------------------------------') INTO var;
-		CALL logwrite_Verification(MessageFlowLabel,'Logger2', 'INFO', 'Application_Input_data:' || input_request) into var;
+		CALL logwrite_Verification(MessageFlowLabel,'valid','INFO',' ---------------------------Start Log -----------------------------------') INTO var;
+		CALL logwrite_Verification(MessageFlowLabel,'valid', 'INFO', 'Application_Input_data:' || input_request) into var;
 		
        -----------------------------------------Logging---------------------------------------------
 
@@ -87,8 +87,8 @@ CREATE COMPUTE MODULE Acc_Linking_Varification_Flow_Compute
 		DECLARE response_request CHARACTER;
 		SET response_request = OutputRoot.JSON.Data.Status;
 		SET response_request = CAST(response_request AS CHARACTER CCSID 1208);
-		CALL logwrite_Verification(MessageFlowLabel,'Logger2', 'INFO', 'Application_Output_data:' || response_request) into var;
-	    CALL logwrite_Verification(MessageFlowLabel,'Logger2','INFO',' ---------------------------End Log -----------------------------------') INTO var;
+		CALL logwrite_Verification(MessageFlowLabel,'valid', 'INFO', 'Application_Output_data:' || response_request) into var;
+	    CALL logwrite_Verification(MessageFlowLabel,'valid','INFO',' ---------------------------End Log -----------------------------------') INTO var;
 		
        -----------------------------------------Logging-------------------------------------------
        

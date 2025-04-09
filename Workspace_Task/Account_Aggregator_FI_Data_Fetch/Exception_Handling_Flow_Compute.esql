@@ -1,9 +1,12 @@
-/*EATE FUNCTION Main() RETURNS BOOLE*/
+--DECLARE configPath EXTERNAL CHARACTER;
+DECLARE var1 BOOLEAN;
+
+CREATE COMPUTE MODULE Exception_Handling_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		-- CALL CopyMessageHeaders();
 		CALL initLog4j_EXC(configPath) INTO var1;
-		CALL CopyEntireMessage();
-		
+		   CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
 
@@ -41,13 +44,22 @@
 		DECLARE Exception_Occured CHARACTER;
 		SET Exception_Occured = 'error_desc :' || Text || ' additionalData : ' || Itm.item.Text;
 		
+		
 		----------------------------Logging------------------------------
-
 		DECLARE input_request CHARACTER;
 
 		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
 
-		CALL logwrite_EXC(MessageFlowLabel,'ritesh', 'error', 'Application_Input_data:' || input_request|| 'Exception: ' || Exception_Occured) into var1;
+		CALL logwrite_EXC(MessageFlowLabel,'e_fidata', 'error', 'Application_Input_data:' || input_request || 'Exception: ' || Exception_Occured) into var1;
 		----------------------------Logging------------------------------
-
 	END;
+END MODULE;
+
+CREATE FUNCTION logwrite_EXC(in mfname CHARACTER, in logger_name CHARACTER, in level CHARACTER , in data CHARACTER)
+RETURNS boolean
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.log";
+
+CREATE FUNCTION initLog4j_EXC(in logConfigPath CHARACTER) RETURNS BOOLEAN
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.initLog4j";

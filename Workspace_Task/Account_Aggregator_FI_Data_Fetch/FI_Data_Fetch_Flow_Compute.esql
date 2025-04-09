@@ -1,0 +1,188 @@
+DECLARE configPath EXTERNAL CHARACTER;
+DECLARE var BOOLEAN;
+
+DECLARE DSN_NAME EXTERNAL CHARACTER ;
+DECLARE SCHEMA_I EXTERNAL CHARACTER ;
+
+CREATE COMPUTE MODULE FI_Data_Fetch_Flow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL initLog4j(configPath) INTO var;
+		-- Check Method-----
+		DECLARE method_type CHARACTER;
+		SET method_type = SUBSTRING(InputRoot.HTTPInputHeader."X-Original-HTTP-Command" FROM 1 FOR 4);
+
+		IF method_type = 'POST' THEN
+			CALL CopyEntireMessage();
+		ELSE
+			THROW USER EXCEPTION CATALOG 'BIPmsgs' MESSAGE 2230 VALUES('Unsupported HTTP Method');
+			PROPAGATE TO TERMINAL 'Catch';
+		END IF;
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+
+		DECLARE inref REFERENCE TO InputRoot.JSON.Data;
+		DECLARE bank_id INTEGER inref.bankId;
+		DECLARE acc_no INTEGER inref.accNo;
+		--DECLARE fDate TIMESTAMP inref.fromDate;
+		--DECLARE TDate TIMESTAMP inref.toDate;
+
+		DECLARE fDate CHARACTER inref.fromDate;
+		DECLARE cleanedDate CHARACTER;
+		DECLARE F_parsedTimestamp TIMESTAMP;
+		SET cleanedDate = REPLACE(REPLACE(fDate, 'T', ' '), 'Z', '');
+		SET F_parsedTimestamp = CAST(cleanedDate AS TIMESTAMP);
+
+
+		DECLARE TDate CHARACTER inref.toDate;
+		DECLARE cleanedTDate CHARACTER;
+		DECLARE T_parsedTimestamp TIMESTAMP;
+		SET cleanedTDate = REPLACE(REPLACE(TDate, 'T', ' '), 'Z', '');
+		SET T_parsedTimestamp = CAST(cleanedTDate AS TIMESTAMP);
+		
+		
+		-----------------------------------------Logging-------------------------------------------
+		DECLARE input_request CHARACTER;
+
+		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+        CALL logwrite(MessageFlowLabel,'fidata','INFO',' ---------------------------Start Log -----------------------------------') INTO var;
+		CALL logwrite(MessageFlowLabel,'fidata', 'INFO', 'Application_Input_data:' || input_request) into var;
+		
+	 -----------------------------------------Logging-------------------------------------------
+
+		DECLARE sqlStatement CHARACTER;
+		SET sqlStatement = 'SELECT BANK_NAME, DSN, D_SCHEMA FROM '|| SCHEMA_I ||'.' ||'ACC_DISCOVERY_TABLE  WHERE BANKID = ?';
+		SET Environment.Data.Bank[] = PASSTHRU(sqlStatement TO Database.{DSN_NAME} VALUES(bank_id));
+
+		DECLARE bank_Name CHARACTER Environment.Data.Bank.BANK_NAME;
+		DECLARE Dsn_Name CHARACTER Environment.Data.Bank.DSN;
+		DECLARE Schema_Name CHARACTER Environment.Data.Bank.D_SCHEMA;
+
+		DECLARE sqlStatement_For_FI_Data CHARACTER;
+
+		SET sqlStatement_For_FI_Data =
+		'SELECT
+		P.HolderType,
+		P.Name,
+		P.DOB,
+		P.Mobile,
+		P.Nominee,
+		P.Email,
+		P.PAN,
+		P.CKYC_Compliance,
+		P.Account_Number,
+		S.Account_Number AS Summary_Account_Number,
+		S.Current_Balance,
+		S.Currency,
+		S.Exchange_Rate,
+		S.Balance_DateTime,
+		S.Type,
+		S.Branch,
+		S.Facility,
+		S.IFSC_Code,
+		S.MICR_Code,
+		S.Opening_Date,
+		S.Current_OD_Limit,
+		S.Drawing_Limit,
+		S.Status,
+		S.Pending_Amount,
+		T.Account_Number AS Transaction_Account_Number,
+		T.Start_Date,
+		T.End_Date,
+		T.Txn_ID,
+		T.Txn_Type,
+		T.Txn_Mode,
+		T.Amount,
+		T.Current_Balance AS Txn_Current_Balance,
+		T.Transaction_Timestamp,
+		T.Value_Date,
+		T.Narration,
+		T.Reference
+		FROM Profile_Table P
+		JOIN Summary_Table S ON P.Account_Number = S.Account_Number
+		JOIN Transaction_Table T ON P.Account_Number = T.Account_Number
+		WHERE P.Account_Number = ?
+		AND T.Transaction_Timestamp BETWEEN ? AND ?
+		ORDER BY T.Transaction_Timestamp DESC';
+
+		SET Environment.Data1.Bank1[] = PASSTHRU(sqlStatement_For_FI_Data TO Database.{Dsn_Name} VALUES(acc_no, F_parsedTimestamp, T_parsedTimestamp));		
+
+		SET OutputRoot.JSON.Data.status = 'Success';
+		SET OutputRoot.JSON.Data.Data.Profile.Accounttype = 'Deposit';
+		SET OutputRoot.JSON.Data.Data.Profile.HOLDERSTYP = Environment.Data1.Bank1[1].HOLDERSTYP;
+		SET OutputRoot.JSON.Data.Data.Profile.HOLDER_NAME = Environment.Data1.Bank1[1].HOLDER_NAME;
+		SET OutputRoot.JSON.Data.Data.Profile.MOBILE = Environment.Data1.Bank1[1].MOBILE;
+		SET OutputRoot.JSON.Data.Data.Profile.NOMINEE = Environment.Data1.Bank1[1].NOMINEE;
+		SET OutputRoot.JSON.Data.Data.Profile.EMAIL = Environment.Data1.Bank1[1].EMAIL;
+		SET OutputRoot.JSON.Data.Data.Profile.PAN = Environment.Data1.Bank1[1].PAN;
+		SET OutputRoot.JSON.Data.Data.Profile.CKYCCOMPLIANCE = Environment.Data1.Bank1[1].CKYCCOMPLIANCE;
+		SET OutputRoot.JSON.Data.Data.Profile.DOB = Environment.Data1.Bank1[1].DOB;
+		
+		SET OutputRoot.JSON.Data.Data.Summary.CURRENTBALANCE = Environment.Data1.Bank1[1].CURRENT_BALANCE;
+		SET OutputRoot.JSON.Data.Data.Summary.CURRENCY = Environment.Data1.Bank1[1].CURRENCY;
+		SET OutputRoot.JSON.Data.Data.Summary.SUMMARY_TYPE = Environment.Data1.Bank1[1].TYPE;
+		SET OutputRoot.JSON.Data.Data.Summary.BRANCH = Environment.Data1.Bank1[1].BRANCH;
+		SET OutputRoot.JSON.Data.Data.Summary.FACILITY = Environment.Data1.Bank1[1].FACILITY;
+		SET OutputRoot.JSON.Data.Data.Summary.IFSCCODE = Environment.Data1.Bank1[1].IFSC_CODE;
+		SET OutputRoot.JSON.Data.Data.Summary.MICRCODE = Environment.Data1.Bank1[1].MICR_CODE;
+		SET OutputRoot.JSON.Data.Data.Summary.CURRENTODLIMIT = Environment.Data1.Bank1[1].CURRENT_OD_LIMIT;
+		SET OutputRoot.JSON.Data.Data.Summary.DRAWINGLIMIT = Environment.Data1.Bank1[1].DRAWING_LIMIT;
+		SET OutputRoot.JSON.Data.Data.Summary.STATUS = Environment.Data1.Bank1[1].STATUS;
+		SET OutputRoot.JSON.Data.Data.Summary.PENDINGAMOUNT = Environment.Data1.Bank1[1].PENDING_AMOUNT;
+		SET OutputRoot.JSON.Data.Data.Summary.EXCHANGERATE = Environment.Data1.Bank1[1].EXCHANGE_RATE;
+		
+		DECLARE tnxData REFERENCE TO Environment.Data1.Bank1[1];
+		CREATE LASTCHILD OF OutputRoot.JSON.Data.Data NAME 'Transactions';
+		DECLARE i INTEGER 1;
+		DECLARE j INTEGER 1;
+ 
+		WHILE LASTMOVE(tnxData) DO
+			CREATE LASTCHILD OF OutputRoot.JSON.Data.Data.Transactions NAME 'Data';
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].TXNID = Environment.Data1.Bank1[j].TXN_ID;
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].TXN_TYPE = Environment.Data1.Bank1[j].TXN_TYPE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].MODE1 = Environment.Data1.Bank1[j].TXN_MODE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].AMOUNT = Environment.Data1.Bank1[j].AMOUNT;
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].TXN_BALANCE = Environment.Data1.Bank1[j].TXN_CURRENT_BALANCE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].TRANSACTIONTIMESTAMP = Environment.Data1.Bank1[j].TRANSACTION_TIMESTAMP;
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].VALUEDATE = Environment.Data1.Bank1[j].VALUE_DATE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].NARRATION = Environment.Data1.Bank1[j].NARRATION;
+			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].REFERENCE = Environment.Data1.Bank1[j].REFERENCE;
+			MOVE tnxData NEXTSIBLING;
+			SET i=i+1;
+			SET j=j+1;
+		END WHILE;
+		
+		
+		
+		-----------------------------------------Logging-------------------------------------------
+		DECLARE output_request CHARACTER;
+
+		SET input_request = CAST(ASBITSTREAM(Environment.Data1.Bank1 CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
+        CALL logwrite(MessageFlowLabel,'fidata','INFO',' ---------------------------End Log -----------------------------------') INTO var;
+		CALL logwrite(MessageFlowLabel,'fidata', 'INFO', 'Application_Input_data:' || output_request) into var;
+		
+	 -----------------------------------------Logging-------------------------------------------
+	END;
+END MODULE;
+
+CREATE FUNCTION logwrite(in mfname CHARACTER, in logger_name CHARACTER, in level CHARACTER , in data CHARACTER)
+RETURNS boolean
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.log";
+
+CREATE FUNCTION initLog4j(in logConfigPath CHARACTER) RETURNS BOOLEAN
+LANGUAGE JAVA
+EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.initLog4j";

@@ -33,8 +33,8 @@ CREATE COMPUTE MODULE Acc_Linking_Req_Flow_Compute
 		DECLARE input_request CHARACTER;
 
 		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
-        CALL logwrite(MessageFlowLabel,'Logger2','INFO',' ---------------------------Start Log -----------------------------------') INTO var;
-		CALL logwrite(MessageFlowLabel,'Logger2', 'INFO', 'Application_Input_data:' || input_request) into var;
+        CALL logwrite(MessageFlowLabel,'send','INFO',' ---------------------------Start Log -----------------------------------') INTO var;
+		CALL logwrite(MessageFlowLabel,'send', 'INFO', 'Application_Input_data:' || input_request) into var;
 		
 	 -----------------------------------------Logging-------------------------------------------
 		
@@ -50,10 +50,13 @@ CREATE COMPUTE MODULE Acc_Linking_Req_Flow_Compute
 		DECLARE sqlStatement1 CHARACTER;
 		SET sqlStatement1 = 'SELECT ACC_NO FROM '|| SCHEMA_I ||'.' ||'ACC_LINKING_REQ_TABLE';
 		SET Environment.Data.accNo = PASSTHRU(sqlStatement1 TO Database.{DSN_NAME});
-		DECLARE Present_Acc_NO CHARACTER CAST(Environment.Data.accNo AS CHARACTER CCSID 1208);
+		DECLARE data_a INTEGER Environment.Data.accNo.ACC_NO;
+		DECLARE Present_Acc_NO CHARACTER CAST(data_a AS CHARACTER CCSID 1208);
 		
-		IF Present_Acc_NO = acc_no THEN
-				CALL ACC_Linking_Data_Update(acc_no, bank_ID, otp, reff_no, CURRENT_TIMESTAMP);
+		IF Present_Acc_NO = acc_no THEN			
+			DECLARE sqlStatement CHARACTER;
+			SET sqlStatement = 'UPDATE ' || SCHEMA_I || '.ACC_LINKING_REQ_TABLE SET OTP = ? , REF_NO = ? , OTP_GEN_TIME = ? WHERE BANK_ID = ? AND ACC_NO =? ';
+			SET Environment.Data[] = PASSTHRU(sqlStatement TO Database.{DSN_NAME} VALUES(otp, reff_no, CURRENT_TIMESTAMP, bank_ID, acc_no));
 		ELSE
 			CALL ACC_Linking_Data_Stored(acc_no, bank_ID, mobile_no, otp, reff_no, CURRENT_TIMESTAMP);
 		END IF;
@@ -92,8 +95,8 @@ CREATE COMPUTE MODULE Acc_Linking_Req_Flow_Compute
 
 		SET All_Data = ch_req || ' OTP IS: ' || ch_otp || ' Reference Number IS: ' || ch_reff;
 		
-		CALL logwrite(MessageFlowLabel, 'Logger2', 'INFO', 'Application_Input_data: ' || All_Data) INTO var;
-		CALL logwrite(MessageFlowLabel,'Logger2','INFO',' ---------------------------End Log -----------------------------------') INTO var;
+		CALL logwrite(MessageFlowLabel, 'send', 'INFO', 'Application_Input_data: ' || All_Data) INTO var;
+		CALL logwrite(MessageFlowLabel,'send','INFO',' ---------------------------End Log -----------------------------------') INTO var;
 		-----------------------------------------Logging-------------------------------------------------
 	END;
 END MODULE;
@@ -101,11 +104,6 @@ END MODULE;
 CREATE PROCEDURE ACC_Linking_Data_Stored (IN acc_no INTEGER, IN bank_ID INTEGER, IN mobile_no INTEGER, IN otp INTEGER, IN reff_no CHARACTER, IN otp_gen_time TIMESTAMP )
 LANGUAGE DATABASE
 EXTERNAL NAME "ACC_LINKING_REQ_PROCEDURE";
-
-CREATE PROCEDURE ACC_Linking_Data_Update (IN accNO INTEGER, IN Bid INTEGER, IN OTP INTEGER, IN Ref_No CHARACTER, IN time_u TIMESTAMP)
-LANGUAGE DATABASE
-EXTERNAL NAME "UPDATE_ACC_LINKAGE_REQ";
-
 
 CREATE FUNCTION logwrite(in mfname CHARACTER, in logger_name CHARACTER, in level CHARACTER , in data CHARACTER)
 RETURNS boolean

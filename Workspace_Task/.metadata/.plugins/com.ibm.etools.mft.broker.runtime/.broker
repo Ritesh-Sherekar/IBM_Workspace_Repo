@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<IntegrationNodeConnectionParameters Version="11.0.0" host="192.168.1.67" integrationNodeName="Broker_r" listenerPort="4415" xmlns="http://www.ibm.com/xmlns/prod/ace/11"/>
+<IntegrationNodeConnectionParameters Version="11.0.0" host="192.168.1.67" integrationNodeName="Broker_1167" listenerPort="4418" userName="bandaru" xmlns="http://www.ibm.com/xmlns/prod/ace/11"/>

@@ -51,7 +51,7 @@ CREATE COMPUTE MODULE Acc_Discovery_Flow_Compute1
 
 		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
 
-		CALL logwrite_EXC(MessageFlowLabel,'ritesh', 'error', 'Application_Input_data:' || input_request|| 'Exception: ' || Exception_Occured) into var1;
+		CALL logwrite_EXC(MessageFlowLabel,'err1', 'error', 'Application_Input_data:' || input_request|| 'Exception: ' || Exception_Occured) into var1;
 		----------------------------Logging------------------------------
 
 	END;

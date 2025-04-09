@@ -17,7 +17,12 @@
 <workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744004323560_6" label="[Account_Aggregator_Acc_Linking_Varification]" name="[Account_Aggregator_Acc_Linking_Varification]">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Account_Aggregator_Acc_Linking_Varification" type="4"/>
 </workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744180378035_8" label="[Account_Aggregator_FI_Data_Fetch]" name="[Account_Aggregator_FI_Data_Fetch]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Account_Aggregator_FI_Data_Fetch" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744105226156_7" label="Window Working Set" name="Aggregate for window 1744105226155"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744190021033_9" label="Window Working Set" name="Aggregate for window 1744190021033"/>
+<mruList name="[Account_Aggregator_FI_Data_Fetch]"/>
 <mruList name="[Account_Aggregator_Acc_Linking_Varification]"/>
 <mruList name="[Account_Aggregator_Acc_Linking_Req]"/>
 <mruList name="[Account_Aggregator_Acc_Discovery]"/>

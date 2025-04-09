@@ -1,3 +1,0 @@
-CREATE FUNCTION initLog4j_EXC(in logConfigPath CHARACTER) RETURNS BOOLEAN
-LANGUAGE JAVA
-EXTERNAL NAME "com.ibm.broker.IAM3.Log4jNode.initLog4j";
