@@ -1170,3 +1170,26 @@ BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\Gene
 Account_Aggregator_Acc_Linking_Req>>Broker_r>>s1>>SUCCESS>>1744201792707
 BIP9332I<<Application 'Account_Aggregator_Acc_Linking_Req' has been created successfully. <<1744201792707
 BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Account_Aggregator_Acc_Linking_Reqproject.generated.bar' has been successfully deployed. <<1744201792707
+Account_Aggregator_FI_Data_Fetch>>Broker_r>>s1>>SUCCESS>>1744261271785
+BIP9332I<<Application 'Account_Aggregator_FI_Data_Fetch' has been created successfully. <<1744261271785
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Account_Aggregator_FI_Data_Fetchproject.generated.bar' has been successfully deployed. <<1744261271785
+Account_Aggregator_FI_Data_Fetch>>Broker_r>>s1>>WARNING>>1744261449899
+BIP9318E<<Request to 'PreSetupValidate' resource 'Account_Aggregator_FI_Data_Fetch', 'Account_Aggregator_FI_Data_Fetch' of type 'Application' failed. <<1744261449899
+BIP2905E<<(.FI_Data_Fetch_Flow_Compute.CopyEntireMessage, 117.4) : The expression passed to the 'CREATE' statement as parameter 'NAME' must evaluate to a 'CHARACTER' value. <<1744261449899
+BIP9333W<<Application 'Account_Aggregator_FI_Data_Fetch' has been changed but contains errors which has prevented some resources from starting. <<1744261449899
+BIP1096E<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Account_Aggregator_FI_Data_Fetchproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1744261449899
+Account_Aggregator_FI_Data_Fetch>>Broker_r>>s1>>SUCCESS>>1744261503226
+BIP9332I<<Application 'Account_Aggregator_FI_Data_Fetch' has been changed successfully. <<1744261503226
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Account_Aggregator_FI_Data_Fetchproject.generated.bar' has been successfully deployed. <<1744261503226
+Account_Aggregator_FI_Data_Fetch>>Broker_r>>s1>>SUCCESS>>1744261550315
+BIP9332I<<Application 'Account_Aggregator_FI_Data_Fetch' has been changed successfully. <<1744261550315
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Account_Aggregator_FI_Data_Fetchproject.generated.bar' has been successfully deployed. <<1744261550315
+Account_Aggregator_FI_Data_Fetch>>Broker_r>>s1>>SUCCESS>>1744262889906
+BIP9332I<<Application 'Account_Aggregator_FI_Data_Fetch' has been changed successfully. <<1744262889906
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Account_Aggregator_FI_Data_Fetchproject.generated.bar' has been successfully deployed. <<1744262889906
+Account_Aggregator_FI_Data_Fetch>>Broker_r>>s1>>SUCCESS>>1744262946039
+BIP9332I<<Application 'Account_Aggregator_FI_Data_Fetch' has been changed successfully. <<1744262946039
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Account_Aggregator_FI_Data_Fetchproject.generated.bar' has been successfully deployed. <<1744262946039
+Account_Aggregator_FI_Data_Fetch>>Broker_r>>s1>>SUCCESS>>1744263047016
+BIP9332I<<Application 'Account_Aggregator_FI_Data_Fetch' has been changed successfully. <<1744263047016
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Account_Aggregator_FI_Data_Fetchproject.generated.bar' has been successfully deployed. <<1744263047016

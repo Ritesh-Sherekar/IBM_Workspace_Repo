@@ -1,3 +1,7 @@
+
+
+
+
 DECLARE configPath EXTERNAL CHARACTER;
 DECLARE var BOOLEAN;
 
@@ -52,16 +56,13 @@ CREATE COMPUTE MODULE FI_Data_Fetch_Flow_Compute
 		DECLARE T_parsedTimestamp TIMESTAMP;
 		SET cleanedTDate = REPLACE(REPLACE(TDate, 'T', ' '), 'Z', '');
 		SET T_parsedTimestamp = CAST(cleanedTDate AS TIMESTAMP);
-		
-		
 		-----------------------------------------Logging-------------------------------------------
 		DECLARE input_request CHARACTER;
 
 		SET input_request = CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
-        CALL logwrite(MessageFlowLabel,'fidata','INFO',' ---------------------------Start Log -----------------------------------') INTO var;
+		CALL logwrite(MessageFlowLabel,'fidata','INFO',' ---------------------------Start Log -----------------------------------') INTO var;
 		CALL logwrite(MessageFlowLabel,'fidata', 'INFO', 'Application_Input_data:' || input_request) into var;
-		
-	 -----------------------------------------Logging-------------------------------------------
+		-----------------------------------------Logging-------------------------------------------
 
 		DECLARE sqlStatement CHARACTER;
 		SET sqlStatement = 'SELECT BANK_NAME, DSN, D_SCHEMA FROM '|| SCHEMA_I ||'.' ||'ACC_DISCOVERY_TABLE  WHERE BANKID = ?';
@@ -118,7 +119,7 @@ CREATE COMPUTE MODULE FI_Data_Fetch_Flow_Compute
 		AND T.Transaction_Timestamp BETWEEN ? AND ?
 		ORDER BY T.Transaction_Timestamp DESC';
 
-		SET Environment.Data1.Bank1[] = PASSTHRU(sqlStatement_For_FI_Data TO Database.{Dsn_Name} VALUES(acc_no, F_parsedTimestamp, T_parsedTimestamp));		
+		SET Environment.Data1.Bank1[] = PASSTHRU(sqlStatement_For_FI_Data TO Database.{Dsn_Name} VALUES(acc_no, F_parsedTimestamp, T_parsedTimestamp));
 
 		SET OutputRoot.JSON.Data.status = 'Success';
 		SET OutputRoot.JSON.Data.Data.Profile.Accounttype = 'Deposit';
@@ -130,7 +131,7 @@ CREATE COMPUTE MODULE FI_Data_Fetch_Flow_Compute
 		SET OutputRoot.JSON.Data.Data.Profile.PAN = Environment.Data1.Bank1[1].PAN;
 		SET OutputRoot.JSON.Data.Data.Profile.CKYCCOMPLIANCE = Environment.Data1.Bank1[1].CKYCCOMPLIANCE;
 		SET OutputRoot.JSON.Data.Data.Profile.DOB = Environment.Data1.Bank1[1].DOB;
-		
+
 		SET OutputRoot.JSON.Data.Data.Summary.CURRENTBALANCE = Environment.Data1.Bank1[1].CURRENT_BALANCE;
 		SET OutputRoot.JSON.Data.Data.Summary.CURRENCY = Environment.Data1.Bank1[1].CURRENCY;
 		SET OutputRoot.JSON.Data.Data.Summary.SUMMARY_TYPE = Environment.Data1.Bank1[1].TYPE;
@@ -143,38 +144,39 @@ CREATE COMPUTE MODULE FI_Data_Fetch_Flow_Compute
 		SET OutputRoot.JSON.Data.Data.Summary.STATUS = Environment.Data1.Bank1[1].STATUS;
 		SET OutputRoot.JSON.Data.Data.Summary.PENDINGAMOUNT = Environment.Data1.Bank1[1].PENDING_AMOUNT;
 		SET OutputRoot.JSON.Data.Data.Summary.EXCHANGERATE = Environment.Data1.Bank1[1].EXCHANGE_RATE;
-		
+
 		DECLARE tnxData REFERENCE TO Environment.Data1.Bank1[1];
 		CREATE LASTCHILD OF OutputRoot.JSON.Data.Data NAME 'Transactions';
 		DECLARE i INTEGER 1;
 		DECLARE j INTEGER 1;
  
+		CREATE FIELD OutputRoot.JSON.Data.Data.Transactions TYPE(JSON.Array);
 		WHILE LASTMOVE(tnxData) DO
-			CREATE LASTCHILD OF OutputRoot.JSON.Data.Data.Transactions NAME 'Data';
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].TXNID = Environment.Data1.Bank1[j].TXN_ID;
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].TXN_TYPE = Environment.Data1.Bank1[j].TXN_TYPE;
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].MODE1 = Environment.Data1.Bank1[j].TXN_MODE;
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].AMOUNT = Environment.Data1.Bank1[j].AMOUNT;
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].TXN_BALANCE = Environment.Data1.Bank1[j].TXN_CURRENT_BALANCE;
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].TRANSACTIONTIMESTAMP = Environment.Data1.Bank1[j].TRANSACTION_TIMESTAMP;
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].VALUEDATE = Environment.Data1.Bank1[j].VALUE_DATE;
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].NARRATION = Environment.Data1.Bank1[j].NARRATION;
-			SET OutputRoot.JSON.Data.Data.Transactions.Data[i].REFERENCE = Environment.Data1.Bank1[j].REFERENCE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].TXNID=Environment.Data1.Bank1[j].TXN_ID;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].TXN_TYPE=Environment.Data1.Bank1[j].TXN_TYPE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].MODE1=Environment.Data1.Bank1[j].TXN_MODE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].AMOUNT=Environment.Data1.Bank1[j].AMOUNT;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].TXN_BALANCE=Environment.Data1.Bank1[j].TXN_CURRENT_BALANCE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].TRANSACTIONTIMESTAMP=Environment.Data1.Bank1[j].TRANSACTION_TIMESTAMP;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].VALUEDATE=Environment.Data1.Bank1[j].VALUE_DATE;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].NARRATION=Environment.Data1.Bank1[j].NARRATION;
+			SET OutputRoot.JSON.Data.Data.Transactions.Item[i].REFERENCE=Environment.Data1.Bank1[j].REFERENCE;
 			MOVE tnxData NEXTSIBLING;
+
 			SET i=i+1;
+
 			SET j=j+1;
+
 		END WHILE;
-		
-		
+ 
 		
 		-----------------------------------------Logging-------------------------------------------
 		DECLARE output_request CHARACTER;
 
 		SET input_request = CAST(ASBITSTREAM(Environment.Data1.Bank1 CCSID InputRoot.Properties.CodedCharSetId) as CHARACTER CCSID InputRoot.Properties.CodedCharSetId);
-        CALL logwrite(MessageFlowLabel,'fidata','INFO',' ---------------------------End Log -----------------------------------') INTO var;
+		CALL logwrite(MessageFlowLabel,'fidata','INFO',' ---------------------------End Log -----------------------------------') INTO var;
 		CALL logwrite(MessageFlowLabel,'fidata', 'INFO', 'Application_Input_data:' || output_request) into var;
-		
-	 -----------------------------------------Logging-------------------------------------------
+		-----------------------------------------Logging-------------------------------------------
 	END;
 END MODULE;
 
