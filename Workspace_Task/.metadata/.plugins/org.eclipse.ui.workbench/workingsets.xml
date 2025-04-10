@@ -20,6 +20,28 @@
 <workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744180378035_8" label="[Account_Aggregator_FI_Data_Fetch]" name="[Account_Aggregator_FI_Data_Fetch]">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Account_Aggregator_FI_Data_Fetch" type="4"/>
 </workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744275374655_10" label="[GENERIC_EMAIL_COMPONENT]" name="[GENERIC_EMAIL_COMPONENT]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GENERIC_EMAIL_COMPONENT" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744275374702_11" label="[WB_NeftRtgsStandards]" name="[WB_NeftRtgsStandards]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/WB_NeftRtgsStandards" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744275557911_12" label="[WB_NEFT_RTGS_INWARD]" name="[WB_NEFT_RTGS_INWARD]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RTGS_XML" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/WB_NEFT_RTGS_INWARDJava" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/WB_NEFT_RTGS_INWARD" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744275907406_13" label="[WB_NEFT_OUTWARD]" name="[WB_NEFT_OUTWARD]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/WB_NEFT_OUTWARD" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/WB_NEFT_OUTWARDJava" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744275909359_14" label="[WB_NEFTOUT_TXTMessage_Lib]" name="[WB_NEFTOUT_TXTMessage_Lib]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/WB_NEFTOUT_TXTMessage_Lib" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744281484550_15" label="[Task_N06_To_XML]" name="[Task_N06_To_XML]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Task_N06_To_XML" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/WB_NEFTOUT_TXTMessage_Lib" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744105226156_7" label="Window Working Set" name="Aggregate for window 1744105226155"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744190021033_9" label="Window Working Set" name="Aggregate for window 1744190021033"/>
 <mruList name="[Account_Aggregator_FI_Data_Fetch]"/>
