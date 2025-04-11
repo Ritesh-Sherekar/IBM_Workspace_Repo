@@ -19,14 +19,14 @@ CREATE COMPUTE MODULE N06_To_Xml_Flow_Compute
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		DECLARE myData CHARACTER;
 		SET myData = CAST(InputRoot.BLOB.BLOB AS CHARACTER CCSID 1208);
-		
-		DECLARE rmCh1 CHARACTER ;
-		SET rmCh1 = REPLACE(myData, '{' , '');
-		DECLARE rmCh2 CHARACTER ;
-		SET rmCh2 = REPLACE(rmCh1, '}' , '');
-		
-		DECLARE myBlob BLOB;
-		SET OutputRoot.BLOB.BLOB = CAST(rmCh2 AS BLOB CCSID 1208);
+		set OutputRoot.BLOB.BLOB = TRANSLATE(myData,'#@$%*{}','');
+--		DECLARE rmCh1 CHARACTER ;
+--		SET rmCh1 = REPLACE(myData, '{' , '');
+--		DECLARE rmCh2 CHARACTER ;
+--		SET rmCh2 = REPLACE(rmCh1, '}' , '');
+--		
+--		DECLARE myBlob BLOB;
+--		SET OutputRoot.BLOB.BLOB = CAST(rmCh2 AS BLOB CCSID 1208);
 		
 	END;
 END MODULE;
