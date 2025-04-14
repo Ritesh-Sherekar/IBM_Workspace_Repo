@@ -1247,3 +1247,22 @@ BIP9326I<<The source 'Task_N06_To_XMLproject.generated.bar' has been successfull
 Task_N06_To_XML>>ACC_AGG>>s1>>SUCCESS>>1744289981911
 BIP9332I<<Application 'Task_N06_To_XML' has been changed successfully. <<1744289981911
 BIP9326I<<The source 'Task_N06_To_XMLproject.generated.bar' has been successfully deployed. <<1744289981911
+Task_MQ>>ACC_AGG>>s1>>WARNING>>1744633609806
+BIP1361E<<Message flow node 'MQ Input', 'MQ_Flow#FCMComposite_1_1' in Message flow 'MQ_Flow', 'MQ_Flow' requires Policy 'Default' of type 'MQEndpoint' which is not deployed. <<1744633609806
+BIP1361E<<Message flow node 'MQ Output', 'MQ_Flow#FCMComposite_1_2' in Message flow 'MQ_Flow', 'MQ_Flow' requires Policy 'Default' of type 'MQEndpoint' which is not deployed. <<1744633609806
+BIP1096E<<The source 'Task_MQproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. <<1744633609806
+Task_MQ>>ACC_AGG>>s1>>SUCCESS>>1744633638350
+BIP9332I<<Application 'Task_MQ' has been changed successfully. <<1744633638350
+BIP9326I<<The source 'Task_MQproject.generated.bar' has been successfully deployed. <<1744633638350
+Task_MQ>>Broker_r>>s1>>SUCCESS>>1744633778807
+BIP9332I<<Application 'Task_MQ' has been created successfully. <<1744633778807
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Task_MQproject.generated.bar' has been successfully deployed. <<1744633778807
+Task_MQ>>Broker_r>>s1>>SUCCESS>>1744634147482
+BIP9332I<<Application 'Task_MQ' has been changed successfully. <<1744634147482
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Task_MQproject.generated.bar' has been successfully deployed. <<1744634147482
+Task_MQ>>Broker_r>>s1>>SUCCESS>>1744634707379
+BIP9332I<<Application 'Task_MQ' has been changed successfully. <<1744634707379
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Task_MQproject.generated.bar' has been successfully deployed. <<1744634707379
+Task_MQ>>Broker_r>>s1>>SUCCESS>>1744634775418
+BIP9332I<<Application 'Task_MQ' has been changed successfully. <<1744634775418
+BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Task_MQproject.generated.bar' has been successfully deployed. <<1744634775418

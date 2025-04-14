@@ -1,4 +1,6 @@
-CREATE COMPUTE MODULE Acc_Discovery_Flow_Compute1
+
+
+CREATE COMPUTE MODULE MQ_Flow_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		-- CALL CopyMessageHeaders();
@@ -17,16 +19,10 @@ CREATE COMPUTE MODULE Acc_Discovery_Flow_Compute1
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		DECLARE inref REFERENCE TO InputExceptionList.*[1];
+		DECLARE SqlStatement CHARACTER;
 		
-		DECLARE ex_line INTEGER inref.Line;
-		DECLARE ex_type CHARACTER inref.Type;
-		DECLARE ex_lable CHARACTER inref.Label;
-		DECLARE ex_text CHARACTER inref.RecoverableException.RecoverableException.UserException.Insert.Text;
-		
---		WHILE inref.Number IS NOT NULL DO
---			 
---			MOVE inref LASTCHILD;
---		END WHILE;
+		SET SqlStatement = 'INSERT INTO EMPLOYEES100 VALUES (104, ''fghjcjsducjh'', ''lloollolllasdfg'', ?)';
+
+		PASSTHRU(SqlStatement ,CURRENT_DATE );
 	END;
 END MODULE;
