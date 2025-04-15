@@ -24,5 +24,6 @@ CREATE COMPUTE MODULE MQ_Flow_Compute
 		SET SqlStatement = 'INSERT INTO EMPLOYEES100 VALUES (104, ''fghjcjsducjh'', ''lloollolllasdfg'', ?)';
 
 		PASSTHRU(SqlStatement ,CURRENT_DATE );
+		--SET 
 	END;
 END MODULE;

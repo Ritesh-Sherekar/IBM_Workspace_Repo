@@ -3301,3 +3301,555 @@ Caused by: javax.activation.UnsupportedDataTypeException: Unsupported JSON non h
 	at com.ibm.msl.mapping.api.json.resources.XSDResourceForJSON.getConvertedXsdForJsonSchema(XSDResourceForJSON.java:94)
 	at com.ibm.msl.mapping.api.json.resources.XSDResourceForJSON.doLoad(XSDResourceForJSON.java:51)
 	... 22 more
+
+!ENTRY org.eclipse.help.base 4 0 2025-04-15 15:54:52.274
+!MESSAGE I/O error while trying to contact the remote help server
+!STACK 0
+java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:679)
+	at java.base/java.net.URL.<init>(URL.java:541)
+	at java.base/java.net.URL.<init>(URL.java:488)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:649)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:59)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:47)
+	at org.eclipse.help.internal.base.remote.RemoteContextProvider.getContext(RemoteContextProvider.java:83)
+	at org.eclipse.help.internal.context.ContextManager.getContext(ContextManager.java:69)
+	at org.eclipse.help.HelpSystem.getContext(HelpSystem.java:52)
+	at com.ibm.etools.mft.util.ui.pdhelp.F1HelpUtils.getRelatedF1HelpTopics(F1HelpUtils.java:206)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getSharedF1HelpPageLinks(PDHelpPopup.java:987)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getControlContent(PDHelpPopup.java:972)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.<init>(PDHelpPopup.java:831)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopup.<init>(PDHelpPopup.java:116)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:320)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:302)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager$1.widgetSelected(PDHelpManager.java:239)
+	at org.eclipse.jface.fieldassist.ControlDecoration.notifySelectionListeners(ControlDecoration.java:798)
+	at org.eclipse.jface.fieldassist.ControlDecoration.lambda$3(ControlDecoration.java:700)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:585)
+	... 50 more
+
+!ENTRY org.eclipse.help.base 4 0 2025-04-15 16:19:26.297
+!MESSAGE I/O error while trying to contact the remote help server
+!STACK 0
+java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:679)
+	at java.base/java.net.URL.<init>(URL.java:541)
+	at java.base/java.net.URL.<init>(URL.java:488)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:649)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:59)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:47)
+	at org.eclipse.help.internal.base.remote.RemoteContextProvider.getContext(RemoteContextProvider.java:83)
+	at org.eclipse.help.internal.context.ContextManager.getContext(ContextManager.java:69)
+	at org.eclipse.help.HelpSystem.getContext(HelpSystem.java:52)
+	at com.ibm.etools.mft.util.ui.pdhelp.F1HelpUtils.getRelatedF1HelpTopics(F1HelpUtils.java:206)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getSharedF1HelpPageLinks(PDHelpPopup.java:987)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getControlContent(PDHelpPopup.java:972)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.<init>(PDHelpPopup.java:831)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopup.<init>(PDHelpPopup.java:116)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:320)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:302)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager$1.widgetSelected(PDHelpManager.java:239)
+	at org.eclipse.jface.fieldassist.ControlDecoration.notifySelectionListeners(ControlDecoration.java:798)
+	at org.eclipse.jface.fieldassist.ControlDecoration.lambda$3(ControlDecoration.java:700)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:585)
+	... 50 more
+
+!ENTRY org.eclipse.help.base 4 0 2025-04-15 17:42:02.987
+!MESSAGE I/O error while trying to contact the remote help server
+!STACK 0
+java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:679)
+	at java.base/java.net.URL.<init>(URL.java:541)
+	at java.base/java.net.URL.<init>(URL.java:488)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:649)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:59)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:47)
+	at org.eclipse.help.internal.base.remote.RemoteContextProvider.getContext(RemoteContextProvider.java:83)
+	at org.eclipse.help.internal.context.ContextManager.getContext(ContextManager.java:69)
+	at org.eclipse.help.HelpSystem.getContext(HelpSystem.java:52)
+	at com.ibm.etools.mft.util.ui.pdhelp.F1HelpUtils.getRelatedF1HelpTopics(F1HelpUtils.java:206)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getSharedF1HelpPageLinks(PDHelpPopup.java:987)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getControlContent(PDHelpPopup.java:972)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.<init>(PDHelpPopup.java:831)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopup.<init>(PDHelpPopup.java:116)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:320)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:302)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager$1.widgetSelected(PDHelpManager.java:239)
+	at org.eclipse.jface.fieldassist.ControlDecoration.notifySelectionListeners(ControlDecoration.java:798)
+	at org.eclipse.jface.fieldassist.ControlDecoration.lambda$3(ControlDecoration.java:700)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:585)
+	... 50 more
+
+!ENTRY org.eclipse.help.base 4 0 2025-04-15 17:47:28.672
+!MESSAGE I/O error while trying to contact the remote help server
+!STACK 0
+java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:679)
+	at java.base/java.net.URL.<init>(URL.java:541)
+	at java.base/java.net.URL.<init>(URL.java:488)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:649)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:59)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:47)
+	at org.eclipse.help.internal.base.remote.RemoteContextProvider.getContext(RemoteContextProvider.java:83)
+	at org.eclipse.help.internal.context.ContextManager.getContext(ContextManager.java:69)
+	at org.eclipse.help.HelpSystem.getContext(HelpSystem.java:52)
+	at com.ibm.etools.mft.util.ui.pdhelp.F1HelpUtils.getRelatedF1HelpTopics(F1HelpUtils.java:206)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getSharedF1HelpPageLinks(PDHelpPopup.java:987)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getControlContent(PDHelpPopup.java:972)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.<init>(PDHelpPopup.java:831)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopup.<init>(PDHelpPopup.java:116)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:320)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:302)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager$1.widgetSelected(PDHelpManager.java:239)
+	at org.eclipse.jface.fieldassist.ControlDecoration.notifySelectionListeners(ControlDecoration.java:798)
+	at org.eclipse.jface.fieldassist.ControlDecoration.lambda$3(ControlDecoration.java:700)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:585)
+	... 50 more
+
+!ENTRY org.eclipse.help.base 4 0 2025-04-15 17:58:20.675
+!MESSAGE I/O error while trying to contact the remote help server
+!STACK 0
+java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:679)
+	at java.base/java.net.URL.<init>(URL.java:541)
+	at java.base/java.net.URL.<init>(URL.java:488)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:649)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:59)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:47)
+	at org.eclipse.help.internal.base.remote.RemoteContextProvider.getContext(RemoteContextProvider.java:83)
+	at org.eclipse.help.internal.context.ContextManager.getContext(ContextManager.java:69)
+	at org.eclipse.help.HelpSystem.getContext(HelpSystem.java:52)
+	at com.ibm.etools.mft.util.ui.pdhelp.F1HelpUtils.getRelatedF1HelpTopics(F1HelpUtils.java:206)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getSharedF1HelpPageLinks(PDHelpPopup.java:987)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getControlContent(PDHelpPopup.java:972)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.<init>(PDHelpPopup.java:831)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopup.buildControlBasedContent(PDHelpPopup.java:601)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopup.updatePopupFor(PDHelpPopup.java:132)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:314)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:302)
+	at com.ibm.etools.mft.util.ui.pdhelp.PopupHelpFocusListener.focusGained(PDHelpManager.java:409)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:143)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2942)
+	at org.eclipse.swt.widgets.Combo.wmCommandChild(Combo.java:3241)
+	at org.eclipse.swt.widgets.Control.WM_COMMAND(Control.java:4897)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4749)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Combo.callWindowProc(Combo.java:474)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Combo.windowProc(Combo.java:2826)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1093)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3441)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1081)
+	at org.eclipse.swt.widgets.Decorations.restoreFocus(Decorations.java:761)
+	at org.eclipse.swt.widgets.Decorations.WM_ACTIVATE(Decorations.java:1525)
+	at org.eclipse.swt.widgets.Shell.WM_ACTIVATE(Shell.java:2314)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4743)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3627)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:585)
+	... 74 more
+
+!ENTRY org.eclipse.help.base 4 0 2025-04-15 18:15:33.070
+!MESSAGE I/O error while trying to contact the remote help server
+!STACK 0
+java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:679)
+	at java.base/java.net.URL.<init>(URL.java:541)
+	at java.base/java.net.URL.<init>(URL.java:488)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:649)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:59)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:47)
+	at org.eclipse.help.internal.base.remote.RemoteContextProvider.getContext(RemoteContextProvider.java:83)
+	at org.eclipse.help.internal.context.ContextManager.getContext(ContextManager.java:69)
+	at org.eclipse.help.HelpSystem.getContext(HelpSystem.java:52)
+	at com.ibm.etools.mft.util.ui.pdhelp.F1HelpUtils.getRelatedF1HelpTopics(F1HelpUtils.java:206)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getSharedF1HelpPageLinks(PDHelpPopup.java:987)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.getControlContent(PDHelpPopup.java:972)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopupContentStack.<init>(PDHelpPopup.java:831)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopup.buildControlBasedContent(PDHelpPopup.java:601)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpPopup.updatePopupFor(PDHelpPopup.java:132)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:314)
+	at com.ibm.etools.mft.util.ui.pdhelp.PDHelpManager.showPDHelpPopup(PDHelpManager.java:302)
+	at com.ibm.etools.mft.util.ui.pdhelp.PopupHelpFocusListener.focusGained(PDHelpManager.java:409)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:143)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2942)
+	at org.eclipse.swt.widgets.Combo.wmCommandChild(Combo.java:3241)
+	at org.eclipse.swt.widgets.Control.WM_COMMAND(Control.java:4897)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4749)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Combo.callWindowProc(Combo.java:474)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Combo.windowProc(Combo.java:2826)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Control.forceFocus(Control.java:1093)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3441)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1081)
+	at org.eclipse.swt.widgets.Decorations.restoreFocus(Decorations.java:761)
+	at org.eclipse.swt.widgets.Decorations.WM_SETFOCUS(Decorations.java:1616)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4818)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:585)
+	... 80 more
+!SESSION 2025-04-15 18:48:59.726 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220421-1001
+java.fullversion=11.0.22+7
+JRE 11 Windows 10 amd64-64-Bit Compressed References 20240201_758 (JIT enabled, AOT enabled)
+OpenJ9   - 2c3d78b48
+OMR      - ea8124dbc
+JCL      - ad0357f272 based on jdk-11.0.22+7
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -showlocation -product com.ibm.etools.msgbroker.tooling.ide -showlocation -product com.ibm.etools.msgbroker.tooling.ide
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-04-15 18:49:06.694
+!MESSAGE Both 'com.ibm.etools.mft.fcb' and 'com.ibm.etools.mft.gef.emf' register a package for 'http://www.ibm.com/wbi/2005/eflow_utility'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-04-15 18:49:06.694
+!MESSAGE Both 'com.ibm.etools.mft.gef.emf' and 'com.ibm.etools.mft.gef.emf' register a package for 'http://www.ibm.com/wbi/2005/eflow_utility'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-04-15 18:49:06.694
+!MESSAGE Both 'com.ibm.etools.mft.fcb' and 'com.ibm.etools.mft.pattern.capture.annotation' register a package for 'http://www.ibm.com/patternAnnotation/2010'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-04-15 18:49:06.700
+!MESSAGE Both 'com.ibm.etools.mft.gef.emf' and 'org.eclipse.emf.ecore' register a package for 'http://www.eclipse.org/emf/2002/Ecore'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-04-15 18:49:06.714
+!MESSAGE Both 'com.ibm.etools.javaee.core' and 'com.ibm.etools.mft.service.model' register an extension parser for 'application'
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-04-15 18:49:14.438
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2025-04-15 18:50:44.714
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-15 18:50:44.714
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78cd3d31,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@97f6d647,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-15 18:50:44.714
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1de4ec63,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@98be3509,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2025-04-15 18:50:46.515
+!MESSAGE Invalid preference category path: com.ibm.importer.preferences (bundle: com.ibm.adapter.c, page: com.ibm.adapter.c.ui.preferencepage.CPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2025-04-15 18:50:46.515
+!MESSAGE Invalid preference category path: com.ibm.importer.preferences (bundle: com.ibm.etools.cobol.preference.ui, page: com.ibm.etools.cobol.preference.ui.preferencepage.CobolPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2025-04-15 18:50:46.515
+!MESSAGE Invalid preference category path: com.ibm.debug.breakpoints.common.pref.tracepoint (bundle: com.ibm.debug.wsa, page: com.ibm.debug.wsa.WSATracepointPreferencePage)
+
+!ENTRY com.ibm.etools.mft.uri 0 0 2025-04-15 18:50:52.553
+!MESSAGE 
+
+!ENTRY org.eclipse.jface.text 2 0 2025-04-15 18:51:13.578
+!MESSAGE Duplicate template id: 'com.ibm.datatools.sqlxeditor.templates.xmlnamespaces2'
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-15 18:51:34.433
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Sreenivas Bandaru'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-04-15 18:51:48.752
+!MESSAGE 
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-04-15 18:51:48.752
+!MESSAGE C:\Program Files\IBM\ACE\12.0.12.0\tools>mqsifindmqpath
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-04-15 18:51:49.335
+!MESSAGE BIP8071I: Successful command completion. C:\Program Files\IBM\MQ_2
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-04-15 18:51:49.335
+!MESSAGE MQ Install location found:C:/Program Files/IBM/MQ_2
+
+!ENTRY com.ibm.mq.runtime 1 0 2025-04-15 18:51:49.335
+!MESSAGE 
+
+!ENTRY com.ibm.etools.mft.map 4 4 2025-04-15 18:58:36.161
+!MESSAGE Could not resolve and load Unsupported JSON non heterogeneous array: [{"type":"string"},{"type":"string"},{"type":"string"}] element/type from JSON schema.
+!STACK 0
+ErrorCode: 9 Location: '' Message: 'Could not resolve and load Unsupported JSON non heterogeneous array: [{"type":"string"},{"type":"string"},{"type":"string"}] element/type from JSON schema.'
+	at com.ibm.msl.mapping.api.MapException.throwMapException(MapException.java:101)
+	at com.ibm.msl.mapping.api.json.resources.XSDResourceForJSON.doLoad(XSDResourceForJSON.java:55)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at com.ibm.etools.mft.map.util.ToolkitMappingRestAPIHandler.resolveXsdSchemaFromjsonSchema(ToolkitMappingRestAPIHandler.java:84)
+	at com.ibm.etools.mft.json.builder.JSONBuilder.processChangedFile(JSONBuilder.java:179)
+	at com.ibm.etools.mft.json.builder.JSONBuilder.processAddedFile(JSONBuilder.java:155)
+	at com.ibm.etools.mft.builder.AbstractBuilder.buildFiles(AbstractBuilder.java:599)
+	at com.ibm.etools.mft.builder.AbstractBuilder.build(AbstractBuilder.java:376)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: javax.activation.UnsupportedDataTypeException: Unsupported JSON non heterogeneous array: [{"type":"string"},{"type":"string"},{"type":"string"}]
+	at com.ibm.msl.mapping.api.json.resources.JsonSchema2XsdConverter.consumeJsonSchemaArray(JsonSchema2XsdConverter.java:1810)
+	at com.ibm.msl.mapping.api.json.resources.JsonSchema2XsdConverter.consumeJsonNode(JsonSchema2XsdConverter.java:1590)
+	at com.ibm.msl.mapping.api.json.resources.JsonSchema2XsdConverter.consumeJsonChildNodes(JsonSchema2XsdConverter.java:1650)
+	at com.ibm.msl.mapping.api.json.resources.JsonSchema2XsdConverter.consumeJsonNode(JsonSchema2XsdConverter.java:1586)
+	at com.ibm.msl.mapping.api.json.resources.JsonSchema2XsdConverter.consumeJsonHeadNode(JsonSchema2XsdConverter.java:1191)
+	at com.ibm.msl.mapping.api.json.resources.JsonSchema2XsdConverter.run(JsonSchema2XsdConverter.java:298)
+	at com.ibm.msl.mapping.api.json.resources.XSDResourceForJSON.createAndRun(XSDResourceForJSON.java:122)
+	at com.ibm.msl.mapping.api.json.resources.XSDResourceForJSON.getConvertedXsdForJsonSchema(XSDResourceForJSON.java:94)
+	at com.ibm.msl.mapping.api.json.resources.XSDResourceForJSON.doLoad(XSDResourceForJSON.java:51)
+	... 22 more
