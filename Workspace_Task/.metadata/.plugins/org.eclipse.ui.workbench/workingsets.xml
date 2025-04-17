@@ -45,6 +45,9 @@
 <workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744610786808_16" label="[Task_MQ]" name="[Task_MQ]">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Task_MQ" type="4"/>
 </workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744866962991_17" label="[Task_Variable]" name="[Task_Variable]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Task_Variable" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744105226156_7" label="Window Working Set" name="Aggregate for window 1744105226155"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1744190021033_9" label="Window Working Set" name="Aggregate for window 1744190021033"/>
 <mruList name="[Account_Aggregator_FI_Data_Fetch]"/>

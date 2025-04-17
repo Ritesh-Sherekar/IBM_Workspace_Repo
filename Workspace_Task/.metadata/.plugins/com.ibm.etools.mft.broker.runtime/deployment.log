@@ -1266,3 +1266,54 @@ BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\Gene
 Task_MQ>>Broker_r>>s1>>SUCCESS>>1744634775418
 BIP9332I<<Application 'Task_MQ' has been changed successfully. <<1744634775418
 BIP9326I<<The source ''C:\Users\Sreenivas Bandaru\IBM\ACET12\Workspace_Task\GeneratedBarFiles\Task_MQproject.generated.bar' has been successfully deployed. <<1744634775418
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744867235721
+BIP9332I<<Application 'Task_Variable' has been created successfully. <<1744867235721
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744867235721
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744867485997
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744867485997
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744867485997
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744867590884
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744867590884
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744867590884
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744867726046
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744867726046
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744867726046
+sgfh>>ACC_AGG>>s2>>SUCCESS>>1744867742606
+BIP9332I<<Application 'sgfh' has been created successfully. <<1744867742606
+BIP9326I<<The source 'sgfhproject.generated.bar' has been successfully deployed. <<1744867742606
+sgfh>>ACC_AGG>>s1>>SUCCESS>>1744868078542
+BIP9332I<<Application 'sgfh' has been created successfully. <<1744868078542
+BIP9326I<<The source 'sgfhproject.generated.bar' has been successfully deployed. <<1744868078542
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744868566327
+BIP9332I<<Application 'Task_Variable' has been created successfully. <<1744868566327
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744868566327
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744868678711
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744868678711
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744868678711
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744868830237
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744868830237
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744868830237
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744868878553
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744868878553
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744868878553
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744868954750
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744868954750
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744868954750
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744869379931
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744869379931
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744869379931
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744869552807
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744869552807
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744869552807
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744869829359
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744869829359
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744869829359
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744869966703
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744869966703
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744869966703
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744870152876
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744870152876
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744870152876
+Task_Variable>>ACC_AGG>>s1>>SUCCESS>>1744870321379
+BIP9332I<<Application 'Task_Variable' has been changed successfully. <<1744870321379
+BIP9326I<<The source 'Task_Variableproject.generated.bar' has been successfully deployed. <<1744870321379
