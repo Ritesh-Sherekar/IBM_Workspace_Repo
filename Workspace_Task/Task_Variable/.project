@@ -3,6 +3,7 @@
 	<name>Task_Variable</name>
 	<comment></comment>
 	<projects>
+		<project>Task_VariableJava</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
